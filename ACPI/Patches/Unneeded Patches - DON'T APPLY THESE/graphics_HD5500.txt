@@ -1,0 +1,29 @@
+# Modified from RehabMan’s graphics_HD4600_yosemite patch by nguyenlc1993.
+# Changelog:
+# - Changed the values in _DSM method to proper ones for Intel HD5500.
+
+# ————————————————————
+
+#Maintained by: RehabMan for: Laptop Patches
+#graphics_HD5500.txt
+
+#
+# Use this patch if your laptop has Broadwell graphics
+#
+
+into method label _DSM parent_adr 0x00020000 remove_entry;
+into device name_adr 0x00020000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "device-id", Buffer () { 0x16, 0x16, 0x00, 0x00 },\n
+        "AAPL,ig-platform-id", Buffer () { 0x06, 0x00, 0x26, 0x16 },\n
+        "hda-gfx", Buffer () { "onboard-1" },\n
+        "model", Buffer () { "Intel HD Graphics 5500" },\n
+    })\n
+}\n
+end;
+

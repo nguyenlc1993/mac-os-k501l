@@ -1,0 +1,40 @@
+# Patch made by nguyenlc1993 to:
+# - Delete PXSX device in RP04 (as WLAN device already exists).
+# - Rename any RP04.PXSX instance to RP04.WLAN.
+# - Fix _ADR of WLAN device from 0xFF to Zero (if problem exists).
+# - Add _SUN object, _PRW and _DSM methods.
+
+# ————————————————————
+
+# Delete PXSX device
+into device label PXSX parent_label RP04 remove_entry;
+
+# Rename PXSX to WLAN
+into method label HPME parent_label RP04 code_regex Notify\s\(PXSX,\s0x02\) replaceall_matched begin Notify (WLAN, 0x02) end;
+into_all all label _SB.PCI0.RP04.PXSX set_label begin _SB.PCI0.RP04.WLAN end;
+
+# Fix _ADR to Zero
+into device label WLAN parent_label RP04 code_regex Name\s\(_ADR,\s0xFF\) replace_matched begin Name (_ADR, Zero) end;
+
+# Add _SUN, _PRW and _DSM
+into device label WLAN parent_label RP04 insert
+begin
+Name (_SUN, 0x03)\n
+Method (_PRW, 0, NotSerialized)\n
+{\n
+    Return (GPRW (0x69, 0x04))\n
+}\n
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "AAPL,slot-name", "AirPort",\n
+        "built-in", Buffer () { 0x00 },\n
+        "device_type", Buffer () { "AirPort" },\n
+        "model", Buffer () { "Dell Wireless 1702 802.11 b/g/n" },\n
+        "compatible", Buffer () { "pci168c,2a" },\n
+        "name", "AirPort Extreme",\n
+    })\n
+}\n
+end;

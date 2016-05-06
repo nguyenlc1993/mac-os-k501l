@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>PBXBuildPhase</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The name of this build phase.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+                <key>target</key>
+				<dict>
+					<key>Description</key>
+					<string>The target that contains this build phase.</string>
+					<key>Name</key>
+					<string>target</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A build phase represents a stage in the build of a target.  Each build phase contains a set of build files and information about how to process those files.</string>
+			<key>Name</key>
+			<string>build phase</string>
+			<key>PluralName</key>
+			<string>build phases</string>
+		</dict>
+		<key>PBXAppleScriptBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that compiles the applescripts that it contains.</string>
+			<key>Name</key>
+			<string>compile applescripts phase</string>
+			<key>PluralName</key>
+			<string>compile applescripts phases</string>
+		</dict>
+		<key>PBXCopyFilesBuildPhase</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>appleScriptDestinationSubfolder</key>
+				<dict>
+					<key>Description</key>
+					<string>The base location to copy items relative to. If "root volume" is chosen then "path" is an absolute path. Otherwise "path" is relative to the base location.</string>
+					<key>Name</key>
+					<string>destination directory</string>
+				</dict>
+				<key>destinationPath</key>
+				<dict>
+					<key>Description</key>
+					<string>The path relative to the destination to copy items to</string>
+					<key>Name</key>
+					<string>path</string>
+				</dict>
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<dict>
+					<key>Description</key>
+					<string>Indicates if the build phase should only be run when performing an install build.</string>
+					<key>Name</key>
+					<string>run only when installing</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A build phase that copies its contained items to a location on disk. </string>
+			<key>Name</key>
+			<string>copy files phase</string>
+			<key>PluralName</key>
+			<string>copy files phases</string>
+		</dict>
+		<key>PBXFrameworksBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that links its contained items into the binary produced by the containing target.</string>
+			<key>Name</key>
+			<string>link binary with libraries phase</string>
+			<key>PluralName</key>
+			<string>link binary with libraries phases</string>
+		</dict>
+		<key>PBXHeadersBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that copies its contained items into the proper locations for public and private headers.</string>
+			<key>Name</key>
+			<string>copy headers phase</string>
+			<key>PluralName</key>
+			<string>copy headers phases</string>
+		</dict>
+		<key>PBXJavaArchiveBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that archives its contained items into a class hierarchy or archive file (.jar or .zip file).</string>
+			<key>Name</key>
+			<string>build java resources phase</string>
+			<key>PluralName</key>
+			<string>build java resources phases</string>
+		</dict>
+		<key>PBXResourcesBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that copies its contained items into the Resources directory of the target's wrapped product. Localized files are copied into the proper sub-directory of Resources.</string>
+			<key>Name</key>
+			<string>copy bundle resources phase</string>
+			<key>PluralName</key>
+			<string>copy bundle resources phases</string>
+		</dict>
+		<key>PBXRezBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build file that rezzes any contained .r files into a .rsrc file.</string>
+			<key>Name</key>
+			<string>build resource manager resources phase</string>
+			<key>PluralName</key>
+			<string>build resource manager resources phases</string>
+		</dict>
+		<key>PBXShellScriptBuildPhase</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<dict>
+					<key>Description</key>
+					<string>Indicates if the build phase should only be run when performing an install build.</string>
+					<key>Name</key>
+					<string>run only when installing</string>
+				</dict>
+				<key>shellPath</key>
+				<dict>
+					<key>Description</key>
+					<string>The absolute path to the shell used by the shell script.</string>
+					<key>Name</key>
+					<string>shell path</string>
+				</dict>
+				<key>shellScript</key>
+				<dict>
+					<key>Description</key>
+					<string>The actual shell script to run during this build phase.</string>
+					<key>Name</key>
+					<string>shell script</string>
+				</dict>
+				<key>showEnvVarsInLog</key>
+				<dict>
+					<key>Description</key>
+					<string>Indicates if shell environment variables should be output to the build log.</string>
+					<key>Name</key>
+					<string>show environment variables</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string></string>
+			<key>Name</key>
+			<string>run script phase</string>
+			<key>PluralName</key>
+			<string>run script phases</string>
+		</dict>
+		<key>PBXSourcesBuildPhase</key>
+		<dict>
+			<key>Description</key>
+			<string>A build phase that compiles its contained files into the target's binary.</string>
+			<key>Name</key>
+			<string>compile sources phase</string>
+			<key>PluralName</key>
+			<string>compile sources phases</string>
+		</dict>
+		<key>XCAppleScriptInputPath</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>path</key>
+				<dict>
+					<key>Description</key>
+					<string>The path of the input file.</string>
+					<key>Name</key>
+					<string>path</string>
+				</dict>
+				<key>container</key>
+				<dict>
+					<key>Description</key>
+					<string>The run script phase that contains this input path.</string>
+					<key>Name</key>
+					<string>run script phase</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>An object that represents a input path that is used by a run script phase.</string>
+			<key>Name</key>
+			<string>input path</string>
+			<key>PluralName</key>
+			<string>input paths</string>
+		</dict>
+		<key>XCAppleScriptOutputPath</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>path</key>
+				<dict>
+					<key>Description</key>
+					<string>The path of the output file.</string>
+					<key>Name</key>
+					<string>path</string>
+				</dict>
+				<key>container</key>
+				<dict>
+					<key>Description</key>
+					<string>The run script phase that contains this output path.</string>
+					<key>Name</key>
+					<string>run script phase</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>An object that represents a output path that is used by a run script phase.</string>
+			<key>Name</key>
+			<string>output path</string>
+			<key>PluralName</key>
+			<string>output paths</string>
+		</dict>
+	</dict>
+	<key>Enumerations</key>
+	<dict>
+		<key>PBXWrapperPart</key>
+		<dict>
+			<key>PBXWrapperPart_None</key>
+			<dict>
+				<key>Name</key>
+				<string>root volume</string>
+			</dict>
+			<key>PBXWrapperPart_ProductDir</key>
+			<dict>
+				<key>Name</key>
+				<string>products directory</string>
+			</dict>
+			<key>PBXWrapperPart_Root</key>
+			<dict>
+				<key>Name</key>
+				<string>wrapper</string>
+			</dict>
+			<key>PBXWrapperPart_ExecutablesDir</key>
+			<dict>
+				<key>Name</key>
+				<string>executables directory</string>
+			</dict>
+			<key>PBXWrapperPart_ResourcesDir</key>
+			<dict>
+				<key>Name</key>
+				<string>resources</string>
+			</dict>
+			<key>PBXWrapperPart_JavaDir</key>
+			<dict>
+				<key>Name</key>
+				<string>java resources</string>
+			</dict>
+			<key>PBXWrapperPart_FrameworksDir</key>
+			<dict>
+				<key>Name</key>
+				<string>frameworks</string>
+			</dict>
+			<key>PBXWrapperPart_SharedFrameworksDir</key>
+			<dict>
+				<key>Name</key>
+				<string>shared frameworks</string>
+			</dict>
+			<key>PBXWrapperPart_SharedSupportDir</key>
+			<dict>
+				<key>Name</key>
+				<string>shared support</string>
+			</dict>
+			<key>PBXWrapperPart_PlugInsDir</key>
+			<dict>
+				<key>Name</key>
+				<string>plugins directory</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>This suite contains any classes that deal with build phases.</string>
+	<key>Name</key>
+	<string>Xcode Build Phase Suite</string>
+</dict>
+</plist>

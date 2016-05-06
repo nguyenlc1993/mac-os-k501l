@@ -1,0 +1,21 @@
+# RehabMan’s system_IMEI patch + system_MCHC patch (may include insignificant changes in code style and/or comments).
+
+# ————————————————————
+
+# Add IMEI and MCHC devices if missing
+
+into device label IMEI parent_label PCI0 remove_entry;
+into device label PCI0 insert
+begin
+Device (IMEI)\n
+{\n
+    Name (_ADR, 0x00160000)\n
+}\n
+end;
+into device label MCHC parent_label PCI0 remove_entry;
+into device label PCI0 insert begin
+Device (MCHC)\n
+{\n
+    Name (_ADR, Zero)\n
+}
+end;

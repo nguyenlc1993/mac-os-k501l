@@ -1,0 +1,35 @@
+{
+    Names = {
+        English = "Aggregate";
+        Swedish = "Sammanstallning";
+    };
+    BuildPhases = ();
+    DefaultInstallationPath = "$(HOME)";
+    DefaultBuildFlags = {
+        OTHER_CFLAGS = "";
+        OTHER_LDFLAGS =	"";
+        OTHER_REZFLAGS = "";
+        SECTORDER_FLAGS = "";
+        OPTIMIZATION_CFLAGS = "";
+        WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+    };
+    BuildFlagHelpStrings = {
+        OS = "Operating system to build target for (currently, only MACOS, WINDOWS, and PDOUNIX are supported).";
+        OTHER_CFLAGS = "Additional flags passed to the C compiler.";
+        OTHER_LDFLAGS = "Additional flags passed to the linker.";
+        OTHER_REZFLAGS = "Additional flags passed to the Carbon resource compiler.";
+        SECTORDER_FLAGS = "For ordering named sections in Mach-O files (see ld(1)).";
+        OPTIMIZATION_CFLAGS = "Flags that specify optimization level for C-like languages.  The default is -O which produces the compiler's default optimization level. Valid levels for gcc are -O0, for no optimization, to -O6, for maximum.";
+        WARNING_CFLAGS = "Flags that specify warning level (common values are \"-Wmost\" and \"-Wall\").";
+        REZ_EXECUTABLE = "Set to YES if your resource fork should be part of your executable instead of in a separate file.  This is typically used for Libraries, Tools or other non-bundle targets.";
+        
+        WRAPPER_EXTENSION = "Extension to use for the bundle produced by the target.  This defaults to \"app\", \"framework\", or \"bundle\" depending on the target type.  This applies only to Application, Framework and Bundle targets.";
+
+        LIBRARY_STYLE = "Set to STATIC to produce a static archive-style (lib___.a) library, set to DYNAMIC to produce a dynamic library.  This applies only to Library targets";
+        OTHER_LIBTOOL_FLAGS = "Additional flags passed to libtool when linking the library.  This applies only to Library and Framework targets.";
+        
+        DYLIB_COMPATIBILITY_VERSION = "The compatibility version number for a shared library.  This applies only to Framework and Library targets.";
+        DYLIB_CURRENT_VERSION = "The current version number for a shared library.  This applies only to Framework and Library targets.";
+        FRAMEWORK_VERSION = "The major version letter number for a framework.  This applies only to Framework targets.";
+    };
+}

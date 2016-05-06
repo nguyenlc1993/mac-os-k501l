@@ -1,0 +1,87 @@
+# This patch is similar to the usb_USB_9-series patch,
+# with the exceptions of higher current intensity settings
+# (the properties that contain the word 'current')
+# to allow more USB power output.
+# Either use this patch or the original patch, not both.
+
+# ————————————————————
+
+#Maintained by: RehabMan for: Laptop Patches
+#usb_USB_9-series.txt
+
+# USB property injection for 9-series boards
+
+# Insert Apple USB properties into EHC1
+into method label _DSM parent_adr 0x001D0000 remove_entry;
+into device name_adr 0x001D0000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "AAPL,clock-id", Buffer () { 0x01 },\n
+        "AAPL,slot-name", "Built In",\n
+        "name", "Intel EHCI Controller",\n
+        "model", Buffer () { "Intel 9 Series Chipset Family USB Enhanced Host Controller #1" },\n
+        "device_type", Buffer () { "USB Controller" },\n
+        "built-in", Buffer () { 0x00 },\n
+        "AAPL,current-available", 2100,\n
+        "AAPL,current-extra", 2700,\n
+        "AAPL,current-in-sleep", 1000,\n
+        "AAPL,current-extra-in-sleep", 2100,\n
+        "AAPL,device-internal", 0x02,\n
+        "AAPL,max-port-current-in-sleep", 2700,\n
+    })\n
+}\n
+end;
+
+# Insert Apple USB properties into EHC2
+into method label _DSM parent_adr 0x001A0000 remove_entry;
+into device name_adr 0x001A0000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "AAPL,clock-id", Buffer () { 0x01 },\n
+        "AAPL,slot-name", "Built In",\n
+        "name", "Intel EHCI Controller",\n
+        "model", Buffer () { "Intel 9 Series Chipset Family USB Enhanced Host Controller #2" },\n
+        "device_type", Buffer () { "USB Controller" },\n
+        "built-in", Buffer () { 0x00 },\n
+        "AAPL,current-available", 2100,\n
+        "AAPL,current-extra", 2700,\n
+        "AAPL,current-in-sleep", 1000,\n
+        "AAPL,current-extra-in-sleep", 2100,\n
+        "AAPL,device-internal", 0x02,\n
+        "AAPL,max-port-current-in-sleep", 2700,\n
+    })\n
+}\n
+end;
+
+# Insert Apple USB properties into USB 3.0 XHC
+into method label _DSM parent_adr 0x00140000 remove_entry;
+into device name_adr 0x00140000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "AAPL,clock-id", Buffer () { 0x02 },\n
+        "AAPL,slot-name", "Built In",\n
+        "name", "Intel XHCI Controller",\n
+        "model", Buffer () { "Intel 9 Series Chipset Family USB xHCI Host Controller" },\n
+        "device_type", Buffer () { "USB Controller" },\n
+        "built-in", Buffer() { 0x00 },\n
+        "AAPL,current-available", 2100,\n
+        "AAPL,current-extra", 2700,\n
+        "AAPL,current-in-sleep", 1000,\n
+        "AAPL,current-extra-in-sleep", 2100,\n
+        "AAPL,device-internal", 0x02,\n
+        "AAPL,max-port-current-in-sleep", 2700,\n
+    })\n
+}\n
+end;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+        <key>PBXBuildStyle</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The name of this build style.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A set of build settings that can override the settings in a target. One build style is active at a time when building a target.</string>
+			<key>Name</key>
+			<string>build style</string>
+			<key>PluralName</key>
+			<string>build styles</string>
+		</dict>
+    </dict>
+    <key>Description</key>
+	<string>This suite contains obsolete classes which should not appear in the dictionary.</string>
+	<key>Name</key>
+	<string>Xcode Base Hidden Suite</string>
+</dict>
+</plist>

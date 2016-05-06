@@ -1,0 +1,1797 @@
+#
+#  Clang Diagnostic Message Patterns
+#
+#  Copyright (c) 2009-2010 Apple Inc.
+#  All rights reserved.
+#
+
+   1  NTE>  note: *
+   2  WRN>  warning: *
+   3  ERR>  error: *
+   4  ERR>  fatal error: *
+   5  ERR>  internal error: *
+   0  SKIP  1 diagnostic generated.
+   0  SKIP  * diagnostics generated.
+  10  SMSF  instantiated from:
+2292  MESG  zero-length arrays are not permitted in C++
+1952  MESG  zero vector size
+2291  MESG  zero size arrays are an extension
+2519  MESG  you need to include <typeinfo> before using the 'typeid' operator
+1294  MESG  write-strings
+1768  MESG  writable atomic property * cannot pair a synthesized setter/getter with a user defined setter/getter
+1695  MESG  will never be executed
+2643  MESG  wide string is invalid in 'asm'
+1353  MESG  whitespace required after macro name
+1354  MESG  whitespace recommended after macro name
+2203  SMSG  while substituting prior template arguments into * template parameter*
+2200  SMSG  while substituting explicitly-specified template arguments into function template *
+2201  SMSG  while substituting deduced template arguments into function template *
+2204  SMSG  while checking a default template argument used here
+2526  MESG  when type is in parentheses, array cannot have dynamic size
+1978  MESG  weakref declaration of '*' must be static
+1979  MESG  weakref declaration of '*' must be in a global context
+1980  MESG  weakref declaration of '*' must also have an alias attribute
+1975  MESG  weak identifier * never declared
+1976  MESG  weak declaration of '*' must be public
+2358  MESG  void block should not return a value
+2792  MESG  void * should not return void expression
+2791  MESG  void * should not return a value
+1806  MESG  virtual function * has more than one final overrider in *
+1875  MESG  virtual function * has a different return type (*) than the function it overrides (which has return type *)
+1320  MESG  version control conflict marker in file
+1293  MESG  vector-conversions
+1951  MESG  vector size not an integral multiple of component size
+2602  MESG  vector is not assignable (contains duplicate components)
+1956  MESG  vector component access exceeds type *
+1292  MESG  variadic-macros
+1617  MESG  variadic templates are only allowed in C++0x
+1375  MESG  variadic macros were introduced in C99
+1987  MESG  variadic function cannot use * calling convention
+2282  MESG  variably modified type declaration not allowed at file scope
+2283  MESG  variably modified type declaration can not have 'extern' linkage
+2298  MESG  variable-sized object may not be initialized
+1830  MESG  variable of type * has * destructor
+1651  MESG  variable length arrays are not permitted in C++
+1650  MESG  variable length arrays are a C99 feature, accepted as an extension
+1658  MESG  variable length array must be bound in function definition
+2279  MESG  variable length array declaration not allowed at file scope
+2280  MESG  variable length array declaration can not have 'static' storage duration
+2281  MESG  variable length array declaration can not have 'extern' linkage
+2603  MESG  variable is not assignable (missing __block type specifier)
+2411  MESG  variable has incomplete type *
+1467  MESG  variable declaration in for loop is a C99-specific feature
+1927  MESG  variable * declared with 'auto' type cannot appear in its own initializer
+2110  MESG  variable * declared as a template
+1378  MESG  varargs argument missing, but tolerated as an extension
+2564  MESG  value of type * is not contextually convertible to 'bool'
+1716  MESG  value of #pragma pack(show) == *
+1192  SMSG  using this macro definition from precompiled header
+2577  MESG  using the result of an assignment as a condition without parentheses
+2369  MESG  using extended field designator is an extension
+1668  MESG  using declaration requires a qualified name
+1672  MESG  using declaration refers to its own class
+1673  MESG  using declaration refers into '*', which is not a base class of *
+1671  MESG  using declaration in class refers into '*', which is not a class
+1675  MESG  using declaration can not refer to namespace
+1674  MESG  using declaration can not refer to class member
+1678  MESG  using declaration can not refer to a template specialization
+1677  MESG  using declaration can not refer to a destructor
+1676  MESG  using declaration can not refer to a constructor
+1721  MESG  using '#pragma weak' to refer to an undeclared identifier is not yet supported
+1044  SMSG  using
+2622  MESG  used type * where arithmetic or pointer type is required
+1704  MESG  use of unknown builtin *
+1034  MESG  use of uninitialized variable
+2321  MESG  use of undeclared label '*'
+2841  MESG  use of undeclared identifier *; did you mean *?
+2245  MESG  use of undeclared identifier *
+2840  MESG  use of undeclared *; did you mean *?
+2247  MESG  use of undeclared *
+2735  MESG  use of unary operator that may be intended as compound assignment (*=)
+1605  MESG  use of right-shift operator ('>>') in template argument will require parentheses in C++0x
+2075  MESG  use of overloaded operator '*' is ambiguous
+1665  MESG  use of out-of-scope declaration of *
+1323  MESG  use of non-standard escape character '\*'
+1459  MESG  use of empty * extension
+2046  MESG  use of default argument to function * that is declared later in class *
+2114  MESG  use of class template * requires template arguments
+2470  MESG  use of GNU void* extension
+1472  MESG  use of GNU statement expression extension
+1478  MESG  use of GNU old-style field designator extension
+1470  MESG  use of GNU indirect-goto extension
+1474  MESG  use of GNU empty initializer extension
+1479  MESG  use of GNU case range extension
+1475  MESG  use of GNU array range extension
+1471  MESG  use of GNU address-of-label extension
+1473  MESG  use of GNU ?: expression extension, eliding middle term
+1476  MESG  use of GNU 'missing =' extension in designator
+2826  MESG  use of C99-specific array features, accepted as an extension
+2268  MESG  use of * with tag type that does not match previous declaration
+2737  MESG  use of '*n' in format string discouraged (potentially insecure)
+2190  SMSG  use -ftemplate-depth-N to increase recursive template instantiation depth
+2578  SMSG  use '==' to turn this assignment into an equality comparison
+1285  MESG  unused-variable
+1656  MESG  unused variable *
+1655  MESG  unused parameter *
+1659  MESG  unused function *
+1003  MESG  unterminated symbolic operand name in inline assembly string
+1435  MESG  unterminated function-like macro invocation
+1396  MESG  unterminated conditional directive
+1318  MESG  unterminated /* comment
+1070  MESG  unsupported use of internal gcc -Z option '*'
+1955  MESG  unsupported type * for vector_size attribute, please use on typedef
+1063  MESG  unsupported option '*'
+2003  MESG  unsupported machine mode *
+2649  MESG  unsupported inline asm: input with type * matching output with type *
+2124  SMSG  unnamed type used in template argument was declared here
+1279  MESG  unknown-pragmas
+1199  MESG  unknown warning option '*'
+1429  MESG  unknown warning group '*', ignored
+2001  MESG  unknown visibility '*'
+2837  MESG  unknown type name *; did you mean *?
+1543  MESG  unknown type name *
+1596  MESG  unknown template name *
+1056  MESG  unknown target triple '*', please use -triple or -arch
+1057  MESG  unknown target CPU '*'
+1058  MESG  unknown target ABI '*'
+1002  MESG  unknown symbolic operand name in inline assembly string
+2650  MESG  unknown register name '*' in asm
+2487  MESG  unknown receiver *; did you mean *?
+1558  MESG  unknown property attribute *
+1420  MESG  unknown pragma in STDC namespace
+1419  MESG  unknown pragma ignored
+1102  MESG  unknown platform, assuming -mfloat-abi=*
+2002  MESG  unknown machine mode *
+1664  MESG  unknown linkage language
+1430  MESG  unknown kind of pragma comment
+1324  MESG  unknown escape sequence '\*'
+1088  MESG  unknown argument: '*'
+1624  MESG  unknown action for '#pragma pack' - ignored
+1200  MESG  unknown * warning specifier: '*'
+1329  MESG  universal character name is too long
+2685  MESG  unions cannot have base classes
+2687  MESG  unions cannot be base classes
+1871  MESG  union member * has a non-trivial *
+1921  SMSG  uninitialized reference member is here
+1278  MESG  uninitialized
+1531  MESG  unexpected type name *: expected identifier
+2243  MESG  unexpected type name *: expected expression
+1428  MESG  unexpected token in pragma diagnostic
+1563  MESG  unexpected token after Objective-C string
+2244  MESG  unexpected namespace name *: expected expression
+2464  MESG  unexpected interface name *: expected expression
+1524  MESG  unexpected '@' in program
+1546  MESG  unexpected ':' in nested name specifier
+1359  MESG  undefining builtin macro
+1288  MESG  undeclared-selector
+1719  MESG  undeclared variable * used as an argument for '#pragma unused'
+1791  MESG  undeclared selector *
+1073  MESG  unable to remove file: *
+1130  MESG  unable to read PCH file: '*'
+1136  MESG  unable to open output file '*': '*'
+1137  MESG  unable to open logfile file '*': '*'
+1093  MESG  unable to open CC_PRINT_OPTIONS file: *
+1072  MESG  unable to make temporary file: *
+1127  MESG  unable to load plugin '*': '*'
+1126  MESG  unable to load PCH file
+1129  MESG  unable to interface with target machine
+1122  MESG  unable to handle compilation, expected exactly one compiler job in '*'
+1121  MESG  unable to find plugin '*'
+1074  MESG  unable to execute command: *
+1128  MESG  unable to create target: '*'
+1115  MESG  unable to change standard output to binary
+1116  MESG  unable to change standard error to binary
+2563  MESG  types may not be defined in conditions
+2677  MESG  types cannot be declared in an anonymous *
+2233  MESG  typename specifier refers to non-type member * in *
+1614  MESG  typename specifier refers to a non-template
+1711  MESG  typedef requires a name
+2264  MESG  typedef redefinition with different types (* vs *)
+1858  MESG  typedef member * cannot be a bit-field
+2402  MESG  typedef declarator cannot be qualified
+1277  MESG  type-limits
+1466  MESG  type-less parameter names in function declaration
+1652  MESG  type specifier required for unnamed parameter, defaults to int
+2821  MESG  type specifier missing, defaults to 'int'
+2455  MESG  type qualifier is not allowed on this function
+1757  MESG  type of setter must be void
+1755  MESG  type of property * does not match type of accessor *
+1783  MESG  type of property * (*) does not match type of ivar * (*)
+2005  MESG  type of machine mode does not match type of base type
+1534  MESG  type name requires a specifier or qualifier
+1535  MESG  type name does not allow storage class to be specified
+1536  MESG  type name does not allow function specifier to be specified
+2702  SMSG  type declaration hidden
+2667  MESG  type * is not a direct or virtual base of '*'
+1011  MESG  type * has incompatible definitions in different translation units
+2079  MESG  type * does not provide a * operator
+2206  MESG  type * cannot be used prior to '::' because it has no members
+1724  MESG  trying to recursively use * as superclass of *
+1276  MESG  trigraphs
+1304  MESG  trigraph ignored
+1306  MESG  trigraph ends block comment
+1307  MESG  trigraph converted to '*' character
+1106  MESG  treating '*' input as '*' when in C++ mode, this behavior is deprecated
+1997  MESG  transparent_union attribute can only be applied to a union definition; attribute ignored
+1999  MESG  transparent union definition must contain at least one field; transparent_union attribute ignored
+1708  MESG  too many parameters (*) for 'main': must be 0, 2, or 3
+1035  MESG  too many errors emitted, stopping now
+2307  MESG  too many braces around scalar initializer
+2612  MESG  too many arguments to * call, expected at most *, have *
+2611  MESG  too many arguments to * call, expected *, have *
+1436  MESG  too many arguments provided to function-like macro invocation
+2610  MESG  too few arguments to * call, expected at least *, have *
+2609  MESG  too few arguments to * call, expected *, have *
+1437  MESG  too few arguments provided to function-like macro invocation
+2613  MESG  too * arguments in call to *
+1412  MESG  token is not a valid binary operator in a preprocessor subexpression
+1043  SMSG  to match this '*'
+1688  MESG  thread-local storage is unsupported for the current target
+2261  MESG  thread-local declaration of * follows non-thread-local declaration
+2556  MESG  the type of object expression (*) does not match the type being destroyed (*) in pseudo-destructor expression
+1179  MESG  the macro '__OPTIMIZE__' was * in the PCH file but is currently *
+1180  MESG  the macro '__OPTIMIZE_SIZE__' was * in the PCH file but is currently *
+1184  MESG  the macro '__NO_INLINE__' was * in the PCH file but is currently *
+1101  MESG  the clang compiler does not support '*'
+1181  MESG  the PCH file was compiled * but the current translation unit is being compiled as *
+1185  MESG  the PCH file was built with * garbage collection but the current translation unit will compiled with * garbage collection
+2521  MESG  the 'static' modifier for the array size is not legal in new expressions
+1350  MESG  the #__include_macros directive is only for internal use by -imacros
+2412  MESG  tentative definition of variable with internal linkage has incomplete non-array type *
+2413  MESG  tentative definition has type * that is never completed
+2414  MESG  tentative definition has array of type * that is never completed
+2415  MESG  tentative array definition assumed to have one element
+1828  MESG  temporary of type * has * destructor
+2092  MESG  templates must have C++ linkage
+2091  MESG  templates can only be declared in namespace or class scope
+2128  MESG  template template argument has different template parameters than its corresponding template template parameter
+2168  MESG  template specialization requires 'template<>'
+2169  MESG  template specialization or definition requires a template parameter list corresponding to the nested type *
+2165  MESG  template specialization declaration cannot be a friend
+2104  MESG  template parameter redefines default argument
+2242  MESG  template parameter pack must be the last template parameter
+2241  MESG  template parameter pack cannot have a default argument
+2106  MESG  template parameter missing a default argument
+2170  MESG  template parameter list matching the non-templated nested type * should be empty ('template<>')
+2089  SMSG  template parameter is declared here
+2099  SMSG  template parameter has a different kind in template argument
+2098  MESG  template parameter has a different kind in template *redeclaration
+2101  SMSG  template non-type parameter has a different type * in template argument
+2100  MESG  template non-type parameter has a different type * in template *redeclaration
+2116  SMSG  template is declared here
+2123  MESG  template argument uses unnamed type
+2122  MESG  template argument uses local type *
+2127  SMSG  template argument refers to function template *, here
+2125  MESG  template argument is the type of an unresolved overloaded function
+2118  MESG  template argument for template type parameter must be a type
+2121  MESG  template argument for template template parameter must be a class template
+2119  MESG  template argument for non-type template parameter must be an expression
+2120  MESG  template argument for non-type template parameter is treated as type *
+2126  MESG  template argument does not refer to a class template or template template parameter
+1682  MESG  target of using declaration conflicts with declaration already in scope
+1679  SMSG  target of using declaration
+1820  MESG  target exception specification is not superset of source
+2429  MESG  taking the address of a temporary object of type *
+1781  MESG  synthesized property * must either be named the same as a compatible ivar or must explicitly name an ivar
+1788  MESG  synthesized properties * and * both claim ivar *
+2044  SMSG  synthesized method is first required here
+1259  MESG  synth
+2783  MESG  switch condition type * requires explicit conversion to *
+2784  MESG  switch condition has incomplete class type *
+2772  MESG  switch condition has boolean value
+1290  MESG  super-class-method-mismatch
+2319  MESG  suggest braces around initialization of subobject
+2435  MESG  subtraction of pointer * requires pointee to be a complete object type
+2384  MESG  subscripted value is not an array, pointer, or vector
+2381  MESG  subscript requires size of interface *, which is not constant in non-fragile ABI
+2387  MESG  subscript of pointer to incomplete type *
+2386  MESG  subscript of pointer to function type *
+1644  MESG  subobject initialization overrides initialization of other fields within its enclosing subobject
+1055  SMSG  subexpression not valid in an integer constant expression
+1590  MESG  string literal after 'operator' must be '""'
+1274  MESG  strict-selector-match
+1947  MESG  strftime format attribute requires 3rd parameter to be 0
+1846  MESG  storage class specified for a member declaration
+1794  MESG  static_assert failed "*"
+1793  MESG  static_assert expression is not an integral constant expression
+2679  MESG  static members cannot be declared in an anonymous *
+1856  MESG  static member * cannot be a bit-field
+2258  MESG  static declaration of * follows non-static declaration
+2684  MESG  static data member * not allowed in local class *
+2050  MESG  static and non-static member functions with the same parameter types cannot be overloaded
+2778  MESG  statement requires expression of scalar type (* invalid)
+2779  MESG  statement requires expression of integer type (* invalid)
+2448  MESG  statement expression not allowed at file scope
+2349  MESG  star modifier used outside of function prototype
+1175  MESG  stack protector was * in PCH file but is currently *
+1717  MESG  specifying both a name and alignment to 'pop' is undefined
+2560  MESG  specialization of template * does not refer to a scalar type in pseudo-destructor expression
+2161  MESG  specialization of member * does not specialize an instantiated member
+1169  MESG  sjlj-exceptions were * in PCH file but are currently *
+2278  MESG  size of static array must be an integer constant expression
+2317  MESG  size of bit-field * (* bits) exceeds the size of its type; value will be truncated to * bits
+2315  MESG  size of bit-field * (* bits) exceeds size of its type (* bits)
+2294  MESG  size of array has non-integer type *
+2318  MESG  size of anonymous bit-field (* bits) exceeds size of its type; value will be truncated to * bits
+2316  MESG  size of anonymous bit-field (* bits) exceeds size of its type (* bits)
+1178  MESG  signed integer overflow checking was * in PCH file but is currently *
+1258  MESG  sign-compare
+2374  MESG  shift count is negative
+2375  MESG  shift count >= width of type
+1256  MESG  shadow
+1555  MESG  setter/getter expects '=' followed by name
+2475  MESG  setter method is needed to assign to object using property" " assignment syntax
+1255  MESG  sequence-point
+1571  MESG  semicolon before method body is ignored
+2760  MESG  self-comparison always results in a constant value
+2814  MESG  selector element type * is not a valid object
+2813  MESG  selector element is not a valid lvalue
+2787  MESG  second parameter of 'va_start' not last named argument
+2308  MESG  scalar initializer cannot be empty
+1527  MESG  rvalue references are only allowed in C++0x
+1904  MESG  rvalue reference cannot bind to lvalue due to multiple conversion functions
+1902  MESG  rvalue reference cannot bind to lvalue
+1366  MESG  right side of operator converted from negative value to unsigned: *
+2543  MESG  right hand operand to * has non pointer-to-member type *
+2759  MESG  returning block that lives on the local stack
+2758  MESG  returning address of label, which is local
+1253  MESG  return-type
+1882  MESG  return type of virtual function * is not covariant with the return type of the function it overrides (class type * is more qualified than class type *
+1878  MESG  return type of virtual function * is not covariant with the return type of the function it overrides (ambiguous conversion from derived class * to base class *:*)
+1879  MESG  return type of virtual function * is not covariant with the return type of the function it overrides (* is not derived from *)
+1880  MESG  return type of virtual function * is not covariant with the return type of the function it overrides (* is incomplete)
+1881  MESG  return type of virtual function * is not covariant with the return type of the function it overrides (* has different qualifiers than *)
+2764  MESG  return not allowed in block expression literal
+2553  MESG  return in the catch of a function try block of a constructor is illegal
+2761  MESG  result of comparison against * is unspecified (use strncmp instead)
+2288  MESG  restrict requires a pointer or reference (* is invalid)
+2289  MESG  restrict requires a pointer or reference
+1750  SMSG  required for direct or indirect protocol *
+1968  MESG  requested alignment is not a power of 2
+1287  MESG  reorder
+2373  MESG  remainder by zero is undefined
+1411  MESG  remainder by zero in preprocessor expression
+1740  MESG  reimplementation of class *
+1741  MESG  reimplementation of category * for class *
+2234  SMSG  referenced member * is declared here
+1917  MESG  reference to type * requires an initializer
+1909  MESG  reference to type * could not bind to an * of type *
+1910  MESG  reference to type * cannot bind to an initializer list
+2757  MESG  reference to stack memory associated with local variable * returned
+2682  MESG  reference to local variable * declared in enclosed function *
+2699  MESG  reference to * is ambiguous
+1920  MESG  reference member of type * uninitialized
+2073  MESG  reference initialization of type * with initializer of type * is ambiguous
+1918  MESG  reference cannot be initialized with multiple values
+2136  MESG  reference binding of non-type template parameter of type * to template argument of type * ignores qualifiers
+1252  MESG  redundant-decls
+2257  MESG  redefinition of typedef * is invalid in C
+1049  MESG  redefinition of parameter *
+2320  MESG  redefinition of label '*'
+2272  MESG  redefinition of enumerator *
+2034  MESG  redefinition of default argument
+2262  MESG  redefinition of * with a different type
+2263  MESG  redefinition of * as different kind of symbol
+2255  MESG  redefinition of *
+1360  MESG  redefining builtin macro
+1681  MESG  redeclaration of using decl
+2189  MESG  recursive template instantiation exceeded maximum depth of *
+2485  MESG  receiver type * is not 'id' or interface pointer, consider casting it to 'id'
+2818  MESG  receiver * is a forward class and corresponding @interface may not exist
+1286  MESG  readonly-setter-attrs
+2447  MESG  read-only variable is not assignable
+2356  MESG  qualifier specification on block pointer type not allowed
+2287  MESG  qualifier on function type * has unspecified behavior
+2225  MESG  qualifier in explicit instantiation of * requires a template-id
+2226  MESG  qualifier in explicit instantiation of '**' requires a template-id
+1611  MESG  qualified reference to * is a constructor name rather than a type wherever a constructor can be declared
+1610  MESG  qualified reference to * is a constructor name rather than a template name wherever a constructor can be declared
+1843  MESG  qualified member access refers to a member in *
+1811  SMSG  pure virtual function *
+1550  MESG  protocol qualifiers without 'id' is archaic
+1729  MESG  protocol has circular dependency
+1289  MESG  protocol
+1763  MESG  property with '*' attribute must be of object type
+1734  MESG  property type * is incompatible with type * inherited from *
+1569  MESG  property synthesize requires specification of an ivar
+1556  MESG  property requires fields to be named
+1777  MESG  property of reference type is not supported
+1557  MESG  property name cannot be a bitfield
+1779  MESG  property implementation must have its declaration in the category *
+1773  MESG  property implementation must have its declaration in interface *
+1780  MESG  property implementation must be in a class or category implementation
+1778  MESG  property implementation in a category with no category declaration
+2469  MESG  property has a previous declaration
+1774  MESG  property declared in category * cannot be implemented in class implementation
+1775  SMSG  property declared here
+1769  MESG  property declaration in continuation class of * is to change a 'readonly' property to 'readwrite'
+1771  MESG  property cannot have array or function type *
+1790  MESG  property attributes '*' and '*' are mutually exclusive
+1766  MESG  property attribute in continuation class does not match the primary class
+2639  MESG  property access result unused - getters should not have side effects
+2494  MESG  property * requires method * to be defined - use @synthesize, @dynamic or provide a method implementation
+2495  MESG  property * requires method * to be defined - use @dynamic or provide a method implementation in category
+2847  MESG  property * not found on object of type *; did you mean *?
+2468  MESG  property * not found on object of type *
+1789  MESG  property * is already implemented
+1032  MESG  property * declared with incompatible types in different translation units (* vs. *)
+1784  MESG  property * attempting to use ivar * declared in super class *
+1733  MESG  property * '*' attribute does not match the property inherited from *
+1559  MESG  properties are an Objective-C 2 feature
+2048  MESG  promoted type * of K&R function parameter is not compatible with the parameter type * declared in a previous prototype
+1725  MESG  previously declared alias is ignored
+1835  SMSG  previously declared '*' here
+1039  SMSG  previous use is here
+2210  SMSG  previous template specialization is here
+2097  SMSG  previous template * is here
+2024  SMSG  previous overload of function is here
+2102  SMSG  previous non-type template parameter with type * is here
+1646  SMSG  previous initialization *is here*
+1038  SMSG  previous implicit declaration is here
+2208  SMSG  previous explicit instantiation is here
+1036  SMSG  previous definition is here
+2105  SMSG  previous default template argument defined here
+2184  SMSG  previous declaration of class template partial specialization * is here
+1037  SMSG  previous declaration is here
+1040  SMSG  previous case defined here
+1560  MESG  prefix attribute must be followed by an interface or protocol
+1632  MESG  predefined identifier is only valid inside function
+2754  MESG  precision used in '*' conversion specifier (where it has no meaning)
+1426  MESG  pragma diagnostic pop could not pop, no matching push
+1427  MESG  pragma diagnostic expected option name (e.g. "-Wundef")
+1424  MESG  pragma diagnostic expected 'error', 'warning', 'ignored', or 'fatal'
+1425  MESG  pragma diagnostic expected 'error', 'warning', 'ignored', 'fatal' 'push', or 'pop'
+1418  MESG  pragma comment requires parenthesized identifier and optional string
+1423  MESG  pragma STDC FENV_ACCESS ON is not supported, ignoring pragma
+2745  MESG  position arguments in format strings start counting at 1 (not 0)
+1357  MESG  poisoning existing macro
+2634  MESG  pointer/integer type mismatch in conditional expression (* and *)
+1251  MESG  pointer-to-int-cast
+2633  MESG  pointer type mismatch (* and *)
+2290  MESG  pointer to function type * may not be 'restrict' qualified
+2628  MESG  pointer cannot be cast to type *
+1697  SMSG  please include the header <*> or explicitly provide a declaration for '*'
+1456  MESG  plain '_Complex' requires a type specifier; assuming '_Complex double'
+2579  SMSG  place parentheses around the assignment to silence this warning
+2378  SMSG  place parentheses around the * expression to silence this warning
+2377  SMSG  place parentheses around the * expression to evaluate it first
+1438  MESG  pasting formed '*', an invalid preprocessing token
+2185  MESG  partial specialization of * does not use any of its template parameters
+2182  SMSG  partial specialization matches *
+2222  MESG  partial ordering for explicit instantiation of * is ambiguous
+1480  MESG  parse error
+1296  MESG  parentheses", [DiagGroup<"idiomatic-parentheses
+1579  MESG  parentheses were disambiguated as a function declarator
+2824  MESG  parameter requires a declaration specifier
+2710  MESG  parameter of overloaded post-* operator must have type 'int' (not *)
+2707  MESG  parameter of overloaded * cannot have a default argument
+2719  MESG  parameter of * cannot have a default argument
+1574  MESG  parameter named * is missing
+1654  MESG  parameter name omitted
+1964  MESG  parameter may not be qualified with an address space
+2403  MESG  parameter declarator cannot be qualified
+2723  MESG  parameter declaration for literal operator * is not valid
+2031  MESG  parameter * was not declared, defaulting to type 'int'
+1249  MESG  packed
+1876  SMSG  overridden virtual function is here
+1248  MESG  overloaded-virtual
+2704  MESG  overloaded * must have at least one parameter of class or enumeration type
+2709  MESG  overloaded * must be a non-static member function
+2708  MESG  overloaded * must be a * operator (has * parameter*)
+2705  MESG  overloaded * cannot be variadic
+2706  MESG  overloaded * cannot be a static member function
+2077  MESG  overload resolution selected * operator '*'
+2656  MESG  overload requires a non-zero constant expression as first argument
+1714  MESG  overflow in enumeration value
+2773  MESG  overflow converting case value to switch condition type (* to *)
+1247  MESG  overflow
+2399  MESG  out-of-line definition of * from class * without definition
+2400  MESG  out-of-line definition of * does not match any declaration in *
+2404  MESG  out-of-line declaration of a member must be a definition
+1609  MESG  out-of-line constructor for * cannot have template arguments
+2439  MESG  ordered comparison of function pointers (* and *)
+2438  MESG  ordered comparison between pointer and zero (* and *) is an extension
+2437  MESG  ordered comparison between pointer and integer (* and *)
+2620  MESG  ordered compare requires two args of floating point type (* and *)
+2828  SMSG  or because setter is declared here, but no getter method * is found
+1067  MESG  option '*' cannot be used with multiple -arch options
+1406  MESG  operator 'defined' requires an identifier
+2450  MESG  operands of ? are integers of different signs: * and *
+2629  MESG  operand of type * where arithmetic or pointer type is required
+2627  MESG  operand of type * cannot be cast to a pointer type
+2525  MESG  only the first dimension of an allocated array may have dynamic size
+1709  MESG  only one parameter on 'main' declaration
+2812  MESG  only one element declaration is allowed
+1720  MESG  only local variables can be arguments to '#pragma unused'
+1812  MESG  only functions can have deleted definitions
+2658  MESG  only constructors take base initializers
+1246  MESG  old-style-definition
+2367  MESG  offsetof requires struct, union, or class type, * invalid
+2368  MESG  offsetof requires array type, * invalid
+2366  MESG  offsetof of incomplete type *
+2370  MESG  offset of on non-POD type *
+1344  MESG  octal escape sequence out of range
+2555  MESG  object expression of non-scalar type * cannot be used in a pseudo-destructor expression
+1631  MESG  null pointer expression is not an integer constant expression (but is allowed as an extension)
+2748  MESG  null passed to a callee which requires a non-null argument
+1298  MESG  null character(s) preserved in string literal
+1299  MESG  null character(s) preserved in character literal
+1300  MESG  null character ignored
+1098  MESG  not using the clang preprocessor due to user override
+1100  MESG  not using the clang compiler for the '*' architecture
+1099  MESG  not using the clang compiler for C++ inputs
+2251  MESG  not enough variable arguments in * declaration to fit a sentinel
+1244  MESG  nonportable-cfstrings
+1946  MESG  nonnull attribute only applies to pointer arguments
+1243  MESG  nonnull
+2359  MESG  non-void block should return a value
+2790  MESG  non-void * should return a value
+1245  MESG  non-virtual-dtor
+2135  MESG  non-type template parameter of reference type * cannot bind to template argument of type *
+2133  MESG  non-type template argument with value '*' converted to '*' for unsigned template parameter of type *
+2134  MESG  non-type template argument value '*' truncated to '*' for template parameter of type *
+2177  MESG  non-type template argument specializes a template parameter with dependent type *
+2143  MESG  non-type template argument refers to non-static member function *
+2142  MESG  non-type template argument refers to non-static data member *
+2129  MESG  non-type template argument of type * must have an integral or enumeration type
+2130  MESG  non-type template argument of type * is not an integral constant expression
+2132  MESG  non-type template argument of type * cannot be converted to a value of type *
+2141  MESG  non-type template argument of reference type * is not an object
+2149  MESG  non-type template argument is not a pointer to member constant
+2139  MESG  non-type template argument for template parameter of pointer type * must have its address taken
+2137  MESG  non-type template argument does not refer to any declaration
+2148  MESG  non-type template argument does not refer to an object or function
+2138  MESG  non-type template argument does not directly refer to an object or function
+2176  MESG  non-type template argument depends on a template parameter of the partial specialization
+2150  MESG  non-type template argument cannot be surrounded by parentheses
+2260  MESG  non-thread-local declaration of * follows thread-local declaration
+2213  SMSG  non-templated declaration is here
+2145  MESG  non-template argument refers to object * that does not have external linkage
+2144  MESG  non-template argument refers to function * with internal linkage
+2146  SMSG  non-template argument refers to * here
+2147  SMSG  non-template argument refers here
+2696  MESG  non-static member * found in multiple base-class subobjects of type *:*
+2259  MESG  non-static declaration of * follows static declaration
+2401  MESG  non-static data member defined out-of-line
+2598  MESG  non-object type * is not assignable
+2344  MESG  non-empty initialization of flexible array member inside subobject
+2180  SMSG  non-deducible template parameter *
+1797  MESG  non-class type * cannot be a friend
+2078  MESG  no viable overloaded operator[] for type *
+2076  MESG  no viable overloaded '*'
+1923  MESG  no viable copy constructor * of type *
+2566  MESG  no viable conversion from * to *
+2838  MESG  no type named * in *; did you mean *?
+2232  MESG  no type named * in *
+2842  MESG  no template named *; did you mean *?
+2843  MESG  no template named * in *; did you mean *?
+2482  MESG  no super class declared in @interface for *
+2533  MESG  no suitable member * in *
+1062  MESG  no such file or directory: '*'
+2254  MESG  no previous prototype for function *
+1310  MESG  no newline at end of file
+2839  MESG  no member named * in *; did you mean *?
+2397  MESG  no member named * in *
+2052  MESG  no matching member function for call to *
+2080  MESG  no matching function for call to object of type *
+2051  MESG  no matching function for call to *
+2071  MESG  no matching constructor for initialization of *
+1069  SKIP  no input files
+2186  MESG  no function template matches function template specialization *
+1800  MESG  no function named * with type * was found in the specified scope
+1026  SMSG  no corresponding superclass here
+1014  SMSG  no corresponding field here
+1022  SMSG  no corresponding enumerator here
+1019  SMSG  no corresponding base class here
+2481  MESG  no @interface declaration found in class messaging of *
+2573  MESG  no * named * in *
+1764  MESG  no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed
+1239  MESG  newline-eof
+2267  MESG  nested redefinition of *
+2174  MESG  nested name specifier '*' for declaration does not refer into a class, class template or class template partial specialization
+1376  MESG  named variadic macros are a GNU extension
+2314  MESG  named bit-field * has zero width
+2730  MESG  must use a typedef to declare a conversion to *
+1801  MESG  must use a qualified name when declaring a * as a friend
+1544  MESG  must use '*' tag to refer to type **
+1151  MESG  must specify system root with -isysroot when building a relocatable PCH file
+1799  MESG  must specify '*' to befriend *
+2569  MESG  must qualify the name * to declare * in this scope
+2246  SMSG  must qualify identifier to find this declaration in dependent base class
+2426  MESG  must explicitly qualify member function * when taking its address
+1754  MESG  multiple methods named * found
+2659  MESG  multiple initializations given for non-static member *
+2661  MESG  multiple initializations given for base *
+2491  MESG  multiple garbage collection attributes specified for type
+2780  MESG  multiple default labels in one switch
+2781  MESG  multiple conversions from switch condition type * to an integral or enumeration type
+1961  MESG  multiple address spaces specified for type
+1237  MESG  multichar
+1308  MESG  multi-line // comment
+1322  MESG  multi-character character constant
+2738  MESG  more '*' conversions than data arguments
+2004  MESG  mode attribute only supported for integer and floating-point types
+1236  MESG  missing-noreturn
+1403  MESG  missing value before operator
+1589  MESG  missing type specifier after 'operator'
+1315  MESG  missing terminating '"' character
+1316  MESG  missing terminating ' character
+2252  MESG  missing sentinel in *
+1104  MESG  missing resource library '*', link may fail
+2305  MESG  missing field '*' initializer
+2036  MESG  missing default argument on parameter *
+2035  MESG  missing default argument on parameter
+1772  MESG  missing context for property implementation declaration
+1761  MESG  missing context for method declaration
+1549  MESG  missing @end
+2235  MESG  missing 'typename' prior to dependent type name '**'
+2240  MESG  missing 'template' keyword prior to dependent template name '**'
+1389  MESG  missing ')' in macro parameter list
+1408  MESG  missing ')' after '*'
+1621  MESG  missing ')' after '#pragma *' - ignoring
+1407  MESG  missing '(' after '*'
+1620  MESG  missing '(' after '#pragma *' - ignoring
+1241  MESG  mismatched-tags
+1547  MESG  method type specifier must start with '-' or '+'
+2836  MESG  method parameter type * does not match super class method parameter type *
+1047  MESG  method name referenced in property setter attribute must end with ':'
+1792  MESG  method in protocol not implemented
+1749  SMSG  method definition for * not found
+2835  MESG  method attribute can only be specified on method declarations
+2480  MESG  method * not found (return type defaults to 'id')
+2819  SMSG  method * is used for the forward class
+2390  MESG  member reference type * is not a pointer
+2391  MESG  member reference type * is * pointer; maybe you meant to use '*'?
+2388  MESG  member reference base type * is not a structure or union
+2354  MESG  member pointer refers into non-class type *
+2675  MESG  member of anonymous union redeclares *
+2676  MESG  member of anonymous struct redeclares *
+2117  SMSG  member is declared here
+2662  MESG  member initializer * does not name a non-static data member or base class
+2698  SMSG  member found by ambiguous name lookup
+2405  SMSG  member declaration nearly matches
+1844  MESG  member access into incomplete type *
+2697  MESG  member * found in multiple base classes of different types
+1451  MESG  meaningless 'volatile' on asm outside function
+1177  MESG  math functions * 'errno' in PCH file but they are currently set to * 'errno'
+1132  MESG  malformed or corrupted PCH file: '*'
+1133  MESG  malformed block record in PCH file: '*'
+1148  SMSG  main file unchanged
+1634  MESG  magnitude of floating-point constant too small for type *; minimum is *
+1633  MESG  magnitude of floating-point constant too large for type *; maximum is *
+1387  MESG  macro names must be identifiers
+1388  MESG  macro name missing
+1361  MESG  macro is not used
+1191  MESG  macro definitions used to build the precompiled header are missing
+1139  MESG  macro '*' contains embedded newline, text after the newline is ignored.
+1840  MESG  lookup of * in member access expression is ambiguous
+1841  SMSG  lookup in the object type * refers here
+1842  SMSG  lookup from the current scope refers here
+1240  MESG  long-long
+2830  MESG  local declaration of * hides instance variable
+1231  MESG  literal-range
+2722  MESG  literal operator * must be in a namespace or global scope
+1445  MESG  line marker directive requires a positive integer argument
+2804  MESG  level argument for a stack address builtin must be constant
+1365  MESG  left side of operator converted from negative value to unsigned: *
+2545  MESG  left hand operand to * must be a *class compatible with the right hand operand, but is *
+1164  MESG  lax vector conversions were * in PCH file but are currently *
+1065  MESG  language not recognized: '*'
+1519  MESG  label at end of compound statement: expected statement
+2326  SMSG  jump bypasses variable initialization
+2336  SMSG  jump bypasses setup of __block variable
+2328  SMSG  jump bypasses initialization of variable length array
+2334  SMSG  jump bypasses initialization of try block
+2329  SMSG  jump bypasses initialization of declaration with __attribute__((cleanup))
+2335  SMSG  jump bypasses initialization of catch block
+2327  SMSG  jump bypasses initialization of VLA typedef
+2330  SMSG  jump bypasses initialization of @try block
+2333  SMSG  jump bypasses initialization of @synchronized block
+2332  SMSG  jump bypasses initialization of @finally block
+2331  SMSG  jump bypasses initialization of @catch block
+2274  MESG  ivars may not be placed in *
+1866  SMSG  ivar is declared here
+1230  MESG  invalid-pch
+1080  MESG  invalid version number in '*'
+1940  MESG  invalid vector type *
+1089  MESG  invalid value '*' in '*'
+2151  MESG  invalid use of pointer to member type after *
+2457  MESG  invalid use of nonstatic data member *
+2454  MESG  invalid use of member * in static member function
+2458  MESG  invalid use of incomplete type *
+2651  MESG  invalid use of a cast in a inline asm context requiring an l-value: remove the cast or build with -fheinous-gnu-extensions
+2652  MESG  invalid use of a cast in a inline asm context requiring an l-value: accepted due to -fheinous-gnu-extensions, but clang may remove support for this in the future
+2453  MESG  invalid use of 'this' outside of a nonstatic member function
+1327  MESG  invalid universal character
+2419  MESG  invalid type * to * operator
+2648  MESG  invalid type * in asm input for constraint '*'
+1390  MESG  invalid token in macro parameter list
+1413  MESG  invalid token at start of a preprocessor expression
+1501  MESG  invalid token after top level declarator
+1059  MESG  invalid target feature '*'
+1333  MESG  invalid suffix '*' on integer constant
+1334  MESG  invalid suffix '*' on floating constant
+1363  MESG  invalid string literal, ignoring final '\'
+1050  MESG  invalid storage class specifier in function declarator
+2483  MESG  invalid receiver to message expression
+2829  MESG  invalid protocol qualifiers on non-ObjC type
+1380  MESG  invalid preprocessing directive
+2746  MESG  invalid position specified for *
+1092  MESG  invalid output type '*' for use with gcc tool
+2645  MESG  invalid output constraint '*' in asm
+1347  MESG  invalid or corrupt PTH file '*'
+1091  MESG  invalid option '*' not of the form <from-file>;<to-file>
+2434  MESG  invalid operands to binary expression (* and *)
+1005  MESG  invalid operand number in inline asm string
+2644  MESG  invalid lvalue in asm output
+2646  MESG  invalid lvalue in asm input for constraint '*'
+1448  MESG  invalid line marker flag '2': cannot pop empty include stack
+1090  MESG  invalid integral value '*' in '*'
+2647  MESG  invalid input constraint '*' in asm
+1903  MESG  invalid initialization of reference of type * from expression of type *
+1086  MESG  invalid float ABI '*'
+1447  MESG  invalid flag line marker directive
+1446  MESG  invalid filename for line marker directive
+1442  MESG  invalid filename for #line directive
+1332  MESG  invalid digit '*' in octal constant
+1330  MESG  invalid digit '*' in decimal constant
+1331  MESG  invalid digit '*' in binary constant
+1877  MESG  invalid covariant return for virtual function: * is a * base class of *
+2740  MESG  invalid conversion specifier '*'
+2655  MESG  invalid conversion between vector type * and scalar type *
+2654  MESG  invalid conversion between vector type * and integer type * of different size
+2653  MESG  invalid conversion between vector type * and * of different size
+2816  MESG  invalid conversion between ext-vector type * and *
+1625  MESG  invalid constant for '#pragma pack', expected * - ignored
+2591  MESG  invalid block pointer conversion *
+2430  MESG  invalid argument type * to unary expression
+1319  MESG  invalid argument to convert to character
+1078  MESG  invalid argument '*' only allowed with '*'
+1079  MESG  invalid argument '*' not allowed with '*'
+1066  MESG  invalid arch name '*'
+2380  MESG  invalid application of @defs in non-fragile ABI
+2362  MESG  invalid application of 'sizeof' to a function type
+2379  MESG  invalid application of '*' to interface * in non-fragile ABI
+2365  MESG  invalid application of '*' to bit-field
+2364  MESG  invalid application of '*' to an incomplete type *
+2363  MESG  invalid application of '*' to a void type
+1113  MESG  invalid action for AST input
+1077  MESG  invalid Xarch argument: '*'
+1075  MESG  invalid Darwin version number: *
+1112  MESG  invalid AST file: '*'
+1001  MESG  invalid * escape in inline assembly string
+1395  MESG  invalid #ident directive
+1712  MESG  interface type cannot be statically allocated
+1713  MESG  interface type * cannot be * by value; did you forget * in *
+1364  MESG  integer overflow in preprocessor expression
+1053  MESG  integer constant is too large for its type
+1054  MESG  integer constant is so large that it is unsigned
+1229  MESG  int-to-pointer-cast
+2406  MESG  instance variables must have a constant size
+1782  MESG  instance variable synthesis not yet supported (need to declare * explicitly)
+1743  MESG  instance variable is already declared
+2833  MESG  instance variable * is protected
+2832  MESG  instance variable * is private
+1742  MESG  instance variable * has conflicting type: * vs *
+1745  MESG  instance variable * has conflicting bit-field width
+1023  MESG  instance variable * declared with incompatible types in different translation units (* vs. *)
+2831  MESG  instance variable * accessed in class method
+2478  MESG  instance method * is being used on 'Class' which is not in the root class
+1131  MESG  input is not a PCH file: '*'
+1228  MESG  inline
+2660  MESG  initializing multiple members of anonymous union
+2304  MESG  initializer-string for char array is too long
+1645  MESG  initializer overrides prior initialization of this subobject
+1862  MESG  initializer on function does not look like a pure-specifier
+2460  MESG  initializer of a builtin type can only take one argument
+2311  MESG  initializer for aggregate with no elements requires explicit braces
+2295  MESG  initializer element is not a compile-time constant
+2844  MESG  initializer * does not name a non-static data member or base class; did you mean the *?
+1648  SMSG  initialized flexible array member * is here
+2299  MESG  initialization with '{...}' expected for array
+1912  MESG  initialization of reference to type * with a * of type * drops qualifiers
+1919  MESG  initialization of non-aggregate type * with an initializer list
+1227  MESG  init-self
+1025  SMSG  inherits from superclass * here
+1827  MESG  inherited virtual base class * has * destructor
+2695  SMSG  inheritance is implicitly 'private'
+2433  MESG  indirection to an interface is not supported (* invalid)
+2431  MESG  indirection requires pointer operand (* invalid)
+2432  MESG  indirection cannot be to an interface in non-fragile ABI (* invalid)
+2801  MESG  index for __builtin_shufflevector must be less than the total number of vector elements
+2800  MESG  index for __builtin_shufflevector must be a constant integer
+2536  MESG  incrementing expression of type bool is deprecated
+1747  MESG  inconsistent number of instance variables specified
+1328  MESG  incomplete universal character name
+2575  MESG  incomplete type in call to object of type *
+1845  MESG  incomplete type * where a complete type is required
+2641  MESG  incomplete type * used in type trait expression
+1839  MESG  incomplete type * named in nested name specifier
+2600  MESG  incomplete type * is not assignable
+2361  MESG  incomplete result type * in function definition
+1748  MESG  incomplete implementation
+2741  MESG  incomplete format specifier
+2396  MESG  incomplete definition of type *
+2590  MESG  incompatible vector types *
+1701  MESG  incompatible redeclaration of library function *
+2587  MESG  incompatible pointer types *
+2583  MESG  incompatible pointer to integer conversion *
+2631  MESG  incompatible operand types (* and *) use non-standard composite pointer type *
+2630  MESG  incompatible operand types (* and *)
+2584  MESG  incompatible integer to pointer conversion *
+2592  MESG  incompatible block pointer types *
+2669  MESG  in-class initializer is not an integral constant expression
+2668  MESG  in-class initializer has non-integral, non-enumeration type *
+2193  SMSG  in instantiation of template class * requested here
+2197  SMSG  in instantiation of static data member * requested here
+2195  SMSG  in instantiation of member function * requested here
+2194  SMSG  in instantiation of member class * requested here
+2196  SMSG  in instantiation of function template specialization * requested here
+2199  SMSG  in instantiation of default function argument expression for '*' required here
+2198  SMSG  in instantiation of default argument for '*' required here
+1226  MESG  import
+1696  MESG  implicitly declaring C library function '*' with type *
+1202  MESG  implicit-int
+2192  MESG  implicit instantiation of undefined member *
+1869  SMSG  implicit default * for * first required here
+1661  MESG  implicit declaration of function * is invalid in C99
+1660  MESG  implicit declaration of function *
+1699  MESG  implicit declaration of '*' requires inclusion of the header <stdio.h>
+1700  MESG  implicit declaration of '*' requires inclusion of the header <setjmp.h>
+1988  MESG  implicit cast turns vector to scalar: * to *
+1991  MESG  implicit cast turns floating-point number into integer: * to *
+1993  MESG  implicit cast loses integer precision: * to *
+1990  MESG  implicit cast loses floating-point precision: * to *
+1989  MESG  implicit cast discards imaginary component: * to *
+2496  SMSG  implementation is here
+1338  MESG  imaginary constants are an extension
+1553  MESG  illegal visibility specification
+1957  MESG  illegal vector component name '*'
+2323  MESG  illegal switch case into protected scope
+2422  MESG  illegal storage class on function
+2420  MESG  illegal storage class on file-scoped variable
+2493  MESG  illegal qualifiers on @catch parameter
+1554  MESG  illegal interface qualifier
+2310  MESG  illegal initializer type *
+2309  MESG  illegal initializer (only variables can be initialized)
+2324  MESG  illegal indirect goto in protected scope, unknown effect on scopes
+1962  MESG  illegal implicit cast between two pointers with different address spaces
+2322  MESG  illegal goto into protected scope
+2640  MESG  ignoring return value of function declared with * attribute
+1103  MESG  ignoring invalid -ftabstop value '*', using default value *
+1305  MESG  ignored trigraph would end block comment
+1450  MESG  ignored * qualifier on asm
+2785  MESG  if statement has empty body
+1225  MESG  idiomatic-parentheses
+1600  MESG  identifier followed by '<' indicates a class template specialization but *
+1900  MESG  identifier * in pseudo-destructor expression does not name a type
+2020  MESG  iboutlet attribute can only be applied to instance variables or properties
+2021  MESG  ibaction attribute can only be applied to Objective-C instance methods
+1339  MESG  hexadecimal floating constants require an exponent
+1340  MESG  hexadecimal floating constants are a C99 feature that is incompatible with C++0x
+1341  MESG  hexadecimal floating constants are a C99 feature
+1345  MESG  hex escape sequence out of range
+1163  MESG  heinous extensions were * in PCH file but are currently *
+1215  MESG  gnu-designator
+2421  MESG  global register variables are not supported
+2049  MESG  functions that differ only in their return type cannot be overloaded
+2678  MESG  functions cannot be declared in an anonymous *
+2459  MESG  function-style cast to a builtin type can only take one argument
+1986  MESG  function with no prototype cannot use * calling convention
+2187  MESG  function template specialization * ambiguously refers to more than one function template; explicitly specify* template arguments to identify a particular function template
+2188  SMSG  function template matches specialization *
+2250  SMSG  function has been explicitly marked * here
+1950  MESG  function does not return *
+1576  MESG  function definition does not declare parameters
+1498  MESG  function definition declared 'typedef'
+2423  MESG  function declared in block scope cannot have 'static' storage class
+2794  MESG  function declared 'noreturn' should not return
+1985  MESG  function declared '*' here was previously declared *
+2285  MESG  function declaration cannot have variably modified type
+1693  MESG  function could be attribute 'noreturn'
+2337  MESG  function cannot return * type *
+2793  MESG  function * declared 'noreturn' should not return
+1798  MESG  friends cannot be members of the declaring class
+1795  MESG  friends can only be classes or functions
+1802  MESG  friend type templates must use an elaborated type
+1224  MESG  four-char-constants
+1041  SMSG  forward declaration of *
+1223  MESG  format-zero-length
+2750  MESG  format string should not be a wide string
+2742  MESG  format string missing
+2462  MESG  format string is not a string literal (potentially insecure)
+2463  MESG  format string is not a string literal
+2749  MESG  format string is empty
+2751  MESG  format string contains '\0' within the string body
+1948  MESG  format attribute requires variadic function
+1949  MESG  format argument not *
+2547  SMSG  for type *
+1440  MESG  floating point literal in preprocessor expression
+2621  MESG  floating point classification requires argument of floating point type (passed in *)
+2345  MESG  flexible array requires brace-enclosed initializer
+1649  MESG  flexible array initialization is a GNU extension
+2341  MESG  flexible array * not allowed in otherwise empty struct
+2755  MESG  flag '*' results in undefined behavior in '*' conversion specifier
+2799  MESG  first two arguments to __builtin_shufflevector must have the same type
+2798  MESG  first two arguments to __builtin_shufflevector must be vectors
+1998  MESG  first field of a transparent union cannot have floating point or vector type; transparent_union attribute ignored
+2615  MESG  first argument to atomic builtin must be a pointer to integer or pointer (* invalid)
+2616  MESG  first argument to atomic builtin must be a pointer to 1,2,4,8 or 16 byte type (* invalid)
+2614  MESG  first argument to atomic builtin must be a pointer (* invalid)
+2788  MESG  first argument to 'va_arg' is of type * and not 'va_list'
+1807  SMSG  final overrider of * in *
+1061  MESG  file '*' modified since it was first processed
+1135  MESG  file '*' has been modified since the precompiled header was built
+2284  MESG  fields must have a constant size: 'variable length array in structure' extension will never be supported
+1829  MESG  field of type * has * destructor
+1833  MESG  field of type * has * copy constructor
+1831  MESG  field of type * has * copy assignment operator
+1922  MESG  field is uninitialized when used here
+2339  MESG  field has incomplete type *
+1642  SMSG  field designator refers here
+1639  MESG  field designator cannot initialize a * type *
+2845  MESG  field designator * does not refer to any field in type *; did you mean *?
+1640  MESG  field designator * does not refer to any field in type *
+1641  MESG  field designator * does not refer to a non-static data member
+2340  MESG  field * with variable sized type * not at the end of a struct or class is a GNU extension
+2753  MESG  field * should have type *, but argument has type *
+1016  SMSG  field * is not a bit-field
+1013  SMSG  field * has type * here
+2338  MESG  field * declared as a function
+2171  MESG  extraneous template parameter list in template specialization or out-of-line template definition
+2172  MESG  extraneous template parameter list in template specialization
+1335  MESG  extraneous characters in wide character constant ignored
+2111  MESG  extraneous 'template<>' in declaration of variable *
+2112  MESG  extraneous 'template<>' in declaration of *
+1221  MESG  extra-tokens
+1623  MESG  extra tokens at end of '#pragma *' - ignored
+1371  MESG  extra tokens at end of #* directive
+1453  MESG  extra ';' outside of a function
+1454  MESG  extra ';' inside a struct or union
+1007  MESG  external variable * defined in multiple translation units
+1006  MESG  external variable * declared with incompatible types in different translation units (* vs. *)
+1010  MESG  external function * declared with incompatible types in different translation units (* vs. *)
+1160  MESG  extensions were * in PCH file but are currently *
+1314  MESG  extension used
+1954  MESG  ext_vector_type only applies to types, not variables
+2638  MESG  expression result unused; should this cast be to 'void'?
+2637  MESG  expression result unused
+1630  MESG  expression is not integer constant expression (but is allowed as an extension)
+2476  MESG  expression is not assignable using property assignment syntax
+2599  MESG  expression is not assignable
+1629  MESG  expression is not an integer constant expression
+2636  MESG  expression is not a constant, but is accepted as one by GNU extensions
+2090  MESG  exported templates are unsupported
+1337  MESG  exponent has no digits
+2153  SMSG  explicitly specialized declaration is here
+1607  MESG  explicit template instantiation cannot have a definition; if this definition is meant to be an explicit specialization, add '<>' after the 'template' keyword
+2154  MESG  explicit specialization of * in function scope
+2155  MESG  explicit specialization of * in class scope
+2163  MESG  explicit specialization of * after instantiation
+2220  MESG  explicit instantiation refers to static data member * that is not an instantiation
+2221  MESG  explicit instantiation refers to member function * that is not an instantiation
+2219  SMSG  explicit instantiation refers here
+2229  MESG  explicit instantiation of undefined function template *
+2228  MESG  explicit instantiation of undefined * of class template *
+2217  MESG  explicit instantiation of typedef *
+2212  MESG  explicit instantiation of non-templated type *
+2211  MESG  explicit instantiation of enumeration type *
+2209  MESG  explicit instantiation of * that occurs after an explicit specialization will be ignored (C++0x extension)
+2214  MESG  explicit instantiation of * not in a namespace enclosing *
+2227  MESG  explicit instantiation of * must occur in *
+2215  MESG  explicit instantiation of * must occur at global scope
+2218  MESG  explicit instantiation of * does not refer to a function template, member function, member class, or static data member
+2231  SMSG  explicit instantiation definition is here
+2216  MESG  explicit instantiation declaration requires a name
+2230  MESG  explicit instantiation declaration (with 'extern') follows explicit instantiation definition (without 'extern')
+2224  MESG  explicit instantiation cannot be 'inline'
+2223  SMSG  explicit instantiation candidate function template here *
+2736  MESG  explicit conversion functions are a C++0x extension
+1616  MESG  explicit * of non-template *
+1402  MESG  expected value in expression
+1598  MESG  expected type-id after '*'
+1898  MESG  expected the class name after '~' to name the enclosing class
+1899  MESG  expected the class name after '~' to name a destructor
+1602  MESG  expected template name after 'template' keyword in typename specifier
+1601  MESG  expected template name after 'template' keyword in nested name specifier
+1595  MESG  expected template
+1521  MESG  expected string literal or '[' for asm operand
+1520  MESG  expected string literal
+1502  MESG  expected statement
+1522  MESG  expected selector for Objective-C method
+1523  MESG  expected property name
+1529  MESG  expected parameter declarator
+1051  MESG  expected namespace name
+1500  MESG  expected method body
+1497  MESG  expected member name or ';' after declaration specifiers
+1626  MESG  expected integer or identifier in '#pragma pack' - ignored
+2803  MESG  expected initializer
+1486  MESG  expected identifier or '{'
+2642  MESG  expected identifier or '('
+1391  MESG  expected identifier in macro parameter list
+1622  MESG  expected identifier in '#pragma *' - ignored
+1484  MESG  expected identifier
+1499  MESG  expected function body after function declarator
+1483  MESG  expected external declaration
+1481  MESG  expected expression
+1422  MESG  expected end of macro in STDC pragma
+1405  MESG  expected end of line in preprocessor expression
+1392  MESG  expected comma in macro parameter list
+1532  MESG  expected class name
+1580  MESG  expected class member or base class name
+1583  MESG  expected catch
+1615  MESG  expected an identifier or template-id after '::'
+1545  MESG  expected an identifier in using directive
+1551  MESG  expected an Objective-C directive after '@'
+1482  MESG  expected a type
+1612  MESG  expected a qualified name after 'typename'
+1570  MESG  expected a property name in @synthesize
+1572  MESG  expected a field designator, such as '.field = 4'
+2568  MESG  expected a class or namespace
+1586  MESG  expected a class name after '~' to name a destructor
+1123  MESG  expected a clang compiler command
+1575  MESG  expected *
+1492  MESG  expected '}'
+1584  MESG  expected '{' or ','
+1507  MESG  expected '{' in compound literal
+2763  MESG  expected '{' in block literal
+1581  MESG  expected '{' after base class list
+1487  MESG  expected '{'
+1508  MESG  expected 'while' in do/while loop
+1599  MESG  expected 'class' before '*'
+1491  MESG  expected ']'
+1490  MESG  expected '['
+1421  MESG  expected 'ON' or 'OFF' or 'DEFAULT' in pragma
+1493  MESG  expected '>'
+1477  MESG  expected '=' or another designator
+1578  MESG  expected '=' after declarator
+1603  MESG  expected '<' after 'template *' in nested name specifier
+1505  MESG  expected '<' after '*'
+1517  MESG  expected ';' in 'for' statement specifier
+1496  MESG  expected ';' at end of declaration list
+1494  MESG  expected ';' at end of declaration
+1516  MESG  expected ';' after static_assert
+1513  MESG  expected ';' after namespace name
+1512  MESG  expected ';' after method prototype
+1511  MESG  expected ';' after expression
+1515  MESG  expected ';' after attribute list
+1510  MESG  expected ';' after * statement
+1613  MESG  expected ';' after *
+1518  MESG  expected ':' after *
+1046  MESG  expected ':'
+1597  MESG  expected ',' or '>' in template-parameter-list
+1506  MESG  expected ','
+1628  MESG  expected ')' or ',' in '#pragma unused'
+1404  MESG  expected ')' in preprocessor expression
+1489  MESG  expected ')'
+1577  MESG  expected '(' for function-style cast or type construction
+1504  MESG  expected '(' after *
+1503  MESG  expected '(' after '*'
+1488  MESG  expected '('
+1627  MESG  expected '#pragma unused' argument to be a variable name
+1715  MESG  expected #pragma pack parameter to be '1', '2', '4', '8', or '16'
+1386  MESG  expected "FILENAME" or <FILENAME>
+1786  MESG  existing ivar * for a __strong property * must be garbage collectable
+1785  MESG  existing ivar * for __weak property * must be __weak
+2303  MESG  excess elements in char array initializer
+2301  MESG  excess elements in * initializer
+1168  MESG  exceptions were * in PCH file but are currently *
+1821  MESG  exception specifications of * types differ
+1815  MESG  exception specifications are not allowed in typedefs
+1816  MESG  exception specifications are not allowed beyond a single level of indirection
+1819  MESG  exception specification of overriding function is more lax than base version
+1582  MESG  exception specification of '...' is a Microsoft extension
+1818  MESG  exception specification in declaration does not match previous declaration
+2546  MESG  exception of type * will be caught by earlier handler
+2541  MESG  exception declarator cannot be qualified
+1302  MESG  escaped newline between */ characters at block comment end
+1110  MESG  error reading stdin
+1109  MESG  error reading '*'
+1383  MESG  error opening file '*': *
+1108  MESG  error opening '*': *
+1150  MESG  error invoking*: *
+1111  MESG  error in backend: *
+1134  MESG  error at end of module block in PCH file: '*'
+2440  MESG  equality comparison between function pointer and void pointer (* and *)
+2277  MESG  enumerator value * is not representable in the largest integer type
+1021  SMSG  enumerator * with value * here
+2276  MESG  enumeration values exceed range of largest integer
+2776  MESG  enumeration value * not handled in switch
+1796  MESG  enumeration type * cannot be a friend
+1608  MESG  enumeration cannot be a template
+1220  MESG  empty-body
+1004  MESG  empty symbolic operand name in inline assembly string
+2032  MESG  empty parameter list defined with a typedef of 'void' not allowed in C++
+1379  MESG  empty macro arguments were standardized in C99
+1384  MESG  empty filename
+1317  MESG  empty character constant
+2775  MESG  empty case range specified
+1377  MESG  embedding a directive within macro arguments is not portable
+1787  MESG  dynamic property can not have ivar specification
+2202  SMSG  during template argument deduction for class template partial specialization *
+1728  MESG  duplicate protocol definition of * is ignored
+2273  MESG  duplicate member *
+1393  MESG  duplicate macro parameter name *
+1722  MESG  duplicate interface definition for class *
+2207  MESG  duplicate explicit instantiation of *
+1738  MESG  duplicate definition of category * on interface *
+1758  MESG  duplicate declaration of method *
+2774  MESG  duplicate case value '*'
+1588  MESG  duplicate 'virtual' in base specifier
+1455  MESG  duplicate '*' declaration specifier
+2372  MESG  division by zero is undefined
+1410  MESG  division by zero in preprocessor expression
+1000  SMSG  division by zero
+1219  MESG  div-by-zero
+1561  MESG  directive may only be specified in protocols only
+1587  MESG  destructor name * does not refer to a template
+1890  MESG  destructor must be a non-static member function
+1895  MESG  destructor cannot have any parameters
+1893  MESG  destructor cannot have a return type
+1896  MESG  destructor cannot be variadic
+1894  MESG  destructor cannot be redeclared
+1897  MESG  destructor cannot be declared using a typedef * of the class name
+1891  MESG  destructor cannot be declared '*'
+1647  MESG  designator into flexible array member subobject
+1643  MESG  designator in initializer for scalar type *
+1933  MESG  derivation from 'final' *
+1216  MESG  deprecated
+1670  MESG  dependent using declaration resolved to type without 'typename'
+2532  MESG  deleting pointer to incomplete type * may cause undefined behaviour
+1813  MESG  deleted definition must be first declaration
+2570  MESG  definition or redeclaration of * not in a namespace enclosing *
+2572  MESG  definition or redeclaration of * not allowed inside a function
+2571  MESG  definition or redeclaration of * cannot name the global scope
+2416  MESG  definition of variable with array type needs an explicit size or an initializer
+2265  MESG  definition of type * conflicts with typedef of the same name
+1189  MESG  definition of the macro '*' conflicts with the definition used to build the precompiled header
+1193  MESG  definition of macro * conflicts with an identifier used in the precompiled header
+1190  SMSG  definition of macro '*' in the precompiled header
+2256  MESG  definition of implicitly declared *
+1702  MESG  definition of builtin function *
+1042  SMSG  definition of * is not complete until the closing '}'
+2109  MESG  default template argument not permitted on a friend template
+2175  MESG  default template argument in a class template partial specialization
+1618  MESG  default template argument for a template template parameter must be a class template
+1765  MESG  default property attribute 'assign' not appropriate for non-gc object
+2529  MESG  default initialization of an object of const type **
+1753  MESG  default assign attribute on property * which implements NSCopying protocol is not appropriate with -fobjc-gc[-only]
+2042  MESG  default arguments cannot be added to an out-of-line definition of a member of a *
+2041  MESG  default arguments cannot be added to a function template that has already been declared
+2040  MESG  default arguments can only be specified for parameters in a function declaration
+2037  MESG  default argument references parameter *
+2038  MESG  default argument references local variable * of enclosing function
+2039  MESG  default argument references 'this'
+2166  MESG  default argument not permitted on an explicit * of function *
+2047  SMSG  default argument declared here
+2131  MESG  deduced non-type template argument does not have the same type as the its corresponding template parameter (* vs *)
+1008  SMSG  declared here with type *
+1756  SMSG  declared at
+1663  MESG  declarator requires an identifier
+1214  MESG  declaration-after-statement
+2820  MESG  declaration specifier missing, defaulting to 'int'
+1667  MESG  declaration shadows a *
+1930  MESG  declaration of variable * with type * requires an initializer
+1915  MESG  declaration of reference variable * requires an initializer
+2811  MESG  declaration of non-local variable in 'for' loop
+1916  MESG  declaration of const variable '*' requires an initializer
+1591  MESG  declaration of anonymous * must be a definition
+1657  MESG  declaration of * will not be visible outside of this function
+2088  MESG  declaration of * shadows template parameter
+1932  MESG  declaration of * overrides a 'final' function
+2703  SMSG  declaration hides type
+1048  MESG  declaration does not declare anything
+1573  MESG  declaration does not declare a parameter
+1683  MESG  declaration conflicts with target of using declaration already in scope
+2205  MESG  data member instantiated with function type *
+2744  MESG  data argument position '*' exceeds the number of data arguments (*)
+2739  MESG  data argument not used by format string
+1358  MESG  current file is older than dependency *
+1213  MESG  ctor-dtor-privacy
+1125  MESG  could not remap from missing file '*'
+1124  MESG  could not remap file '*' to the contents of file '*'
+1887  MESG  copy constructor must pass its first argument by reference
+1297  MESG  conversion",              [DiagGroup<"shorten-64-to-32
+2782  SMSG  conversion to * type *
+2743  MESG  conversion specifies type * but the argument has type *
+2724  MESG  conversion function must be a non-static member function
+2567  MESG  conversion function from * to * invokes a deleted function
+2732  MESG  conversion function converting * to itself will never be used
+2733  MESG  conversion function converting * to its base class * will never be used
+2734  MESG  conversion function converting * to * will never be used
+2726  MESG  conversion function cannot have any parameters
+2725  MESG  conversion function cannot have a return type
+2728  MESG  conversion function cannot convert to an array type
+2729  MESG  conversion function cannot convert to a function type
+2727  MESG  conversion function cannot be variadic
+2731  MESG  conversion function cannot be redeclared
+2418  MESG  conversion from string literal to * is deprecated
+2692  MESG  conversion from pointer to member of class * to pointer to member of class * via virtual base * is not allowed
+2693  MESG  conversion from * to inaccessible base class *
+2565  MESG  conversion from * to * is ambiguous
+2083  SMSG  conversion candidate of type *
+1690  MESG  control reaches end of non-void function
+1692  MESG  control reaches end of non-void block
+1689  MESG  control may reach end of non-void function
+1691  MESG  control may reach end of non-void block
+1770  MESG  continuation class has no primary class
+2664  MESG  constructor initializer * does not name a class
+1885  MESG  constructor cannot have a return type
+1886  MESG  constructor cannot be redeclared
+1883  MESG  constructor cannot be declared '*'
+1838  SMSG  constrained by ** inheritance here
+1726  MESG  conflicting types for alias *
+2266  MESG  conflicting types for *
+1739  MESG  conflicting super class name *
+1751  MESG  conflicting return type in implementation of *: * vs *
+1752  MESG  conflicting parameter types in implementation of *: * vs *
+1746  MESG  conflicting instance variable names: * vs *
+1105  MESG  conflicting deployment targets, both MACOSX_DEPLOYMENT_TARGET '*' and IPHONEOS_DEPLOYMENT_TARGET '*' are present in environment
+1680  SMSG  conflicting declaration
+2549  MESG  conditional expression is ambiguous; * can be converted to * and vice versa
+2550  MESG  conditional expression is ambiguous; * and * can be converted to several common types
+1468  MESG  compound literals are a C99-specific feature
+2477  MESG  complex numbers are an extension in a freestanding C99 implementation
+1457  MESG  complex integer types are an extension
+1194  MESG  compiler options used when building the precompiled header differ from the options used when using the precompiled header
+2446  MESG  comparison of vector types (* and *) not supported yet
+2451  MESG  comparison of unsigned expression * is always *
+2449  MESG  comparison of integers of different signs: * and *
+2445  MESG  comparison of distinct pointer types (* and *) uses non-standard composite pointer type *
+2444  MESG  comparison of distinct pointer types (* and *)
+2596  MESG  comparison of distinct block types (* and *)
+2452  MESG  comparison of * unsigned expression is always *
+2441  MESG  comparison between pointer and integer (* and *)
+2371  MESG  comparing floating point with == or != is unsafe
+1212  MESG  comment
+1469  MESG  commas at the end of enumerator lists are a *-specific feature
+1372  MESG  comma operator in operand of #if
+2815  MESG  collection expression type * is not a valid object
+2178  MESG  class template partial specialization does not specialize any template argument; to * the primary template, remove the template argument list
+2179  MESG  class template partial specialization contains * that can not be deduced; this partial specialization will never be used
+2183  MESG  class template partial specialization * cannot be redeclared
+2239  MESG  class template declared here
+2398  MESG  class member cannot be redeclared
+1744  MESG  class implementation may not have super class
+1737  SMSG  class implementation is declared here
+1017  SMSG  class has base type *
+1020  SMSG  class has * base *
+1024  MESG  class * has incompatible superclasses
+2554  MESG  circular pointer delegation detected
+1336  MESG  character constant too long for its type
+1295  MESG  char-subscripts
+1196  MESG  char was * in the PCH file but is currently *
+2542  MESG  catch-all handler must come last
+1210  MESG  cast-qual
+2626  MESG  cast to union type from type * not present in union
+2502  MESG  cast from pointer to smaller type * loses information
+2501  MESG  cast between pointer-to-function and pointer-to-object is an extension
+2777  MESG  case value not in enumerated type *
+1540  MESG  cannot use 'double' with '__vector'
+1068  MESG  cannot use '*' output with multiple -arch options
+2632  MESG  cannot type cast @selector expression
+2552  MESG  cannot throw pointer to object of incomplete type *
+2551  MESG  cannot throw object of incomplete type *
+1805  MESG  cannot throw an object of abstract type *
+1071  MESG  cannot specify -o when generating multiple output files
+2167  MESG  cannot specialize a *
+2392  MESG  cannot refer to type member * with '*'
+2393  MESG  cannot refer to member * with '*'
+2467  MESG  cannot refer to declaration with an array type inside block
+2466  MESG  cannot refer to declaration with a variably modified type inside block
+2113  MESG  cannot refer to class template * without a template argument list
+2618  MESG  cannot pass object with interface type * by-value through variadic *
+2619  MESG  cannot pass object of non-POD type * through variadic *; call will abort at runtime
+1060  MESG  cannot open file '*': *
+2747  MESG  cannot mix positional and non-positional arguments in format string
+1114  MESG  cannot locate code-completion file *
+1864  MESG  cannot initialize object parameter of type * with an expression of type *
+2594  MESG  cannot initialize a value of type * with an * of type *
+2595  MESG  cannot initialize * with an * of type *
+1901  MESG  cannot initialize * of type * with an * of type *
+1033  MESG  cannot import unsupported AST node *
+2355  MESG  cannot form a reference to 'void'
+2574  MESG  cannot form a pointer-to-member to member * of reference type *
+1141  MESG  cannot find start ('{{') of expected string
+1731  MESG  cannot find protocol definition for *
+2851  MESG  cannot find protocol declaration for *; did you mean *?
+1730  MESG  cannot find protocol declaration for *
+2849  MESG  cannot find interface declaration for *; did you mean *?
+2850  MESG  cannot find interface declaration for *, superclass of *; did you mean *?
+1723  MESG  cannot find interface declaration for *, superclass of *
+1735  MESG  cannot find interface declaration for *
+1142  MESG  cannot find end ('}}') of expected string
+1565  MESG  cannot find definition of 'id'
+1564  MESG  cannot find definition of 'SEL'
+1566  MESG  cannot find definition of 'Protocol'
+1567  MESG  cannot find definition of 'Class'
+1926  MESG  cannot determine the * of an overloaded function
+2544  MESG  cannot dereference pointer into incomplete class type *
+2530  MESG  cannot delete expression of type *
+2043  MESG  cannot define the implicit default assignment operator for *, because non-static * member * can't use default assignment operator
+1619  MESG  cannot define a type in a friend declaration
+2535  MESG  cannot decrement expression of type bool
+1760  MESG  cannot declare variable inside @interface or @protocol
+1736  MESG  cannot declare class extension for * after class implementation
+2156  MESG  cannot declare an explicit specialization in a friend
+2094  MESG  cannot declare a class template with no name
+1538  MESG  cannot combine with previous '*' declaration specifier. '__vector' must be first
+1537  MESG  cannot combine with previous '*' declaration specifier
+2539  MESG  cannot catch incomplete type *
+2540  MESG  cannot catch exceptions by rvalue reference
+2507  MESG  cannot cast from type * to pointer type *
+2508  MESG  cannot cast from type * to member pointer type *
+2506  MESG  cannot cast from lvalue of type * to rvalue reference type *; types are not compatible
+2513  MESG  cannot cast * to its * base class *
+2511  MESG  cannot cast * to * via virtual base *
+2512  MESG  cannot cast * base class * to *
+1552  MESG  cannot cast 'super' (it isn't an expression)
+2523  MESG  cannot allocate * type * with new
+2108  MESG  cannot add a default template argument to the definition of a member of a class template
+2407  MESG  cannot * value of type *
+2058  SMSG  candidate template ignored: failed template argument deduction
+2059  SMSG  candidate template ignored: couldn't infer template argument *
+2700  SMSG  candidate found by name lookup is *
+2063  SMSG  candidate ** not viable: no overload of * matching * for * argument
+2064  SMSG  candidate ** not viable: no known conversion from * to * for *
+2062  SMSG  candidate ** not viable: cannot convert argument of incomplete type * to *
+2067  SMSG  candidate ** not viable: * argument (*) would lose * qualifier*
+2065  SMSG  candidate ** not viable: * argument (*) is in address space *, but parameter must be in address space *
+2061  SMSG  candidate ** has been explicitly *
+2057  SMSG  candidate **
+2060  SMSG  candidate * not viable: requires* argument*, but * provided
+2066  SMSG  candidate * not viable: 'this' argument has type *, but method is not marked *
+1953  MESG  can't convert between vector values of different size (* and *)
+2152  MESG  can only provide an explicit specialization for a class template, function template, or a member function, static data member, or member class of a class template
+1414  MESG  can only poison identifier tokens
+2605  MESG  calling function with incomplete return type *
+1825  MESG  calling a * constructor of class *
+2606  MESG  calling * with incomplete return type *
+2604  MESG  called object type * is not a function or function pointer
+2557  MESG  call to pseudo-destructor cannot have any arguments
+2081  MESG  call to object of type * is ambiguous
+2084  MESG  call to non-static member function without an object argument
+2055  MESG  call to member function * is ambiguous
+2072  MESG  call to constructor of * is ambiguous
+2056  MESG  call to * member function *
+2053  MESG  call to * is ambiguous
+2082  MESG  call to * function call operator in type *
+2054  MESG  call to * function *
+2074  MESG  call to * constructor of *
+1208  MESG  c++-compat
+1416  MESG  builtin feature check macro requires a parenthesized identifier
+2070  SMSG  built-in candidate *
+2306  MESG  braces around scalar initializer
+1140  MESG  bogus characters before '{{' in expected string
+1176  MESG  blocks were * in PCH file but are currently *
+2762  MESG  blocks support disabled - compile with -fblocks or pick a deployment target that supports them
+2360  MESG  block with explicit return type requires argument list
+2357  MESG  block pointer to non-function type is invalid
+2765  MESG  block declared as returning an array
+2795  MESG  block declared 'noreturn' should not return
+1694  MESG  block could be attribute 'noreturn'
+1867  SMSG  bit-field is declared here
+1015  SMSG  bit-field * with type * and length * here
+1859  MESG  bit-field * has non-integral type *
+2312  MESG  bit-field * has negative width (*)
+1908  MESG  binding of reference to type * to a value of type * drops qualifiers
+1342  MESG  binary integer literals are an extension
+1872  SMSG  because type * has a virtual *
+1874  SMSG  because type * has a user-declared *
+1873  SMSG  because type * has a * with a non-trivial *
+2068  SMSG  because of ambiguity in conversion of * to *
+2686  MESG  base specifier must name a class
+2394  MESG  base of member reference has function type *; perhaps you meant to call this function with '()'?
+2665  MESG  base class initializer * names both a direct base class and an inherited virtual base class
+2688  MESG  base class has incomplete type
+2689  MESG  base class * specified more than once as a direct base class
+2852  SMSG  base class * specified here
+1826  MESG  base class * has * destructor
+1834  MESG  base class * has * copy constructor
+1832  MESG  base class * has * copy assignment operator
+1207  MESG  bad-function-cast
+2486  MESG  bad receiver type *
+1311  MESG  backslash-newline at end of file
+1303  MESG  backslash and newline separated by space
+1963  MESG  automatic variable qualified with an address space
+1548  MESG  attributes may not be specified on a category
+1514  MESG  attributes can not be specified on namespace alias
+1206  MESG  attributes
+1939  MESG  attribute requires unquoted parameter
+1938  MESG  attribute requires * argument(s)
+1945  MESG  attribute may only be applied to an Objective-C interface
+1971  MESG  attribute declaration must precede definition
+1972  MESG  attribute * cannot be applied to * without return value
+1732  MESG  attribute 'readonly' of property * restricts attribute 'readwrite' of property inherited from *
+1415  MESG  attempt to use a poisoned identifier
+2617  MESG  attempt to use a deleted function
+2162  SMSG  attempt to specialize declaration here
+2293  MESG  at least one initializer value required to size array
+2601  MESG  assignment to cast is illegal, lvalue casts are not supported
+2472  MESG  assigning to property with 'readonly' attribute not allowed
+2461  MESG  array types cannot be value-initialized
+2597  MESG  array type * is not assignable
+2395  MESG  array subscript is of type 'char'
+2385  MESG  array subscript is not an integer
+2522  MESG  array size must be specified in new expressions
+2286  MESG  array size is negative
+2528  MESG  array size expression must have integral or enumerated type, not *
+2825  MESG  array of interface * is invalid (probably should be an array of pointers)
+2417  MESG  array initializer must be an initializer list*
+2347  MESG  array has incomplete element type *
+1635  MESG  array designator value '*' is negative
+1636  MESG  array designator range [*, *] is empty
+1638  MESG  array designator index (*) exceeds array bounds (*)
+1637  MESG  array designator cannot initialize non-array type *
+2410  MESG  arithmetic on pointer to void type
+2382  MESG  arithmetic on pointer to interface *, which is not a constant size in non-fragile ABI
+2408  MESG  arithmetic on pointer to incomplete type *
+2471  MESG  arithmetic on pointer to function type * is a GNU extension
+2409  MESG  arithmetic on pointer to function type *
+1096  MESG  argument unused during compilation: '*'
+2608  MESG  argument type * is incomplete
+2805  MESG  argument to __builtin_prefetch must be of integer type
+2806  MESG  argument to __builtin_prefetch must be a constant integer
+2808  MESG  argument to __builtin_object_size must be a constant integer
+2809  MESG  argument to __builtin_longjmp must be a constant 1
+1965  MESG  argument to * attribute was not a string literal
+1966  MESG  argument to 'section' attribute is not valid for this target: *
+1076  MESG  argument to '*' is missing (expected *)
+2807  MESG  argument should be a value from * to *
+1528  MESG  argument required after attribute
+2027  MESG  argument may not have 'void' type
+2657  MESG  argument is not a function, or has wrong number of parameters
+2672  MESG  anonymous unions at namespace or global scope must be declared 'static'
+2670  MESG  anonymous unions are a GNU extension in C
+2673  MESG  anonymous union at class scope must not have a storage specifier
+2671  MESG  anonymous structs are a GNU extension
+1860  MESG  anonymous bit-field has non-integral type *
+2313  MESG  anonymous bit-field has negative width (*)
+2674  MESG  anonymous * must be * members
+2681  MESG  anonymous * cannot contain a * data member
+2680  MESG  anonymous * can only contain non-static data members
+1594  MESG  an attribute list cannot appear here
+2562  MESG  an array type is not allowed here
+2181  MESG  ambiguous partial specializations of *
+1924  MESG  ambiguous copy constructor call when * of type *
+2531  MESG  ambiguous conversion of delete expression of type * to a pointer
+2691  MESG  ambiguous conversion from pointer to member of * class * to pointer to member of * class *:*
+2690  MESG  ambiguous conversion from derived class * to base class *:*
+2510  MESG  ambiguous cast from base * to derived *:*
+2593  MESG  ambiguity in initializing value of type * with initializer of type *
+1045  SMSG  also found
+1009  SMSG  also defined here
+2524  MESG  allocation of incomplete type *
+1804  MESG  allocation of an object of abstract type *
+1205  MESG  aggregate-return
+2325  MESG  address taken of label in protected scope, jump to it would have unknown effect on scope
+2140  MESG  address taken in non-type template argument for template parameter of reference type *
+1959  MESG  address space is negative
+1960  MESG  address space is larger than the maximum supported (*)
+1958  MESG  address space attribute requires an integer constant
+2756  MESG  address of stack memory associated with local variable * returned
+2086  MESG  address of overloaded function * is ambiguous
+2085  MESG  address of overloaded function * does not match required type *
+2087  MESG  address of overloaded function * cannot be converted to type *
+2424  MESG  address of * requested
+2427  MESG  address expression must be an lvalue or a function designator
+1203  MESG  address
+1836  MESG  access to * member outside any class context
+1685  MESG  access declarations are deprecated; use using declarations instead
+2093  MESG  a typedef cannot be a template
+2701  MESG  a type named * is hidden by a declaration in a different namespace
+2107  MESG  a template parameter of a function template cannot have a default argument in C++98
+1604  MESG  a space is required between consecutive right angle brackets (use '> >')
+2456  MESG  a qualified function type cannot be used to declare a nonmember function or a static member function
+2030  MESG  a parameter list without types is only allowed in a function definition
+2103  MESG  a non-type template parameter cannot have type *
+2561  MESG  a function type is not allowed here
+1974  MESG  __weak attribute cannot be specified on an automatic variable
+1973  MESG  __weak attribute cannot be specified on a field declaration
+1703  MESG  __builtin_types_compatible_p is not valid in C++
+2796  MESG  __block attribute not allowed, only allowed on local variables
+2797  MESG  __block attribute not allowed on declaration with a variably modified type
+1935  MESG  __attribute ((NSObject)) is for pointer types only
+1373  MESG  __VA_ARGS__ can only appear in the expansion of a C99 variadic macro
+1417  MESG  _Pragma takes a parenthesized string literal
+1325  MESG  \x used with no following hex digits
+1434  MESG  Use of comma pasting extension is non-portable
+1541  MESG  Use of 'long' with '__vector' is deprecated
+1343  MESG  Pascal string is too long
+1138  MESG  PTH file '*' does not designate an original source header file for -include-pth
+1346  MESG  PTH file '*' could not be read
+1170  MESG  PCH file was compiled with the * runtime but the * runtime is selected
+1159  MESG  PCH file was compiled with the * Objective-C ABI but the * Objective-C ABI is selected
+1172  MESG  PCH file was compiled with builtins * but builtins are currently *
+1171  MESG  PCH file was compiled with a * implementation but a * implementation is selected
+1182  MESG  PCH file was compiled with PIC level *, but the current translation unit will be compiled with PIC level *
+1183  MESG  PCH file was compiled with * inline semantics but * inline semantics are currently selected
+1152  MESG  PCH file was compiled for the target '*' but the current translation unit is being compiled for target '*'
+1173  MESG  PCH file was compiled * thread-safe statics but thread-safe statics are currently *
+1174  MESG  PCH file was compiled * POSIX thread support but POSIX threads are currently *
+1186  MESG  PCH file uses an older PCH format that is no longer supported
+1187  MESG  PCH file uses a newer PCH format that cannot be read
+1188  MESG  PCH file built from a different branch (*) than the compiler (*)
+1166  MESG  OpenCL language extensions were * in PCH file but are currently *
+1156  MESG  Objective-C support was * in PCH file but is currently *
+1107  MESG  Objective-C garbage collection is not supported on this platform, ignoring '*'
+1934  MESG  Objective-C declarations may only appear in global scope
+1157  MESG  Objective-C 2.0 support was * in PCH file but is currently *
+1162  MESG  Microsoft extensions were * in PCH file but are currently *
+1352  MESG  ISO C99 requires whitespace after the macro name
+2810  MESG  ISO C90 forbids mixing declarations and code
+2383  MESG  ISO C90 does not allow subscripting non-lvalue array
+2271  MESG  ISO C++ forbids forward references to 'enum' types
+2538  MESG  ISO C++ forbids catching a reference to incomplete type *
+2537  MESG  ISO C++ forbids catching a pointer to incomplete type *
+2275  MESG  ISO C restricts enumerator values to range of 'int' (* is too *)
+1662  MESG  ISO C requires a named argument before '...'
+2425  MESG  ISO C forbids taking the address of an expression of type 'void'
+2270  MESG  ISO C forbids forward references to 'enum' types
+1452  MESG  ISO C forbids an empty source file
+2474  MESG  ISO C does not support '~' for complex conjugation of *
+2473  MESG  ISO C does not support '++'/'--' on complex integer type *
+1161  MESG  GNU extensions were * in PCH file but are currently *
+2822  MESG  GNU decimal type extension not supported
+1119  MESG  FIX-ITs cannot be applied when generating code
+1145  SMSG  FIX-IT unable to apply suggested code changes in a macro
+1146  SMSG  FIX-IT unable to apply suggested code changes
+1149  SMSG  FIX-IT detected errors it could not fix; no output will be generated
+1147  SMSG  FIX-IT detected an error it cannot fix
+1120  MESG  FIX-IT could not find file '*'
+1144  SMSG  FIX-IT applied suggested code changes
+1167  MESG  Elidable copy constructors were * in PCH file but are currently *
+2766  MESG  CFString literal is not a string constant
+2767  MESG  CFString literal contains NUL character
+2827  MESG  C99-specific array features are not permitted in C++
+1153  MESG  C99 support was * in PCH file but is currently *
+2623  MESG  C99 forbids conditional expressions with only one void side
+2625  MESG  C99 forbids casts to union type
+2624  MESG  C99 forbids casting nonscalar type * to the same type
+1155  MESG  C++0x support was * in PCH file but is currently *
+1593  MESG  C++0x attribute '*' must have an argument list
+1592  MESG  C++0x attribute '*' cannot have an argument list
+1154  MESG  C++ support was * in PCH file but is currently *
+2823  MESG  C++ requires a type specifier for all declarations
+1439  MESG  C++ operator '*' cannot be used as a macro name
+1195  MESG  C++ access control was * in the PCH file but is currently *
+1530  MESG  C requires a comma prior to the ellipsis in a variadic function type
+1449  MESG  C requires #line number to be less than *, allowed as extension
+2033  MESG  C does not support default arguments
+1165  MESG  AltiVec initializers were * in PCH file but are currently *
+1562  MESG  @try statement without a @catch and @finally clause
+2488  MESG  @throw requires an Objective-C object type (* invalid)
+2490  MESG  @throw (rethrow) used outside of a @catch block
+1776  MESG  @synthesize not allowed in a category's implementation
+2489  MESG  @synchronized requires an Objective-C object type (* invalid)
+1568  MESG  @end must appear in an @implementation context
+2492  MESG  @catch parameter is not a pointer to an interface type
+1313  MESG  @# is a microsoft extension
+1309  MESG  // comments are not allowed in this language
+1097  MESG  -pipe ignored because -save-temps specified
+1197  MESG  -fshort-wchar was * in the PCH file but is currently *
+1117  MESG  -dependency-file requires at least one -MT or -MQ option
+1064  MESG  -E or -x required when input is from standard input
+1977  MESG  'weak_import' attribute cannot be specified on a definition
+2028  MESG  'void' must be the first and only parameter if specified
+2029  MESG  'void' as parameter must not have type qualifiers
+1852  MESG  'virtual' can only be specified inside the class definition
+1851  MESG  'virtual' can only appear on non-static member functions
+2786  MESG  'va_start' used in function with fixed args
+1585  MESG  'using namespace' is not allowed in classes
+1669  MESG  'typename' keyword used on a non-type
+2520  MESG  'typeid' of incomplete type *
+2009  MESG  'transparent_union' attribute support incomplete; only supported for pointer unions
+2173  SMSG  'template<>' header not required for explicitly-specialized class * declared here
+2484  MESG  'super' is only valid in a method body
+1533  MESG  'static' may not be used with an unspecified variable length array size
+1857  MESG  'static' can only be specified inside the class definition
+1461  MESG  'short *' is invalid
+2013  MESG  'sentinel' parameter 2 not 0 or 1
+2012  MESG  'sentinel' parameter 1 less than zero
+2010  MESG  'sentinel' attribute requires named arguments
+2011  MESG  'sentinel' attribute only supported for variadic *
+1967  MESG  'section' attribute is not valid on local variables
+2019  MESG  'regparm' parameter must be between 0 and * inclusive
+2018  MESG  'regparm' is not valid on this platform
+2025  MESG  'overloadable' function * must have a prototype
+2022  MESG  'overloadable' attribute can only be applied to a function
+2007  MESG  'nonnull' attribute applied to function with no pointer arguments
+2527  MESG  'new' expression with placement arguments refers to non-placement 'operator delete'
+1848  MESG  'mutable' cannot be applied to references
+1847  MESG  'mutable' cannot be applied to functions
+1850  MESG  'mutable' can only be applied to member variables
+1849  MESG  'mutable' and 'const' cannot be mixed
+2008  MESG  'malloc' attribute only applies to functions returning a pointer type
+1705  MESG  'main' should not be declared *
+1707  MESG  'main' must return 'int'
+1706  MESG  'main' is not allowed to be declared *
+1052  MESG  'long long' is an extension when C99 mode is not enabled
+1463  MESG  'long long *' is invalid
+1462  MESG  'long *' is invalid
+1666  MESG  'inline' can only appear on functions
+1984  MESG  'gnu_inline' attribute requires function to be marked 'inline', attribute ignored
+1542  MESG  'friend' used outside of class
+2297  MESG  'extern' variable has an initializer
+2296  MESG  'extern' variable cannot have an initializer
+1854  MESG  'explicit' can only be specified inside the class definition
+1855  MESG  'explicit' can only be applied to a constructor or conversion function
+1853  MESG  'explicit' can only appear on non-static member functions
+1431  MESG  'defined' cannot be used as a macro name
+2770  MESG  'default' statement not in switch statement
+1767  MESG  'copy' attribute must be specified for the block property when -fobjc-gc-only is specified
+2768  MESG  'continue' statement not in loop statement
+2017  MESG  'cleanup' function * parameter has type * which is incompatible with type *
+2016  MESG  'cleanup' function * must take 1 parameter
+2014  MESG  'cleanup' argument * not found
+2015  MESG  'cleanup' argument * is not a function
+2771  MESG  'case' statement not in switch statement
+2769  MESG  'break' statement not in loop or switch statement
+1929  MESG  'auto' not allowed in *
+1687  MESG  '__thread' variables must have global storage
+1686  MESG  '__thread' is only allowed on variable declarations
+1458  MESG  '__thread' before 'static'
+1539  MESG  '__pixel' must be preceded by '__vector'. '*' declaration specifier not allowed here
+2635  MESG  '__builtin_choose_expr' requires a constant expression
+1464  MESG  '_Complex *' is invalid
+1759  MESG  '@end' is missing in implementation context
+1409  MESG  ':' without preceding '?'
+1301  MESG  '/*' within block comment
+2238  MESG  '**' instantiated to a class template, not a function template
+1082  MESG  '*': unable to use AST files with this tool
+1081  MESG  '*': unable to pass LLVM bit-code files to linker
+2752  MESG  '*' specified field * is missing a matching 'int' argument
+1969  MESG  '*' redeclared without * attribute: previous * ignored
+1525  MESG  '*' qualifier may not be applied to a reference
+1892  MESG  '*' qualifier is not allowed on a destructor
+1884  MESG  '*' qualifier is not allowed on a constructor
+1087  MESG  '*' not supported, please use -iquote instead
+1465  MESG  '*' is invalid in friend declarations
+2694  SMSG  '*' inheritance specifier here
+1382  MESG  '*' file not found
+2353  MESG  '*' does not point into a class
+1198  MESG  '*' does not appear to be a precompiled header file
+1143  MESG  '*' diagnostics * but not *: *
+2348  MESG  '*' declared as array of references of type *
+2346  MESG  '*' declared as array of functions of type *
+1928  MESG  '*' declared as array of 'auto'
+2350  MESG  '*' declared as a pointer to a reference of type *
+2352  MESG  '*' declared as a member pointer to void
+2351  MESG  '*' declared as a member pointer to a reference of type *
+1118  MESG  '*' cannot be used with '*'
+1653  MESG  '*' cannot be the name of a variable or data member
+2817  MESG  '*' cannot be signed or unsigned
+1942  MESG  '*' attribute requires parameter * to be an integer constant
+1943  MESG  '*' attribute requires parameter * to be a string
+1941  MESG  '*' attribute requires integer constant
+1944  MESG  '*' attribute parameter * is out of bounds
+2006  MESG  '*' attribute invalid on this declaration, requires typedef or value
+1931  MESG  '*' attribute cannot be repeated
+2000  MESG  '*' attribute argument not supported: *
+1312  MESG  '$' in identifier
+1394  MESG  '#' is not followed by a macro parameter
+1432  MESG  '##' cannot appear at start of macro expansion
+1433  MESG  '##' cannot appear at end of macro expansion
+1348  MESG  #warning *
+1356  MESG  #pragma system_header ignored in main file
+1718  MESG  #pragma pack(pop, ...) failed: *
+1355  MESG  #pragma once in main file
+1444  MESG  #line directive requires a simple digit sequence
+1441  MESG  #line directive requires a positive integer argument
+1443  MESG  #line directive interprets number as decimal, not octal
+1351  MESG  #include_next with absolute path
+1349  MESG  #include_next in primary source file
+1385  MESG  #include nested too deeply
+1381  MESG  #error *
+1401  MESG  #endif without #if
+1397  MESG  #else after #else
+1400  MESG  #elif without #if
+1398  MESG  #elif after #else
+1684  SMSG  *using declaration
+1911  MESG  *type * cannot be initialized with an initializer list
+1817  MESG  *incomplete type * is not allowed in exception specification
+1837  SMSG  *declared * here
+2045  MESG  *constructor for * must explicitly initialize the * member *
+1870  MESG  *constructor for * must explicitly initialize the * which does not have a default constructor
+1095  MESG  *: previously preprocessed input unused when '*' is present
+1094  MESG  *: '*' input unused when '*' is present
+1803  MESG  * type * is an abstract class
+2500  MESG  * to *, which is not a reference, pointer-to-object, or pointer-to-data-member
+2096  SMSG  * template parameters in template template argument
+2095  MESG  * template parameters in template *redeclaration
+2716  MESG  * template must have at least two parameters.
+2115  MESG  * template arguments for *
+2718  MESG  * takes type size_t (*) as first parameter
+2721  MESG  * takes type * as first parameter
+2159  MESG  * specialization of * not in a namespace enclosing *
+2157  MESG  * specialization of * must originally be declared in the global scope
+2158  MESG  * specialization of * must originally be declared in namespace *
+2160  MESG  * specialization of * must occur at global scope
+1914  MESG  * reference cannot bind to vector element
+1913  MESG  * reference cannot bind to bit-field *
+1823  MESG  * redeclared with '*' access
+1710  MESG  * parameter of 'main' (*) must be of type *
+2548  MESG  * operand to ? is void, but * operand is of type *
+1983  MESG  * only applies to function types; type here is *
+1925  MESG  * of type * invokes deleted copy constructor
+1996  SMSG  * of first field is * bits
+1995  MESG  * of field * (* bits) does not match the * of the first field in transparent union; transparent_union attribute ignored
+2713  MESG  * must return type *
+2715  MESG  * must have at least one parameter.
+2558  MESG  * must be called immediately with '()'
+1030  MESG  * method * is variadic in one translation unit and not variadic in another
+1027  MESG  * method * has incompatible result types in different translation units (* vs. *)
+1029  MESG  * method * has a parameter with a different types in different translation units (* vs. *)
+1028  MESG  * method * has a different number of parameters in different translation units (* vs. *)
+1031  SMSG  * method * also declared here
+1889  SMSG  * member * will never be initialized
+2834  MESG  * may not respond to *
+2343  MESG  * may not be used as an array element due to flexible array member
+2342  MESG  * may not be nested in a struct due to flexible array member
+1374  MESG  * macro redefined
+1907  MESG  * lvalue reference to type * cannot bind to a value of unrelated type *
+1906  MESG  * lvalue reference to type * cannot bind to a temporary of type *
+1905  MESG  * lvalue reference to type * cannot be initialized with a * of type *
+2249  MESG  * is unavailable
+1863  MESG  * is not virtual and cannot be declared pure
+2518  MESG  * is not polymorphic
+1362  MESG  * is not defined, evaluates to 0
+2514  MESG  * is not a reference or pointer
+2517  MESG  * is not a pointer
+2515  MESG  * is not a class
+1822  MESG  * is missing exception specification '*'
+2248  MESG  * is deprecated
+2516  MESG  * is an incomplete type
+2580  MESG  * is always * in this context
+1370  MESG  * is a language extension
+1698  SMSG  * is a builtin with type *
+1824  MESG  * is a * member of *
+1012  SMSG  * is a * here
+2191  MESG  * instantiation of undefined template *
+2164  SMSG  * instantiation first required here
+1814  MESG  * has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit
+2376  MESG  * has lower precedence than *; * will be evaluated first
+2253  SMSG  * has been explicitly marked sentinel here
+2505  MESG  * from vector * to vector * of different size
+2503  MESG  * from vector * to scalar * of different size
+2504  MESG  * from scalar * to vector * of different size
+2498  MESG  * from rvalue to reference type *
+2497  MESG  * from * to * is not allowed
+2499  MESG  * from * to * casts away constness
+2237  MESG  * following the 'template' keyword refers to a function template
+2236  MESG  * following the 'template' keyword does not refer to a template
+2802  MESG  * elements in vector initialization (expected * elements, have *)
+2465  MESG  * does not refer to a value
+2559  MESG  * does not refer to a type name in pseudo-destructor expression; expected the name of type *
+2846  MESG  * does not have a member named *; did you mean *?
+2389  MESG  * does not have a member named *
+1018  SMSG  * derivation here
+2683  SMSG  * declared here
+1526  MESG  * declared as a reference to a reference
+1084  MESG  * command failed with exit code * (use -v to see invocation)
+1085  MESG  * command failed due to signal * (use -v to see invocation)
+2717  MESG  * cannot take a dependent type as first parameter; use size_t (*) instead
+2720  MESG  * cannot take a dependent type as first parameter; use * instead
+2714  MESG  * cannot have a dependent return type; use * instead
+2712  MESG  * cannot be declared static in global scope
+2711  MESG  * cannot be declared inside a namespace
+1861  MESG  * can only be initialized if it is a static const integral data member
+1606  MESG  * can only * a single entity
+1809  MESG  * can not be defined in the result type of a function
+1808  MESG  * can not be defined in a type specifier
+1810  MESG  * can not be defined in a parameter type
+2026  MESG  * attribute only applies to functions or methods that return a pointer or Objective-C object
+1982  MESG  * attribute only applies to * types
+1994  MESG  * attribute ignored for field of type *
+1970  MESG  * attribute ignored
+1936  MESG  * attribute can be applied only to symbol declaration
+1937  MESG  * and * attributes are not compatible
+2436  MESG  * and * are not pointers to compatible types
+2663  MESG  * will be initialized after *
+2023  MESG  * must have the 'overloadable' attribute
+1888  MESG  * does not declare any constructor to initialize its non-modifiable members
+2269  MESG  * was previously declared as a *
+2589  MESG  * discards qualifiers in nested pointer types
+2588  MESG  * discards qualifiers
+2585  MESG  * converts between void pointer and function pointer
+2586  MESG  * converts between pointers to integer types with different sign

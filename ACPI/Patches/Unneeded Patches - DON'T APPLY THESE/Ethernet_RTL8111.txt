@@ -1,0 +1,37 @@
+# Patch made by nguyenlc1993 to:
+# - Delete PXSX device in RP03 (as GLAN device already exists).
+# - Rename any RP03.PXSX instance to RP03.GLAN.
+# - Fix _ADR of GLAN device from 0xFF to Zero (if problem exists).
+# - Add _SUN object, _PRW and _DSM methods.
+
+# ————————————————————
+
+# Delete PXSX device
+into device label PXSX parent_label RP03 remove_entry;
+
+# Rename PXSX to GLAN
+into method label HPME parent_label RP03 code_regex Notify\s\(PXSX,\s0x02\) replaceall_matched begin Notify (GLAN, 0x02) end;
+into_all all label _SB.PCI0.RP03.PXSX set_label begin _SB.PCI0.RP03.GLAN end;
+
+# Fix _ADR to Zero
+into device label GLAN parent_label RP03 code_regex Name\s\(_ADR,\s0xFF\) replace_matched begin Name (_ADR, Zero) end;
+
+# Add _SUN, _PRW and _DSM
+into device label GLAN parent_label RP03 insert
+begin
+Name (_SUN, 0x02)\n
+Method (_PRW, 0, NotSerialized)\n
+{\n
+    Return (GPRW (0x69, 0x04))\n
+}\n
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "built-in", Buffer () { 0x00 },\n
+        "device_type", Buffer () { "Ethernet" },\n
+        "model", Buffer () { "RTL8111 PCI Express Gigabit Ethernet Controller" },\n
+    })\n
+}\n
+end;

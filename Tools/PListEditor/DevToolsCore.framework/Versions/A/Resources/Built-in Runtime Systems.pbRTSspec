@@ -1,0 +1,29 @@
+/**
+    Built-in Runtime Systems specifications
+
+    Copyright (c) 1999-2006 Apple Computer, Inc.
+    All rights reserved.
+*/
+
+(
+    {
+        Identifier = "rts.native";
+        Name = "Native";
+        InfoPlistKey = "";
+    },
+    {
+        Identifier = "rts.Java";
+        Name = "Java";
+        InfoPlistKey = "NSJavaNeeded";
+    },
+    {
+        Identifier = "rts.Java";
+        Name = "Java";
+        SpecificResourcePath = "Java";
+    },
+    {
+        Identifier = "rts.AppleScript";
+        Name = "AppleScript";
+        SpecificResourcePath = "Scripts";
+    },
+)

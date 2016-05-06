@@ -1,0 +1,42 @@
+/**
+    Built-in property dictionary condition flavors
+
+    Copyright (c) 2006-2007 Apple Inc.  All rights reserved.
+*/
+(
+    // SDK
+    {
+        Identifier = sdk;
+        Type = PropertyConditionFlavor;
+        Name = "SDK";
+        Description = "SDK flavor of property conditions";
+        Precedence = 1;
+    },
+    
+    // Variant
+    {
+        Identifier = variant;
+        Type = PropertyConditionFlavor;
+        Name = "Variant";
+        Description = "Variant flavor of property conditions";
+        Precedence = 2;
+    },
+    
+    // Architecture
+    {
+        Identifier = arch;
+        Type = PropertyConditionFlavor;
+        Name = "Architecture";
+        Description = "Architecture flavor of property conditions";
+        Precedence = 4;
+    },
+    
+    // Dialect
+    {
+        Identifier = dialect;
+        Type = PropertyConditionFlavor;
+        Name = "Dialect";
+        Description = "Dialect flavor of property conditions";
+        Precedence = 8;
+    },
+)

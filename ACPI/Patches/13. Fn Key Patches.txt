@@ -1,0 +1,138 @@
+# EMlyDinEsH’s Optional Fn key patches (may include insignificant changes in code style and/or comments).
+
+# ————————————————————
+
+# Replacing method _Q0C for F3 key to work
+# by removing the code which prevents
+into Method label _Q0C replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x50)\n
+                }
+end;
+
+# Replacing method _Q0D for F4 key to work
+# by removing the code which prevents
+into Method label _Q0D replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x51)\n
+                }
+end;
+
+# Replacing method _Q0E for F5 key to work
+# by removing the code which prevents
+into Method label _Q0E replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x20)\n
+                }
+end;
+
+# Replacing method _Q0F for F6 key to work
+# by removing the code which prevents 
+into Method label _Q0F replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x10)\n
+                }
+end;
+
+# Replacing method _Q13 for F10 key to work
+# by removing the code which prevents
+into Method label _Q13 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x32)\n
+                }
+end;
+
+# Replacing method _Q14 for F11 key to work
+# by removing the code which prevents
+into Method label _Q14 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x31)\n
+                }
+end;
+
+# Replacing method _Q15 for F12 key to work
+# by removing the code which prevents
+into Method label _Q15 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x30)\n
+                }
+end;
+
+# Replacing method _Q6F for media down arrow key to work
+# by removing the code which prevents
+into Method label _Q6F replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x45)\n
+                }
+end;
+
+# Replacing method _Q6E for media up arrow key to work
+# by removing the code which prevents
+into Method label _Q6E replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x43)\n
+                }
+end;
+
+# Replacing method _Q6C for media left arrow key to work
+# by removing the code which prevents
+into Method label _Q6C replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x40)\n
+                }
+end;
+
+# Replacing method _Q6D for media right arrow key to work
+# by removing the code which prevents
+into Method label _Q6D replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x41)\n
+                }
+end;
+
+# Replacing method _Q71 for space key to work
+# by removing the code which prevents
+into Method label _Q71 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x5C)\n
+                }
+end;
+
+# Replacing method _Q72 for V key to work
+# by removing the code which prevents
+into Method label _Q72 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x8A)\n
+                }
+end;
+
+# Replacing method _Q73 for C key to work
+# by removing the code which prevents
+into Method label _Q73 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x82)\n
+                }
+end;
+
+# Replacing method _Q76 for ALS toggle A key to work
+# by removing the code which prevents
+into Method label _Q76 replace_content begin 
+             If (ATKP)\n
+                {\n
+                   \_SB.ATKD.IANE (0x7A)\n
+                }
+end;

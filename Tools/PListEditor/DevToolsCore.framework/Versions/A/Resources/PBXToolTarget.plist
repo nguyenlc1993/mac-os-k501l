@@ -1,0 +1,24 @@
+{
+    Names = {
+        English = "Tool";
+        Swedish = "Verktyg";
+    };
+    BuildPhases = (
+        {
+            Class = Headers;
+        },
+        {
+            Class = Sources;
+        },
+        {
+            Class = Frameworks;
+        },
+        {
+            Class = Rez;
+        }
+    );
+    DefaultInstallationPath = "/usr/local/bin";
+    DefaultBuildFlags = {
+        REZ_EXECUTABLE = YES;
+    };
+}

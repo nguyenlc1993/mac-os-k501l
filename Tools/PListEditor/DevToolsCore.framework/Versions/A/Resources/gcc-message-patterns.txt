@@ -1,0 +1,150 @@
+#
+#  GCC Diagnostic Message Patterns
+#
+#  Copyright (c) 2009-2009 Apple Inc.
+#  All rights reserved.
+#
+
+0xF001  ----  cc1: *
+0xF011  ----  cc1obj: *
+0xFFFF  ----  cc1plus: *
+0xFFFF  ----  cc1objplus: *
+
+0xFFFE  ----  warning: *
+0xFFFE  ----  error: *
+0xFFFE  ----  note: *
+
+0x3000  ----  "*" redefined
+0x3001  ----  #warning "*"
+0x3002  ----  #warning *
+0x3003  ----  '*' declared 'static' but never defined
+0x3004  ----  '*' defined but not used
+
+0x3005  ----  '*' has no member named '*'
+0x3006  ----  '*' initialized and declared 'extern'
+0x3007  ----  '*' is deprecated (declared at *)
+0x3008  ----  '*' is used uninitialized in this function
+0x3009  ----  '*' may be used uninitialized in this function
+0x300A  ----  '*' may not respond to '*'
+0x300B  ----  '*' not found in protocol(s)
+0x300C  ----  '*' undeclared (first use in this function)
+0x300D  ----  '*' undeclared here (not in a function)
+0x300E  ----  '*' was not declared in this scope
+0x0001  ----  '...' as arguments.)
+0x300F  ----  'return' with no value, in function returning non-void
+0x0002  ----  (Each undeclared identifier is reported only once
+0x0003  ----  (Messages without a matching method signature
+0x3010  ----  *: No such file or directory
+0x3011  ----  ISO C++ forbids declaration of '*' with no type
+0x3012  ----  aggregate `*' has incomplete type and cannot be defined
+0x3013  ----  argument to '&' not really an lvalue; this will be a hard error in the future
+0x3014  ----  assignment discards qualifiers from pointer target type
+0x3015  ----  assignment from incompatible pointer type
+0x3016  ----  called object '*' is not a function
+0x3017  ----  cannot find interface declaration for '*', superclass of '*'
+0x3018  ----  cast from pointer to integer of different size
+0x3019  ----  cast to pointer from integer of different size
+0x301A  ----  class '*' does not fully implement the '*' protocol
+0x301B  ----  class '*' does not implement the '*' protocol
+0x301C  ----  comparison between signed and unsigned integer expressions
+0x301D  ----  conflicting types for '*'
+0x2000  ----  confused by earlier errors, bailing out
+0x301E  ----  control reaches end of non-void function
+0x301F  ----  data definition has no type or storage class
+0x3020  ----  deprecated conversion from string constant to '*'
+0x3022  ----  field '*' has incomplete type
+0x0004  ----  for each function it appears in.)
+0x3023  ----  format not a string literal and no format arguments
+0x3024  ----  function declaration isn't a prototype
+0x3025  ----  ignoring #pragma *
+0x3026  ----  implicit conversion shortens 64-bit value into a 32-bit value
+0x3027  ----  implicit declaration of function '*'
+0x3028  ----  incompatible Objective-C types assigning '*', expected '*'
+0x3029  ----  incompatible Objective-C types initializing '*', expected '*'
+0x302A  ----  incomplete implementation of class '*'
+0x302B  ----  initialization from incompatible pointer type
+0x302C  ----  initializer element is not constant
+0x302D  ----  invalid conversion from '*' to '*'
+0x302E  ----  invalid preprocessing directive *
+0x302F  ----  label '*' defined but not used
+0x3030  ----  large integer implicitly truncated to unsigned type
+0x3031  ----  method definition for '*' not found
+0x3032  ----  method definition not in @implementation context
+0x3033  ----  method possibly missing a [super dealloc] call
+0x3034  ----  method possibly missing a [super finalize] call
+0x3035  ----  missing braces around initializer for '*'
+0x3036  ----  no '*' method found
+0x3037  ----  no input files
+0x3038  ----  no previous prototype for '*'
+0x3039  ----  no return statement in function returning non-void
+0x303A  ----  parse error before '*' token
+0x303B  ----  passing argument * of '*' discards qualifiers from pointer target type
+0x303C  ----  passing argument * of '*' from incompatible pointer type
+0x303D  ----  passing argument * of '*' makes integer from pointer without a cast
+0x1000  ----  previous definition of '*' was here
+0x303E  ----  redefinition of '*'
+0x303F  ----  syntax error before '*'
+0x3040  ----  syntax error before '*' token
+0x3041  ----  target of assignment not really an lvalue; this will be a hard error in the future
+0x1001  ----  this is the location of the previous definition
+0x3042  ----  type '*' does not conform to the '*' protocol
+0x3043  ----  type defaults to '*' in declaration of '*'
+0x3044  ----  unused variable '*'
+0x3045  ----  '*' has not been declared
+0x3046  ----  '*' does not name a type
+
+0x3047  ----  #error "*"
+0x3048  ----  #error *
+0x9999  ----  redeclaration of '*' with no linkage
+0x9999  ----  too few arguments to function '*'
+0x9999  ----  selector element does not have a valid object type
+0x9999  ----  expected * before *
+0x9999  ----  label '*' used but not defined
+0x9999  ----  no such instruction `*'
+0x9999  ----  void value not ignored as it ought to be
+0x9999  ----  expected identifier or '*' before '*' token
+0x9999  ----  expected specifier-qualifier-list before '*' token
+0x9999  ----  unterminated argument list invoking macro "*"
+0x9999  ----  '@end' missing in implementation context
+0x9999  ----  expected ';' at end of input
+0x9999  ----  expected declaration or statement at end of input
+0x9999  ----  nested functions are disabled, use -fnested-functions to re-enable
+0x9999  ----  format '*' expects type '*', but argument * has type '*'
+0x9999  ----  stray '*' in program
+
+0x0005  ----  warnings being treated as errors
+0x0006  ----  will be assumed to return 'id' and accept
+0x0007  ----  compilation terminated.
+0x0008  ----  {standard input}:*:FATAL:.abort  detected.  Assembly stopping.
+0x0009  ----  *: In function '*':
+
+0x9999  ----  increment of read-only variable '*'
+0x9999  ----  assignment of read-only variable '*'
+0x9999  ----  two or more data types in declaration specifiers
+0x9999  ----  conflicting types for '*'
+0x9999  ----  previous implicit declaration of '*' was here
+0x9999  ----  left shift count >= width of type
+0x9999  ----  right shift count >= width of type
+
+0x9999  ----  *: too short to be a PCH file
+0x9999  ----  *: No such file or directory
+0x9999  ----  one or more PCH files were found, but they were invalid
+0x9999  detl  use -Winvalid-pch for more information
+
+0x9999  ----  input conversion stopped due to an input byte that does not belong to the input codeset UTF-8
+0x9999  ----  format '*' expects type '*', but argument * has type '*'
+0x9999  ----  too many arguments for format
+0x9999  ----  -fwritable-strings not compatible with literal CF/NSString in *
+0x9999  ----  can't make compact unwind encoding from dwarf for * in *
+0x9999  ----  pointer targets in passing argument * of '*' differ in signedness
+0x9999  ----  passing argument * of '*' discards qualifiers from pointer target type
+0x9999  ----  passing argument * of '*' from incompatible pointer type
+0x9999  ----  comparison is always true due to limited range of data type
+0x9999  ----  unused parameter '*'
+0x9999  ----  comparison between signed and unsigned
+0x9999  ----  signed and unsigned type in conditional expression
+0x9999  ----  incompatible block pointer types initializing '*', expected '*'
+0x9999  ----  parameter name omitted
+0x9999  ----  #include nested too deeply
+
+0x9999  ----  called object '*' is not a function
