@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>PBXTarget</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The name of this target.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+                <key>isNative</key>
+				<dict>
+					<key>Description</key>
+					<string>Does this target use the native build system?</string>
+					<key>Name</key>
+					<string>native</string>
+				</dict>
+				<key>productReference</key>
+				<dict>
+					<key>Description</key>
+					<string>An item reference to the generated product on disk.</string>
+					<key>Name</key>
+					<string>product reference</string>
+				</dict>
+				<key>targetTypeDisplayName</key>
+				<dict>
+					<key>Description</key>
+					<string>The type of target. Usually this is related to the type of product the target produces.</string>
+					<key>Name</key>
+					<string>target type</string>
+				</dict>
+				<key>executable</key>
+				<dict>
+					<key>Description</key>
+					<string>The executable used by this target to launch and debug the product. Only exists if the product is executable.</string>
+					<key>Name</key>
+					<string>executable</string>
+				</dict>
+                <key>defaultHeaderBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Copy Headers" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>copy headers phase</string>
+				</dict>
+                <key>defaultResourceBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Copy Bundle Resources" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>copy bundle resources phase</string>
+				</dict>
+                <key>defaultSourceCodeBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Compile Sources" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>compile sources phase</string>
+				</dict>
+                <key>defaultLinkBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Link Binary with Libraries" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>link binary with libraries phase</string>
+				</dict>
+                <key>defaultJavaArchiveBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Build Java Resources" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>build java resources phase</string>
+				</dict>
+                <key>defaultRezBuildPhase</key>
+				<dict>
+					<key>Description</key>
+					<string>The "Build Resource Manager Resources" build phase for this target if it exists.</string>
+					<key>Name</key>
+					<string>build resource manager resources phase</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A target is a blueprint for building a product. Besides specifying the type of product to build, a target consists of an ordered list of build phases, a record of 'build settings', an Info.plist record (the 'product settings'), a list of build rules, and a list of the produced executables (if any). Targets also track their dependencies on other targets.</string>
+			<key>Name</key>
+			<string>target</string>
+			<key>PluralName</key>
+			<string>targets</string>
+		</dict>
+		<key>XCAppleScriptBuildSetting</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The unlocalized build setting name (e.g. DSTROOT).</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+				<key>value</key>
+				<dict>
+					<key>Description</key>
+					<string>A string value for the build setting.</string>
+					<key>Name</key>
+					<string>value</string>
+				</dict>
+				<key>container</key>
+				<dict>
+					<key>Description</key>
+					<string>The build configuration that contains this build setting.</string>
+					<key>Name</key>
+					<string>container</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>An object that represents a build setting.</string>
+			<key>Name</key>
+			<string>build setting</string>
+			<key>PluralName</key>
+			<string>build settings</string>
+		</dict>
+		<key>XCAppleScriptFlattenedBuildSetting</key>
+		<dict>
+			<key>Description</key>
+			<string>An object that represents the highest precedence value for a build setting.</string>
+			<key>Name</key>
+			<string>flattened build setting</string>
+			<key>PluralName</key>
+			<string>flattened build settings</string>
+		</dict>
+		<key>XCAppleScriptBaseBuildSetting</key>
+		<dict>
+			<key>Description</key>
+			<string>An object that represents the value defined for a build setting in the Configuration Settings File.</string>
+			<key>Name</key>
+			<string>base build setting</string>
+			<key>PluralName</key>
+			<string>base build settings</string>
+		</dict>
+		<key>PBXTargetDependency</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>target</key>
+				<dict>
+					<key>Description</key>
+					<string>The target that the containing target depends on.</string>
+					<key>Name</key>
+					<string>target</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A target dependency provides a link between a target and another target upon which the first target depends.</string>
+			<key>Name</key>
+			<string>target dependency</string>
+			<key>PluralName</key>
+			<string>target dependencies</string>
+		</dict>
+		<key>XCTargetTemplate</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The name of this target template.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+				<key>templateDescription</key>
+				<dict>
+					<key>Description</key>
+					<string>The description of this target template.</string>
+					<key>Name</key>
+					<string>description</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A target template, used when creating a new target.</string>
+			<key>Name</key>
+			<string>target template</string>
+			<key>PluralName</key>
+			<string>target templates</string>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>This suite contains classes related to targets.</string>
+	<key>Name</key>
+	<string>Xcode Target Suite</string>
+</dict>
+</plist>

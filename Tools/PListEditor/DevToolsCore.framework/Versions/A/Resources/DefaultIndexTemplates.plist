@@ -1,0 +1,57 @@
+//
+// This file contains the rules for determining which index template is used to initialize a project index.
+//
+// The rules are searched in order for the first one that matches (so more specific project types should come first).
+//
+// The index files of the given name can be put in "~/Library/Application Support/Apple/Developer Tools/Index Templates"
+// or "/Library/Application Support/Apple/Developer Tools/Index Templates". The files should be called "<name>.pbxindex".
+//
+// Index templates can be turned on with "defaults write com.apple.Xcode PBXCodeSenseEnableIndexTemplates YES"
+//
+(
+    {
+        name = JavaDTWJavaClientAppIndex;
+        hasJava = YES;
+        hasObjC = NO;
+        frameworks = ( "JavaDirectToWeb.framework" );
+    },
+    {
+        name = JavaWebObjectsAppIndex;
+        hasJava = YES;
+        hasObjC = NO;
+        frameworks = ( "JavaWebObjects.framework" );
+    },
+    {
+        name = CocoaEOFIndex;
+        hasJava = YES;
+        hasObjC = YES;
+        frameworks = ( "JavaEOCocoa.framework" );
+    },
+    {
+        name = JavaIndex;
+        hasJava = YES;
+        hasObjC = NO;
+    },
+    {
+        name = CocoaJavaIndex;
+        hasJava = YES;
+        hasObjC = YES;
+    },
+    {
+        name = CocoaIndex;
+        hasJava = NO;
+        hasObjC = YES;
+    },
+    {
+        name = CPlusPlusIndex;
+        hasJava = NO;
+        hasCpp = YES;
+        frameworks = ( "Carbon.framework" );
+    },
+    {
+        name = CarbonIndex;
+        hasJava = NO;
+        hasC = YES;
+        frameworks = ( "Carbon.framework" );
+    }
+)

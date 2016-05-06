@@ -1,0 +1,40 @@
+# Modified from PJALM’s SATA patch by nguyenlc1993.
+# Changelog:
+# - Removed the patch that renames SAT0 to SATA.
+# - Added a patch to remove SAT1 device.
+# - Removed ‘device-id’ property in _DSM method.
+# - Modified the content of _DSM method to not use DTGP (RehabMan's style).
+# - Modified the patch to find by address instead of label.
+
+# ————————————————————
+
+# Maintained by: PJALM (help@pjalm.com) for: http://pjalm.com/repos/
+
+# These patches are the registered property of PJALM.COM and can not be
+# redistributed or modified without the written consent of PJALM.COM.
+# Links to these patches are allowed. All material is protected under the DMCA.
+
+# Last Updated  : 11/17/2015
+# Patch Name    : SATA
+# Patch Version : 1.0
+
+# Remove SAT1 Device
+into device label SAT1 remove_entry;
+
+# Add _DSM Method
+into method label _DSM parent_adr 0x001F0002 remove_entry;
+into device name_adr 0x001F0002 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer () { 0x03 } ) }\n
+    Return (Package ()\n
+    {\n
+        "AAPL,slot-name", "Built In",\n
+        "name", "Intel AHCI Controller",\n
+        "model", Buffer () { "Intel 9 Series Chipset Family SATA Controller" },\n
+        "device_type", Buffer () { "AHCI Controller" },\n
+    })\n
+}\n
+end;
+

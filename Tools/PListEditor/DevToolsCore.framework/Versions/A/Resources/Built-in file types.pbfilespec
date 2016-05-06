@@ -1,0 +1,69 @@
+/**
+    Built-in file type specifications
+
+    Copyright (c) 1999-2006 Apple Computer, Inc.
+    All rights reserved.
+
+    The primitive file type specifications that are built into Xcode.  These file type specifications should probably not be overridden.  This is the minimal set of file types of which Xcode needs to be aware, and consists mainly of abstract file types.
+*/
+(
+    // Very primitive file types (should probably not be overridden)
+    {   Type = FileType;
+        Identifier = file;
+        MIMETypes = ("application/x-octet-stream");
+    },
+        {   Type = FileType;
+            Identifier = text;
+            BasedOn = file;
+            Extensions = (txt, "");
+            TypeCodes = (TEXT);
+            MIMETypes = ("text/plain");
+            IsTextFile = YES;
+        },
+            {   Type = FileType;
+                Identifier = sourcecode;
+                BasedOn = text;
+                ComputerLanguage = default;
+                Language = "xcode.lang.simpleColoring";
+                IncludeInIndex = YES;
+                IsSourceCode = YES;
+            },
+        {   Type = FileType;
+            Identifier = compiled;
+            BasedOn = file;
+        },
+        {   Type = FileType;
+            Identifier = archive;
+            BasedOn = file;
+            IncludeInIndex = YES;
+        },
+        {   Type = FileType;
+            Identifier = audio;
+            BasedOn = file;
+        },
+        {   Type = FileType;
+            Identifier = image;
+            BasedOn = file;
+        },
+        {   Type = FileType;
+            Identifier = video;
+            BasedOn = file;
+        },
+
+
+    // Very primitive folder types (should probably not be overridden)
+    {   Type = FileType;
+        Identifier = folder;
+        IsFolder = YES;
+        IsTransparent = YES;
+        IncludeInIndex = YES;
+        CanSetIncludeInIndex = YES;
+    },
+        {   Type = FileType;
+            Identifier = wrapper;
+            BasedOn = folder;
+            IsWrapperFolder = YES;
+            IncludeInIndex = NO;
+            CanSetIncludeInIndex = NO;
+        },
+)

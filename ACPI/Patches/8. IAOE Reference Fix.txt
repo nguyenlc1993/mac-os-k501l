@@ -1,0 +1,28 @@
+# RehabMan’s system_IAOE patch - modified by nguyenlc1993.
+# Change log:
+# - Completely rewrote the patch for correct finding and replacing.
+# - The patch will now modify the RPTS and RWAK methods, instead of _PTS and _WAK.
+
+# ————————————————————
+
+# RPTS fixes
+into method label RPTS code_regex And\s+\(ICNF,\sOne\n*\s*\) replaceall_matched
+begin
+LAnd (CondRefOf (\\_SB.IAOE), And (ICNF, One))
+end;
+into method label RPTS code_regex And\s+\(ICNF,\s0x10\n*\s*\) replaceall_matched
+begin
+LAnd (CondRefOf (\\_SB.IAOE), And (ICNF, 0x10))
+end;
+into method label RPTS code_regex If\s\(LOr\s\(LEqual\s\(Arg0,\s0x03\),\sLEqual\s\(Arg0,\s0x04\)\)\)\s\{\} remove_matched;
+
+# RWAK fixes
+into method label RWAK code_regex And\s+\(ICNF,\sOne\n*\s*\) replaceall_matched
+begin
+LAnd (CondRefOf (\\_SB.IAOE), And (ICNF, One))
+end;
+into method label RWAK code_regex And\s+\(ICNF,\s0x10\n*\s*\) replaceall_matched
+begin
+LAnd (CondRefOf (\\_SB.IAOE), And (ICNF, 0x10))
+end;
+into method label RWAK code_regex If\s+\(LEqual\s+\(\\_SB\.IAOE\.ITMR,\s+(Zero|0x00)\)\)\s+\{\} remove_matched;

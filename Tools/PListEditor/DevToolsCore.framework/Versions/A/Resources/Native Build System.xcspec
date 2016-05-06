@@ -1,0 +1,785 @@
+
+/*
+    Native Build System Properties
+
+    Copyright (c) 1999-2009 Apple Inc.  All rights reserved.
+
+    Defines the names, types, and default values of build properties that are specific to the native build system.
+    The native build system inherits all property definitions from the Core Build System,
+    and adds additional ones for concepts specific to the native build system.
+    
+    Product types, build phases, compilers, linkers, and other tools can define additional build properties.
+*/
+{
+    Type = BuildSystem;
+    Identifier = com.apple.build-system.native;
+    BasedOn = com.apple.build-system.core;
+    Name = "Native Build System";
+    Properties = (
+        {   Name = CCHROOT;
+            Type = Path;
+            DefaultValue = "$(CACHE_ROOT)";
+        },
+        {   Name = OBJECT_FILE_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/Objects";
+        },
+        {   Name = SYMBOL_REPOSITORY_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/SymbolRepositories";
+        },
+        {   Name = CLASS_FILE_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/JavaClasses";
+        },
+        {   Name = DERIVED_FILE_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/DerivedSources";
+        },
+        {   Name = FIXED_FILES_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/FixedFiles";
+        },
+        {   Name = SHARED_PRECOMPS_DIR;
+            Type = Path;
+            DefaultValue = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
+            Category = "Build Locations";
+        },
+        {   Name = COMPOSITE_SDK_DIRS;
+            Type = PathList;
+            DefaultValue = "$(CACHE_ROOT)/CompositeSDKs";
+        },
+
+        {   Name = REZ_COLLECTOR_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/ResourceManagerResources";
+        },
+        {   Name = REZ_OBJECTS_DIR;
+            Type = Path;
+            DefaultValue = "$(REZ_COLLECTOR_DIR)/Objects";
+        },
+        {   Name = TEMP_FILE_DIR;
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)";
+        },
+
+        // Build directory settings maintained for compatibility with targets moved from the Jambase
+        {   Name = DERIVED_FILES_DIR;
+            Type = Path;
+            DefaultValue = "$(DERIVED_FILE_DIR)";
+        },
+
+        // Default package type structure settings
+        {   Name = PRODUCT_TYPE;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = PACKAGE_TYPE;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = EXECUTABLE_PREFIX;
+            Type = String;
+            DefaultValue = "";
+            Category = Packaging;
+        },
+        {   Name = EXECUTABLE_VARIANT_SUFFIX;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = EXECUTABLE_SUFFIX;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = EXECUTABLE_EXTENSION;
+            Type = String;
+            DefaultValue = "";
+            Category = Packaging;
+        },
+        {   Name = EXECUTABLE_NAME;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = EXECUTABLE_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = WRAPPER_PREFIX;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = WRAPPER_SUFFIX;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = WRAPPER_NAME;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = WRAPPER_EXTENSION;
+            Type = String;
+            Category = Packaging;
+            DefaultValue = "";
+        },
+        {   Name = CONTENTS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = INFOPLIST_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = INFOSTRINGS_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = PKGINFO_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = PBDEVELOPMENTPLIST_PATH;         // This might be deprecated
+            Type = Path;
+            DefaultValue = "";
+        },
+
+        {   Name = VERSIONPLIST_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = PUBLIC_HEADERS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+            Category = Packaging;
+        },
+        {   Name = PRIVATE_HEADERS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+            Category = Packaging;
+        },
+        {   Name = EXECUTABLES_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = FRAMEWORKS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = SHARED_FRAMEWORKS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = SHARED_SUPPORT_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = UNLOCALIZED_RESOURCES_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = LOCALIZED_RESOURCES_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = DOCUMENTATION_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = PLUGINS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = SCRIPTS_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = JAVA_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "";
+        },
+        
+        {   Name = CODESIGNING_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)";
+        },
+
+        // Search paths default to empty and get special values prepended automatically
+        {   Name = HEADER_SEARCH_PATHS;
+            Type = PathList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Search Paths";
+        },
+        {   Name = USER_HEADER_SEARCH_PATHS;
+            Type = PathList;
+            ConditionFlavors = ( "arch" );
+            Category = "Search Paths";
+        },
+        {   Name = FRAMEWORK_SEARCH_PATHS;
+            Type = PathList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Search Paths";
+        },
+        {   Name = LIBRARY_SEARCH_PATHS;
+            Type = PathList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Search Paths";
+        },
+        {   Name = REZ_SEARCH_PATHS;
+            Type = PathList;
+            DefaultValue = "";
+            ConditionFlavors = ( "sdk" );
+            Category = "Search Paths";
+        },
+        {   Name = DERIVED_PATHS;
+            DefaultValue = "";
+        },
+
+        {   Name = ALWAYS_SEARCH_USER_PATHS;
+            Type = Boolean;
+            DefaultValue = YES;
+            ConditionFlavors = ( "arch" );
+            Category = "Search Paths";
+        },
+
+        {   Name = INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES;
+            Type = StringList;
+            DefaultValue = "";
+            Category = "Search Paths";
+        },
+        {   Name = EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES;
+            Type = StringList;
+            DefaultValue = "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj";
+            Category = "Search Paths";
+        },
+        {   Name = RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS;
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+
+        // Headermap settings
+        {   Name = USE_HEADERMAP;
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+        {   Name = USE_HEADER_SYMLINKS;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+
+        // Default variants and architectures
+        {   Name = CURRENT_ARCH;
+            Type = String;
+            DefaultValue = "$(arch)";
+        },
+        {   Name = CURRENT_VARIANT;
+            Type = String;
+            DefaultValue = "$(variant)";
+        },
+
+        // SDK, weak-linking and related settings (these are also defined in the Core Build System .xcspec)
+        {   Name = SDKROOT;
+            Type = Path;
+            UIType = SDKRoot;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch" );
+            Category = "Architectures";
+        },
+        {   Name = ADDITIONAL_SDKS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch" );
+            Category = "Architectures";
+        },
+
+        // Default install settings
+        {   Name = DEPLOYMENT_LOCATION;
+            Type = Boolean;
+            DefaultValue = NO;
+            ConditionFlavors = ( "sdk" );
+            Category = "Deployment";
+        },
+
+        // Default settings for installation information and framework version
+        {   Name = STRIP_INSTALLED_PRODUCT;     // Default value will be computed from $(UNSTRIPPED_PRODUCT)
+            Type = Boolean;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Deployment";
+        },
+        {   Name = UNSTRIPPED_PRODUCT;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+        {   Name = RETAIN_RAW_BINARIES;         // defaults to match asides and is supported
+            Type = Boolean;
+            DefaultValue = "$(INSTALLED_PRODUCT_ASIDES)";
+        },
+        {   Name = COPY_RESOURCES_FROM_STATIC_FRAMEWORKS;
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+        {   Name = PREBINDING;
+            Type = Boolean;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = YES;
+            Category = "Linking";
+        },
+        {   Name = SET_DIR_MODE_OWNER_GROUP;
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+        {   Name = SET_FILE_MODE_OWNER_GROUP;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+
+        // Miscellaneous default target settings
+        {   Name = INFOPLIST_FILE;
+            Type = Path;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+        },
+        {   Name = GENERATE_PKGINFO_FILE;
+            Type = Boolean;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = NO;
+            Category = Packaging;
+        },
+        {   Name = INFOPLIST_EXPAND_BUILD_SETTINGS;
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+        {   Name = INFOPLIST_OUTPUT_FORMAT;
+            Type = Enumeration;
+            Category = Packaging;
+            ConditionFlavors = ( "sdk" );
+            Values = ("same-as-input", "xml", "binary");
+            DefaultValue = "same-as-input";
+        },
+        {   Name = PLIST_FILE_OUTPUT_FORMAT;
+            Type = Enumeration;
+            Category = Packaging;
+            ConditionFlavors = ( "sdk" );
+            Values = ("same-as-input", "xml", "binary");
+            DefaultValue = "same-as-input";
+        },
+        {   Name = STRINGS_FILE_OUTPUT_ENCODING;
+            Type = Enumeration;
+            Category = Packaging;
+            ConditionFlavors = ( "sdk" );
+            Values = ("UTF-16", "UTF-8", "binary");
+            DefaultValue = "UTF-16";
+        },
+        {   Name = APPLY_RULES_IN_COPY_FILES;
+            Type = Boolean;
+            Category = Packaging;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = NO;
+        },
+        {   Name = RESOURCE_RULES_PLIST_PATH;
+            Type = Path;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+        },
+
+        // Default C and C++ compiler settings
+        {   Name = GCC_VERSION;
+            Type = CompilerVersion;
+            DefaultValue = "";
+            Category = "CompilerVersion";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = GCC_VERSION_IDENTIFIER;
+            Type = String;
+            DefaultValue = "$(GCC_VERSION:identifier)";
+        },
+        {   Name = GCC_TREAT_WARNINGS_AS_ERRORS;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+        {   Name = GLOBAL_CFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = SECTORDER_FLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Linking";
+        },
+        {   Name = ORDER_FILE;
+            Type = String;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Linking";
+        },
+        {   Name = NO_COMMON;
+            Type = Boolean;
+            DefaultValue = YES;
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = PASCAL_STRINGS;
+            Type = Boolean;
+            DefaultValue = YES;
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = USE_DYNAMIC_NO_PIC;
+            Type = Boolean;
+            DefaultValue = YES;
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = PREFIX_FLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = OTHER_PRECOMP_CFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = SYMBOL_HEADER;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = SYMBOL_REPOSITORY;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = ENABLE_OPENMP_SUPPORT;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+
+        // Default prefix header and precompilation settings !!!:dewing:20050406 - these four were used by the jam build system and should get converted to the new GCC_xxx versions.
+        {   Name = PREFIX_HEADER;
+            Type = Path;
+            DefaultValue = "";
+        },
+        {   Name = PRECOMPILE_PREFIX_HEADER;
+            Type = Boolean;
+            DefaultValue = "";
+        },
+        {   Name = USE_GCC3_PFE_SUPPORT;        // Used by GCC 3.1 only
+            Type = Boolean;
+            DefaultValue = "";
+        },
+        {   Name = PFE_FILE_C_DIALECTS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+
+        {   Name = PRECOMP_DESTINATION_DIR;             // !!!:dewing:20050406 - jam build system only
+            Type = Path;
+            DefaultValue = "$(TARGET_TEMP_DIR)/PrefixHeaders";
+        },
+        {   Name = PREFIX_CFLAG_BASE;                   // !!!:dewing:20050406 - jam build system only
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = PREFIX_REFERENCE;                    // !!!:dewing:20050406 - jam build system only
+            Type = String;
+            DefaultValue = "";
+        },
+
+        // Compatibility with old settings:
+        {   Name = GCC_PREFIX_HEADER;
+            Type = Path;
+            DefaultValue = "$(PREFIX_HEADER)";
+            ConditionFlavors = ();
+        },
+        {   Name = GCC_PRECOMPILE_PREFIX_HEADER;
+            Type = Boolean;
+            DefaultValue = "$(PRECOMPILE_PREFIX_HEADER)";
+            ConditionFlavors = ();
+        },
+        {   Name = GCC_USE_GCC3_PFE_SUPPORT;              // Used by GCC 3.1 and later only
+            Type = Boolean;
+            DefaultValue = "$(USE_GCC3_PFE_SUPPORT)";
+        },
+        {   Name = GCC_PFE_FILE_C_DIALECTS;
+            Type = StringList;
+            DefaultValue = "c objective-c c++ objective-c++";
+        },
+
+        {   Name = CLEAN_PRECOMPS;                  // by default, precomps are removed on clean
+            Type = Boolean;
+            DefaultValue = YES;
+        },
+
+        {   Name = OPTIMIZATION_CFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch" );
+        },
+
+        // Default debugging info settings
+        {   Name = DEBUG_INFORMATION_FORMAT;
+            Type = Enumeration;
+            Category = BuildOptions;
+            Values = (
+                {   Value = "stabs";
+                },
+                {   Value = "dwarf";
+                },
+                {   Value = "dwarf-with-dsym";
+                },
+            );
+            DefaultValue = "dwarf";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = DWARF_DSYM_FILE_NAME;
+            Type = String;
+            DefaultValue = "$(FULL_PRODUCT_NAME).dSYM";
+        },
+        {   Name = DWARF_DSYM_FOLDER_PATH;
+            Type = Path;
+            DefaultValue = "$(CONFIGURATION_BUILD_DIR)";
+        },
+
+        // Default linker settings
+        {   Name = STRIPFLAGS;
+            Type = StringList;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Deployment";
+        },
+        {   Name = WARNING_LDFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Linking";
+        },
+        {   Name = INIT_ROUTINE;
+            Type = String;
+            DefaultValue = "";
+            Category = "Linking";
+        },
+        {   Name = LINKER_LIBRARY_FLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = LD_FLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+        },
+        {   Name = OTHER_LDFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+            ConditionFlavors = ( "arch", "sdk" );
+            Category = "Linking";
+        },
+        {   Name = DYLIB_COMPATIBILITY_VERSION;
+            Type = String;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Linking";
+        },
+        {   Name = DYLIB_CURRENT_VERSION;
+            Type = String;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Linking";
+        },
+        {   Name = DYLIB_INSTALL_NAME_BASE;
+            Type = String;
+            DefaultValue = "";
+        },
+
+        // Code signing settings
+        {   Name = CODE_SIGN_IDENTITY;
+            Type = CodeSignIdentity;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Code Signing";
+        },
+        {   Name = CODE_SIGN_RESOURCE_RULES_PATH;
+            Type = String;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Code Signing";
+        },
+        {   Name = OTHER_CODE_SIGN_FLAGS;
+            Type = StringList;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Code Signing";
+        },
+        {   Name = CODE_SIGN_ENTITLEMENTS;
+            Type = String;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = "";
+            Category = "Code Signing";
+        },
+
+       
+        // lex and yacc settings
+        {   Name = LEX;
+            Type = Path;
+            DefaultValue = "$(DEVELOPER_BIN_DIR)/lex";
+        },
+        {   Name = YACC;
+            Type = Path;
+            DefaultValue = "$(DEVELOPER_BIN_DIR)/yacc";
+        },
+        {   Name = LEXFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = YACCFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = JAVAC_DEFAULT_FLAGS;
+            Type = StringList;
+            DefaultValue = "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8";
+        },
+        {   Name = JIKES_DEFAULT_FLAGS;
+            Type = StringList;
+            DefaultValue = "+E +OLDCSO";
+        },
+
+        // Default MiG settings
+        {   Name = OTHER_MIGFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+
+        // Default Rez and Resmerger flags
+        {   Name = OTHER_REZFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = OTHER_RESMERGERFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = MACOS_TYPE;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = MACOS_CREATOR;
+            Type = String;
+            DefaultValue = "";
+        },
+        {   Name = MACOS_TYPE_ARG;
+            Type = StringList;
+            DefaultValue = "";
+        },
+        {   Name = MACOS_CREATOR_ARG;
+            Type = StringList;
+            DefaultValue = "";
+        },
+
+        // Default OSACompiler
+        {   Name = OSAC;
+            Type = Path;
+            DefaultValue = "/usr/bin/osacompile";
+        },
+        {   Name = OTHER_OSAFLAGS;
+            Type = StringList;
+            DefaultValue = "";
+        },
+
+        // Default versioning system settings
+        {   Name = VERSIONING_SYSTEM;
+            Type = Enumeration;
+            Values = ("", "apple-generic");
+            DefaultValue = "";
+            Category = "Versioning";
+        },
+        {   Name = CURRENT_PROJECT_VERSION;
+            Type = String;
+            DefaultValue = "";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_EXPORT_DECL;
+            Type = String;
+            DefaultValue = "";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_FILE;
+            Type = String;
+            DefaultValue = "$(PRODUCT_NAME)_vers.c";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_PREFIX;
+            Type = String;
+            DefaultValue = "";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_SUFFIX;
+            Type = String;
+            DefaultValue = "";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_BUILDER;
+            Type = String;
+            DefaultValue = "$(USER)";
+            Category = "Versioning";
+        },
+        {   Name = VERSION_INFO_STRING;
+            Type = String;
+            DefaultValue = "\"@(#)PROGRAM:$(PRODUCT_NAME)  PROJECT:$(PROJECT_NAME)-$(CURRENT_PROJECT_VERSION)\"";
+        },
+        {   Name = VERSIONING_STUB;
+            Type = String;
+            DefaultValue = "";
+        },
+
+        // Other tool settings
+        {   Name = CP;
+            Type = Path;
+            DefaultValue = "/bin/cp";
+        },
+        {   Name = ICONV;
+            Type = Path;
+            DefaultValue = "/usr/bin/iconv";
+        },
+        {   Name = SED;
+            Type = Path;
+            DefaultValue = "/usr/bin/sed";
+        },
+        {   Name = CHOWN;
+            Type = Path;
+            DefaultValue = "/usr/sbin/chown";
+        },
+        {   Name = CHMOD;
+            Type = Path;
+            DefaultValue = "/bin/chmod";
+        },
+
+        // Utility settings
+        // !!!:cmolick:20030319 verbose copy that applies to any copy tool might be better
+        {   Name = VERBOSE_PBXCP;
+            Type = Boolean;
+            DefaultValue = NO;
+        },
+
+        {   Name = GENERATE_PROFILING_CODE;
+            Type = Boolean;
+            ConditionFlavors = ( "sdk" );
+            DefaultValue = NO;
+            Category = "BuildOptions";
+        },
+        {   Name = PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR;
+            Type = Boolean;
+            DefaultValue = YES;
+            Category = "BuildOptions";
+        },
+        {   Name = RUN_CLANG_STATIC_ANALYZER;
+            Type = Boolean;
+            DefaultValue = NO;
+            Category = "BuildOptions";
+        },
+        {   Name = VALIDATE_PRODUCT;
+            Type = Boolean;
+            DefaultValue = NO;
+            Category = "BuildOptions";
+        },
+    );
+}

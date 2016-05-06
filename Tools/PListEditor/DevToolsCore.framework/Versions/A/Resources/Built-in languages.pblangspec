@@ -1,0 +1,2294 @@
+/**
+    Built-in language specifications
+
+    Copyright (c) 1999-2006 Apple Computer, Inc.
+    All rights reserved.
+
+    The language specifications that are built into Xcode. Any or all of these could be overridden by separate language specification property lists.
+*/
+(
+    // General lang specs, applicable to any language
+    {
+        Identifier = pbx_root_language;
+        Name = "Root Language";
+        Description = "Root Language Spec";
+        SupportsIndentation = NO;
+        SyntaxColoring = {
+            LinkStartChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";	/* same for URLs and email */
+            LinkPrefixChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.";	/* applies to URL schemes and email names */
+            MailLocalNameDelimiter = "@";
+            DomainNameStartChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            DomainNameChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.";
+            URLSchemeDelimiter = "://";
+            URLLocationChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;/?:@&=+$,-_.!~*'()%#";
+            URLSchemes = (
+                "acap",
+                "afp",
+                "afs",
+                "cid",
+                "data",
+                "fax",
+                "file",
+                "ftp",
+                "go",
+                "gopher",
+                "http",
+                "https",
+                "imap",
+                "ldap",
+                "mailserver",
+                "mailto",
+                "mid",
+                "modem",
+                "news",
+                "nntp",
+                "opaquelocktoken",
+                "pop",
+                "prospero",
+                "rdar",
+                "rtsp",
+                "service",
+                "sip",
+                "soap.beep",
+                "soap.beeps",
+                "tel",
+                "telnet",
+                "tip",
+                "tn3270",
+                "urn",
+                "vemmi",
+                "wais",
+                "z39.50r",
+                "z39.50s"
+            );
+        };
+    },
+
+    // Default plain old file
+    {
+        Identifier = default;
+        Name = "Simple Coloring";
+        Description = "Default";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            UnicodeSymbols = NO;
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            SingleLineComment = (
+                "//",
+                "#",
+            );
+
+        };
+    },
+
+    // ANSI C
+    {
+        Identifier = c;
+        Name = "C";
+        Description = "ANSI C";
+        BasedOn = "pbx_root_language";
+        SourceScannerClassName = PBXCSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            IndexedSymbols = YES;
+            CommentsCanBeNested = NO;
+            IdentifierStartChars = "_";
+            IdentifierChars = "_";
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            Character = (
+                ( "'", "'" )
+            );
+            SingleLineComment = (  "//" );
+            DocComment = "!";
+            DocCommentKeywords = (
+                "@abstract",
+                "@callback",
+                "@category",
+                "@class",
+                "@const",
+                "@constant",
+                "@defined",
+                "@discussion",
+                "@enum",
+                "@field",
+                "@function",
+                "@header",
+                "@method",
+                "@param",
+                "@protocol",
+                "@result",
+                "@struct",
+                "@thread",
+                "@typedef",
+                "@union",
+                "@var"
+            );
+            Keywords = (
+                "__alignof__",
+                "__asm__",
+                "__attribute__",
+                "__complex__",
+                "__extension__",
+                "__imag__",
+                "__label__",
+                "__real__",
+                "__restrict",
+                "__restrict__",
+                "__typeof__",
+                "_Bool",
+                "_Complex",
+                "_Imaginary",
+                "asm",
+                "auto",
+                "break",
+                "case",
+                "char",
+                "const",
+                "continue",
+                "default",
+                "do",
+                "double",
+                "else",
+                "enum",
+                "extern",
+                "float",
+                "for",
+                "goto",
+                "if",
+                "inline",
+                "int",
+                "long",
+                "pascal",
+                "register",
+                "restrict",
+                "return",
+                "short",
+                "signed",
+                "sizeof",
+                "static",
+                "struct",
+                "switch",
+                "typedef",
+                "typeof",
+                "union",
+                "unsigned",
+                "void",
+                "volatile",
+                "while"
+            );
+            AltKeywords = (
+                "FALSE",
+                "NULL",
+                "TRUE"
+            );
+            PreprocessorKeywordStart = "#";
+            PreprocessorKeywords = (
+                "error",
+                "define",
+                "elif",
+                "else",
+                "endif",
+                "error",
+                "file",
+                "if",
+                "ifdef",
+                "ifndef",
+                "import",
+                "include",
+                "line",
+                "pragma",
+                "undef",
+                "warning"
+            );
+        };
+    },
+
+    // Objective-C
+    {
+        Identifier = "c.objc";
+        Name = "Objective-C";
+        Description = "Objective-C";
+        BasedOn = c;
+        SourceScannerClassName = PBXObjCSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            String = (
+                ( "@\"", "\"" )
+            );
+            IdentifierStartChars = "@";
+            Keywords = (
+                "__strong",
+                "__weak",
+                "@catch",
+                "@class",
+                "@defs",
+                "@encode",
+                "@end",
+                "@finally",
+                "@implementation",
+                "@interface",
+                "@optional",
+                "@private",
+                "@property",
+                "@protected",
+                "@protocol",
+                "@public",
+                "@selector",
+                "@synchronized",
+                "@throw",
+                "@try",
+                "bycopy",
+                "byref",
+                "in",
+                "inout",
+                "oneway",
+                "out"
+
+            );
+            AltKeywords = (
+                "BOOL",
+                "IBAction",
+                "IBOutlet",
+                "IMP",
+                "NO",
+                "NS_DURING",
+                "NS_ENDHANDLER",
+                "NS_HANDLER",
+                "NS_VALUERETURN",
+                "NS_VOIDRETURN",
+                "Nil",
+                "SEL",
+                "YES",
+                "id",
+                "nil",
+                "self",
+                "super"
+            );
+        };
+    },
+
+    // C++
+    {
+        Identifier = "c.cpp";
+        Name = "C++";
+        BasedOn = c;
+        Description = "C++";
+        SourceScannerClassName = PBXCPPSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            Keywords = (
+                "abstract",	// really?
+                "and",
+                "and_eq",
+                "bitand",
+                "bitor",
+                "bool",
+                "catch",
+                "class",
+                "compl",
+                "const_cast",
+                "delete",
+                "dynamic_cast",
+                "explicit",
+                "false",
+                "friend",
+                "mutable",
+                "namespace",
+                "new",
+                "not",
+                "not_eq",
+                "operator",
+                "or",
+                "or_eq",
+                "private",
+                "protected",
+                "public",
+                "reinterpret_cast",
+                "static_cast",
+                "template",
+                "throw",
+                "true",
+                "try",
+                "typeid",
+                "typename",
+                "using",
+                "virtual",
+                "wchar_t",
+                "xor",
+                "xor_eq"
+            );
+            AltKeywords = (
+                "this"
+            );
+        };
+    },
+
+    // Objective-C++
+    {
+        Identifier = "c.objcpp";
+        Name = "Objective-C++";
+        Description = "Objective-C++";
+        BasedOn = "c.cpp";
+        SourceScannerClassName = PBXObjCPPSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            IdentifierStartChars = "@";
+            String = (
+                ( "@\"", "\"" )
+            );
+            Keywords = (
+                "__strong",
+                "__weak",
+                "@catch",
+                "@class",
+                "@defs",
+                "@encode",
+                "@end",
+                "@finally",
+                "@implementation",
+                "@interface",
+                "@optional",
+                "@private",
+                "@property",
+                "@protected",
+                "@protocol",
+                "@public",
+                "@selector",
+                "@synchronized",
+                "@throw",
+                "@try",
+                "bycopy",
+                "byref",
+                "in",
+                "inout",
+                "oneway",
+                "out",
+            );
+            AltKeywords = (
+                "BOOL",
+                "IBAction",
+                "IBOutlet",
+                "IMP",
+                "NO",
+                "NS_DURING",
+                "NS_ENDHANDLER",
+                "NS_HANDLER",
+                "NS_VALUERETURN",
+                "NS_VOIDRETURN",
+                "Nil",
+                "SEL",
+                "YES",
+                "id",
+                "nil",
+                "self",
+                "super"
+            );
+        };
+    },
+
+    // Interfacer
+    {
+        Identifier = "c.interfacer";
+        Name = "Interfacer";
+        Description = "Interfacer";
+        BasedOn = c;
+        SourceScannerClassName = PBXCPPSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            SingleLineComment = (  "%%" );
+            IdentifierStartChars = "%";
+            Keywords = (
+                "ByteArrayStruct",
+                "HandleStruct",
+                "MacPrefix",
+                "NoStruct",
+                "PointerStruct",
+                "asm",
+                "c",
+                "carbonOnly",
+                "customMixedModeGlue",
+                "defined",
+                "deprecated",
+                "exportset",
+                "extended",
+                "inout",
+                "java",
+                "javaClass",
+                "mixedmodeUPP",
+                "nativeUPP",
+                "noGrandfatherProc",
+                "noInline",
+                "noJava",
+                "noMixedModeGlue",
+                "noUPP",
+                "none",
+                "null",
+                "opaque",
+                "out",
+                "output",
+                "packed",
+                "pascal",
+                "pascalPtr",
+                "pascalVal",
+                "prototype",
+                "rez",
+                "string",
+                "threadHot",
+                "threadSafe",
+                "threadUnsafe",
+                "type"
+            );
+            AltKeywords = (
+                "%if",
+                "%inline",
+                "%else",
+                "%endif",
+                "%AsmPassThru",
+                "%CPassThru",
+                "%PassThru",
+                "%PascalPassThru",
+                "%RezPassThru",
+                "%TellEmitter"
+            );
+        };
+    },
+
+    // Java
+    {
+        Identifier = java;
+        Name = "Java";
+        Description = "Java";
+        BasedOn = "pbx_root_language";
+        SourceScannerClassName = PBXJavaSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = YES;
+            UnicodeEscapes = YES;		// accept \uXXXX anywhere in a file, and return a single character (not yet supported!)
+            IndexedSymbols = YES;
+            CommentsCanBeNested = NO;
+            IdentifierStartChars = "_";
+            IdentifierChars = "_$";
+            EscapeCharacter = "\\";
+            String = (
+                ( "\"", "\"" )
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            SingleLineComment = ( "//" );
+            DocComment = "*";
+            DocCommentKeywords = (
+                "@author",
+                "@beaninfo",
+                "@deprecated",
+                "@docRoot",
+                "@exception",
+                "@inheritDoc",
+                "@link",
+                "@linkplain",
+                "@param",
+                "@return",
+                "@see",
+                "@serial",
+                "@serialData",
+                "@serialField",
+                "@since",
+                "@throws",
+                "@value",
+                "@version"
+            );
+            Keywords = (
+                "abstract",
+                "assert",
+                "boolean",
+                "break",
+                "byte",
+                "byvalue",
+                "case",
+                "cast",
+                "catch",
+                "char",
+                "class",
+                "const",
+                "continue",
+                "default",
+                "do",
+                "double",
+                "else",
+                "extends",
+                "false",
+                "final",
+                "finally",
+                "float",
+                "for",
+                "future",
+                "generic",
+                "goto",
+                "if",
+                "implements",
+                "import",
+                "inner",
+                "instanceof",
+                "int",
+                "interface",
+                "long",
+                "native",
+                "new",
+                "null",
+                "operator",
+                "outer",
+                "package",
+                "private",
+                "protected",
+                "public",
+                "rest",
+                "return",
+                "short",
+                "static",
+                "strictfp",
+                "super",
+                "switch",
+                "synchronized",
+                "this",
+                "throw",
+                "throws",
+                "transient",
+                "true",
+                "try",
+                "var",
+                "void",
+                "volatile",
+                "while"
+            );
+        };
+    },
+
+    // Generic Shell script
+    {
+        Identifier = shell;
+        Name = "Shell Script";
+        Description = "Generic Shell Script";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            SingleLineComment = ( "#" );
+            String = (
+                ( "\"", "\"" ),
+                ( "'", "'" ),
+                ( "`", "`" )
+            );
+            Character = (
+            );
+            IdentifierStartChars = "_";
+            IdentifierChars = "_";
+            EscapeCharacter = "\\";
+            Keywords = (
+            );
+        };
+    },
+
+    // Bourne Shell script
+    {
+        Identifier = shell.sh;
+        Name = "Bourne Shell Script";
+        Description = "Bourne Shell Script";
+        BasedOn = "shell";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            Keywords = (
+                "break",
+                "case",
+                "continue",
+                "do",
+                "done",
+                "elif",
+                "else",
+                "esac",
+                "exit",
+                "export",
+                "fi",
+                "for",
+                "if",
+                "in", 
+                "read",
+                "shift",
+                "then",
+                "while"
+            );
+        };
+    },
+
+    // C Shell script
+    {
+        Identifier = shell.csh;
+        Name = "C Shell Script";
+        Description = "C Shell Script";
+        BasedOn = "shell";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            Keywords = (
+                "alias",
+                "break",
+                "continue",
+                "foreach",
+                "umask",
+                "breaksw",
+                "case",
+                "default",
+                "else",
+                "end",
+                "endif",
+                "endsw",
+                "eval",
+                "exec",
+                "exit",
+                "if",
+                "onintr",
+                "printenv",
+                "set",
+                "setenv",
+                "shift",
+                "source",
+                "switch",
+                "then",
+                "umask",
+                "unlimit",
+                "unset",
+                "unsetenv",
+                "while"
+            );
+        };
+    },
+
+    // Perl script
+    {
+        Identifier = shell.perl;
+        Name = "Perl Script";
+        Description = "Perl Script";
+        BasedOn = "shell";
+        SourceScannerClassName = PBXPerlSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            String = (
+                ( "\\\"", "\\\"" )
+            );
+            IdentifierStartChars = "$@";
+            IdentifierChars = "#";
+            Keywords = (
+                "and",
+                "defined",
+                "do",
+                "each",
+                "else",
+                "elsif",
+                "die",
+                "do",
+                "eval",
+                "exec",
+                "exists",
+                "for",
+                "foreach",
+                "ge",
+                "glob",
+                "gt",
+                "goto",
+                "if",
+                "import",
+                "int",
+                "last",
+                "lc",
+                "lcfirst",
+                "le",
+                "lt",
+                "my",
+                "ne",
+                "new",
+                "next",
+                "no",
+                "or",
+                "our",
+                "pop",
+                "print",
+                "redo",
+                "ref",
+                "return",
+                "scalar",
+                "shift",
+                "sub",
+                "unshift",
+                "use",
+                "while",
+            );
+            AltKeywords = (
+                "abs",
+                "accept",
+                "alarm",
+                "atan2",
+                "bind",
+                "binmode",
+                "bless",
+                "caller",
+                "chdir",
+                "chmod",
+                "chomp",
+                "chop",
+                "chown",
+                "chr",
+                "chroot",
+                "close",
+                "closedir",
+                "cmp",
+                "connect",
+                "cos",
+                "crypt",
+                "dbmclose",
+                "dbmopen",
+                "delete",
+                "dump",
+                "eof",
+                "eq",
+                "exit",
+                "exp",
+                "fcntl",
+                "fileno",
+                "flock",
+                "fork",
+                "format",
+                "formline",
+                "getc",
+                "getgrent",
+                "getgrgid",
+                "getgrnam",
+                "gethostbyaddr",
+                "gethostbyname",
+                "gethostent",
+                "getlogin",
+                "getnetbyaddr",
+                "getnetbyname",
+                "getnetent",
+                "getpeername",
+                "getpgrp",
+                "getppid",
+                "getpriority",
+                "getprotobyname",
+                "getprotobynumber",
+                "getprotoent",
+                "getpwent",
+                "getpwnam",
+                "getpwuid",
+                "getservbyname",
+                "getservbyport",
+                "getservent",
+                "getsockname",
+                "getsockopt",
+                "glob",
+                "gmtime",
+                "grep",
+                "hex",
+                "index",
+                "ioctl",
+                "join",
+                "keys",
+                "kill",
+                "length",
+                "link",
+                "listen",
+                "local",
+                "localtime",
+                "log",
+                "lstat",
+                "map",
+                "mkdir",
+                "msgctl",
+                "msgget",
+                "msgrcv",
+                "msgsnd",
+                "oct",
+                "open",
+                "opendir",
+                "ord",
+                "pack",
+                "package",
+                "pipe",
+                "pos",
+                "printf",
+                "push",
+                "quotemeta",
+                "rand",
+                "read",
+                "readdir",
+                "readlink",
+                "recv",
+                "rename",
+                "require",
+                "reset",
+                "reverse",
+                "rewinddir",
+                "rindex",
+                "rmdir",
+                "seek",
+                "seekdir",
+                "select",
+                "semctl",
+                "semget",
+                "semopt",
+                "send",
+                "setpgrp",
+                "setpriority",
+                "setsockopt",
+                "shmctl",
+                "shmget",
+                "shmread",
+                "shmwrite",
+                "shutdown",
+                "sin",
+                "sleep",
+                "socket",
+                "socketpair",
+                "sort",
+                "splice",
+                "split",
+                "sprintf",
+                "sqrt",
+                "srand",
+                "stat",
+                "study",
+                "substr",
+                "symlink",
+                "syscall",
+                "sysopen",
+                "sysread",
+                "system",
+                "syswrite",
+                "tell",
+                "telldir",
+                "tie",
+                "tied",
+                "time",
+                "times",
+                "tr",
+                "truncate",
+                "uc",
+                "ucfirst",
+                "umask",
+                "undef",
+                "unless",
+                "unlink",
+                "unpack",
+                "unshift",
+                "untie",
+                "utime",
+                "values",
+                "vec",
+                "wait",
+                "waitpid",
+                "wantarray",
+                "warn",
+                "write",
+                "__FILE__",
+                "__LINE__",
+                "__END__",
+                "__DATA__"
+            );
+        };
+    },
+
+    // Property list
+    {
+        Identifier = plist;
+        Name = "Property List";
+        Description = "Property List";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            SingleLineComment = (  "//" );
+        };
+    },
+    
+    // xcconfig file
+    {
+        Identifier = xcconfig;
+        Name = "Xcode Configuration File";
+        Description = "Xcode Configuration File";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            SingleLineComment = (  "//" );
+            PreprocessorKeywordStart = "#";
+            PreprocessorKeywords = (
+                "include"            
+            );
+        };
+    },
+
+    // Text Macros (only separated from a normal plist so that it gets its own macros)
+    {
+        Identifier = xctxtmacro;
+        Name = "Text Macro Specifications";
+        Description = "Text Macro Specifications";
+        BasedOn = "plist";
+    },
+
+    // XcodeEdit Language Specs
+    {
+        Identifier = xclangspec;
+        Name = "Xcode Language Specifications";
+        Description = "Xcode Language Specifications";
+        BasedOn = "plist";
+    },
+
+    // XcodeEdit Syntax Types
+    {
+        Identifier = xcsynspec;
+        Name = "Xcode Syntax Specifications";
+        Description = "Xcode Syntax Specifications";
+        BasedOn = "plist";
+    },
+
+    // HTML
+    {
+        Identifier = html;
+        Name = "HTML/XML";
+        Description = "HTML and XML";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            UnicodeSymbols = YES;
+            MultiLineComment = (
+                ( "<!--", "-->" )
+            );
+            /*KeywordDelimeters = (	// not supported yet
+                ( "<", ">" )
+            );*/
+            String = (				// so for now, let's at least give some color
+                ( "<", ">" )
+            );
+            Character = (
+                ( "&", ";" )
+            );
+        };
+    },
+
+    // Rez
+    {
+        Identifier = rez;
+        Name = "Rez";
+        Description = "Rez resource text";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = YES; // not sure
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            SingleLineComment = (
+                "//"
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            IdentifierStartChars = "_$";
+            IdentifierChars = "_$";
+            Keywords = (
+                "$$ArrayIndex",
+                "$$Arrayindex",
+                "$$Attributes",
+                "$$BitField",
+                "$$Bitfield",
+                "$$Byte",
+                "$$Countof",
+                "$$CountOf",
+                "$$Date",
+                "$$Day",
+                "$$Format",
+                "$$Hour",
+                "$$ID",
+                "$$Long",
+                "$$Minute",
+                "$$Month",
+                "$$Name",
+                "$$PackedSize",
+                "$$Packedsize",
+                "$$Resource",
+                "$$ResourceSize",
+                "$$Resourcesize",
+                "$$Second",
+                "$$Shell",
+                "$$Time",
+                "$$Type",
+                "$$Version",
+                "$$Weekday",
+                "$$Word",
+                "$$Year",
+                "align",
+                "array",
+                "as",
+                "binary",
+                "bit",
+                "bitstring",
+                "boolean",
+                "byte",
+                "case",
+                "char",
+                "cstring",
+                "data",
+                "decimal",
+                "fill",
+                "hex",
+                "include",
+                "integer",
+                "key",
+                "literal",
+                "long",
+                "longint",
+                "nibble",
+                "octal",
+                "point",
+                "pstring",
+                "read",
+                "rect",
+                "resource",
+                "string",
+                "switch",
+                "type",
+                "unsigned",
+                "wide",
+                "word",
+                "wstring"
+            );
+            PreprocessorKeywordStart = "#";
+            PreprocessorKeywords = (
+                "error",
+                "define",
+                "elif",
+                "else",
+                "endif",
+                "error",
+                "file",
+                "if",
+                "ifdef",
+                "ifndef",
+                "import",
+                "include",
+                "line",
+                "pragma",
+                "undef",
+                "warning"
+            );
+        };
+    },
+
+    // Make
+    {
+        Identifier = make;
+        Name = "Make";
+        Description = "Make";
+        SourceScannerClassName = PBXLabelSourceScanner;
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            String = (
+                ( "\\\"", "\\\"" ),
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            IdentifierStartChars = "._";
+            IdentifierChars = "._-";
+            SingleLineComment = (
+                "#"
+            );
+            Keywords = (
+                ".DEFAULT",
+                ".DELETE_ON_ERROR",
+                ".EXPORT_ALL_VARIABLES",
+                ".IGNORE",
+                ".INTERMEDIATE",
+                ".NOTPARALLEL",
+                ".PHONY",
+                ".PRECIOUS",
+                ".SECONDARY",
+                ".SILENT",
+                ".SUFFIXES",
+                "addprefix",
+                "addsuffix",
+                "basename",
+                "call",
+                "define",
+                "dir",
+                "else",
+                "endef",
+                "endif",
+                "error",
+                "export",
+                "filter",
+                "filter-out",
+                "findstring",
+                "firstword",
+                "foreach",
+                "ifdef",
+                "ifeq",
+                "ifndef",
+                "ifneq",
+                "include",
+                "join",
+                "notdir",
+                "origin",
+                "override",
+                "patsubst",
+                "shell",
+                "sinclude",
+                "sort",
+                "strip",
+                "subst",
+                "suffix",
+                "unexport",
+                "vpath",
+                "warning",
+                "wildcard",
+                "word",
+                "wordlist",
+                "words"
+            );
+            AltKeywords = (
+                ".LIBPATTERNS",
+                "CURDIR",
+                "MAKE",
+                "MAKECMDGOALS",
+                "MAKEFILES",
+                "MAKEFLAGS",
+                "MAKELEVEL",
+                "MAKESHELL",
+                "SHELL",
+                "SUFFIXES",
+                "VPATH"
+            );
+        };
+    },
+
+    // Jam
+    {
+        Identifier = jam;
+        Name = "Jam";
+        Description = "Jam";
+        SourceScannerClassName = PBXJamSourceScanner;
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            String = (
+                ( "\\\"", "\\\"" ),
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            IdentifierStartChars = "$._";
+            IdentifierChars = "._()";
+            SingleLineComment = (
+                "#",
+            );
+            Keywords = (
+                "ALWAYS",
+                "DEPENDS",
+                "ECHO",
+                "EXIT",
+                "INCLUDES",
+                "LEAVES",
+                "NOCARE",
+                "NOTFILE",
+                "NOUPDATE",
+                "TEMPORARY",
+                "actions",
+                "bind",
+                "case",
+                "default",
+                "deferred",	// Apple extension
+                "else",
+                "existing",
+                "export",	// Apple extension
+                "for",
+                "if",
+                "ignore",
+                "in",
+                "include",
+                "local",
+                "on",
+                "piecemeal",
+                "quietly",
+                "rule",
+                "switch",
+                "together",
+                "updated"
+            );
+            AltKeywords = (
+                "HDRRULE",
+                "HDRSCAN",
+                "JAMDATE",
+                "JAMSHELL",
+                "JAMUNAME",
+                "JAMVERSION",
+                "LOCATE",
+                "MAC",
+                "NT",
+                "OS",
+                "OS2",
+                "OSPLAT",
+                "OSVER",
+                "SEARCH",
+                "UNIX",
+                "VMS"
+            );
+        };
+    },
+
+    // Assembler
+    {
+        Identifier = asm;
+        Name = "Assembler";
+        Description = "Generic Assembler";
+        SourceScannerClassName = PBXLabelSourceScanner;
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            UnicodeSymbols = NO;
+            IdentifierStartChars = "_";
+            IdentifierChars = "$_";
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            SingleLineComment = (
+                "//",
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            Keywords = ();
+        };
+    },
+
+    // PowerPC assembler
+    {
+        Identifier = asm.ppc;
+        Name = "PowerPC Assembler";
+        Description = "PowerPC Assembler";
+        SourceScannerClassName = PBXLabelSourceScanner;
+        BasedOn = asm;
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            SingleLineComment = (
+                ";",
+            );
+            Keywords = ();
+        };
+    },
+
+    // Intel386 assembler
+    {
+        Identifier = asm.i386;
+        Name = "Intel386 Assembler";
+        Description = "Intel386 Assembler";
+        SourceScannerClassName = PBXLabelSourceScanner;
+        BasedOn = asm;
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            Keywords = ();
+        };
+    },
+    
+    // Dylan
+    {
+        Identifier = dylan;
+        Name = "Dylan";
+        Description = "Dylan";
+        SourceScannerClassName = PBXDylanSourceScanner;
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            UnicodeSymbols = YES;
+            CommentsCanBeNested = YES;
+            String = (
+                ( "\"", "\"" ),
+            );
+            SingleLineComment = (  "//" );
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            IdentifierStartChars = "\!&*<=>|^$%@_";
+            IdentifierChars = "-+~?/>";
+            EscapeCharacter = "\\";
+            Keywords = (
+                "module",
+                "method",
+                "class",
+                "slot",
+                "afterwards",
+                "cleanup",
+                "exception",
+                "local",
+                "constant",
+                "function",
+                "variable",
+                "generic",
+                "define",
+                "end",
+                "handler",
+                "let",
+                "macro",
+                "otherwise",
+                "begin",
+                "block",
+                "case",
+                "for",
+                "if",
+                "select",
+                "unless",
+                "until",
+                "while",
+                "open",
+                "primary",
+                "free",
+                "concrete",
+                "abstract",
+                "sealed",
+                "else",
+                "elseif",
+                "#t",
+                "#f",
+                "#next",
+                "#rest",
+                "#key",
+                "#all-keys"
+            );
+            AltKeywords = (
+                "<object>",
+                "<type>",
+                "<class>",
+                "<singleton>",
+                "<character>",
+                "<symbol>",
+                "<boolean>",
+                "<number>",
+                "<complex>",
+                "<real>",
+                "<float>",
+                "<single-float>",
+                "<double-float>",
+                "<extended-float>",
+                "<rational>",
+                "<integer>",
+                "<collection>",
+                "<explicit-key-collection>",
+                "<sequence>",
+                "<mutable-collection>",
+                "<mutable-explicit-key-collection>",
+                "<mutable-sequence>",
+                "<stretchy-collection>",
+                "<array>",
+                "<vector>",
+                "<simple-vector>",
+                "<simple-object-vector>",
+                "<stretchy-vector>",
+                "<deque>",
+                "<list>",
+                "<pair>",
+                "<range>",
+                "<string>",
+                "<byte-string>",
+                "<unicode-string>",
+                "<table>",
+                "<object-table>",
+                "<function>",
+                "<generic-function>",
+                "<method>",
+                "<condition>",
+                "<serious-condition>",
+                "<error>",
+                "<simple-error>",
+                "<type-error>",
+                "<sealed-object-error>",
+                "<warning>",
+                "<simple-warning>",
+                "<restart>",
+                "<simple-restart>",
+                "<abort>"
+            );
+        };
+    },
+
+    // Fortran
+    {
+        Identifier = fortran;
+        Name = "Fortran";
+        Description = "Fortran";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            FortranStyleComments = YES;
+            IdentifierStartChars = "_";	// not really sure about these
+            IdentifierChars = "$_";	// not really sure about these
+            SingleLineComment = (
+                "!"
+            );
+            Keywords = (
+                "allocatable",
+                "allocate",
+                "assign",
+                "assignment",
+                "backspace",
+                "block",
+                "blockdata",
+                "call",
+                "case",
+                "character",
+                "close",
+                "common",
+                "complex",
+                "contains",
+                "continue",
+                "cycle",
+                "data",
+                "deallocate",
+                "default",
+                "dimension",
+                "do",
+                "double",
+                "doublecomplex",
+                "doubleprecision",
+                "else",
+                "elseif",
+                "elsewhere",
+                "end",
+                "endblock",
+                "endblockdata",
+                "enddo",
+                "endfile",
+                "endforall",
+                "endfunction",
+                "endif",
+                "endinterface",
+                "endmodule",
+                "endprogram",
+                "endselect",
+                "endsubroutine",
+                "endtype",
+                "endwhere",
+                "endmap",
+                "endstructure",
+                "endunion",
+                "entry",
+                "equivalence",
+                "exit",
+                "external",
+                "extrinsic",
+                "forall",
+                "format",
+                "function",
+                "global",
+                "go",
+                "goto",
+                "if",
+                "implicit",
+                "in",
+                "inout",
+                "include",
+                "inquire",
+                "integer",
+                "intent",
+                "interface",
+                "intrinsic",
+                "logical",
+                "map",
+                "module",
+                "namelist",
+                "none",
+                "nullify",
+                "open",
+                "operator",
+                "optional",
+                "out",
+                "parameter",
+                "pause",
+                "pointer",
+                "precision",
+                "print",
+                "private",
+                "procedure",
+                "program",
+                "public",
+                "pure",
+                "read",
+                "real",
+                "record",
+                "recursive",
+                "return",
+                "rewind",
+                "save",
+                "select",
+                "selectcase",
+                "sequence",
+                "stop",
+                "string",
+                "structure",
+                "subroutine",
+                "target",
+                "then",
+                "to",
+                "type",
+                "union",
+                "use",
+                "where",
+                "while",
+                "write"
+            );
+        };
+    },
+    // Fortran 90
+    {
+        Identifier = fortran.f90;
+        Name = "Fortran 90";
+        Description = "Fortran 90";
+        BasedOn = "fortran";
+        SyntaxColoring = {
+            FortranStyleComments = NO;
+        };
+    },
+
+    // Pascal
+    {
+        Identifier = pascal;
+        Name = "Pascal";
+        Description = "Pascal";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            UnicodeSymbols = NO;
+            CommentsCanBeNested = YES;
+            String = (
+                ( "'", "'" ),
+            );
+            MultiLineComment = (
+                ( "{", "}" ),
+                ( "(*", "*)" )
+            );
+            Keywords = (
+                "and",
+                "array",
+                "begin",
+                "case",
+                "const",
+                "div",
+                "do",
+                "downto",
+                "else",
+                "end",
+                "file",
+                "for",
+                "function",
+                "goto",
+                "if",
+                "implementation",
+                "in",
+                "inherited",
+                "inline",
+                "interface",
+                "label",
+                "mod",
+                "nil",
+                "not",
+                "object",
+                "of",
+                "or",
+                "otherwise",
+                "packed",
+                "procedure",
+                "program",
+                "record",
+                "repeat",
+                "set",
+                "string",
+                "then",
+                "to",
+                "type",
+                "unit",
+                "until",
+                "uses",
+                "var",
+                "while",
+                "with"
+            );
+            AltKeywords = (
+                "Byte",
+                "extended",
+                "extended80",
+                "extended96",
+                "Fixed",
+                "Fract",
+                "Handle",
+                "OSErr",
+                "OSType",
+                "Point",
+                "ProcPtr",
+                "Ptr",
+                "RGBColor",
+                "Rect",
+                "ResType",
+                "SignedByte",
+                "StringPtr",
+                "Str255",
+                "Str31",
+                "Str63",
+                "UniversalProcPtr"
+            );
+        };
+    },
+
+    // Ada
+    {
+        Identifier = ada;
+        Name = "Ada";
+        Description = "Ada";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO; // not sure
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            IdentifierStartChars = "_";	// not really sure about these
+            IdentifierChars = "_";	// not really sure about these
+            String = (
+                ( "\"", "\"" )
+            );
+            //Character = (			// don't do character constants since it conflicts with pointer operator
+            //    ( "'", "'" )
+            //);
+            SingleLineComment = (
+                "--"
+            );
+            Keywords = (
+                "abort",
+                "abs",
+                "abstract",
+                "accept",
+                "access",
+                "aliased",
+                "all",
+                "and",
+                "array",
+                "at",
+                "begin",
+                "body",
+                "case",
+                "constant",
+                "declare",
+                "delay",
+                "delta",
+                "digits",
+                "do",
+                "else",
+                "elsif",
+                "end",
+                "entry",
+                "exception",
+                "exit",
+                "for",
+                "function",
+                "generic",
+                "goto",
+                "if",
+                "in",
+                "is",
+                "limited",
+                "loop",
+                "mod",
+                "new",
+                "not",
+                "null",
+                "of",
+                "or",
+                "others",
+                "out",
+                "package",
+                "pragma",
+                "private",
+                "procedure",
+                "protected",
+                "raise",
+                "range",
+                "record",
+                "rem",
+                "renames",
+                "requeue",
+                "return",
+                "reverse",
+                "select",
+                "separate",
+                "subtype",
+                "tagged",
+                "task",
+                "terminate",
+                "then",
+                "type",
+                "until",
+                "use",
+                "when",
+                "while",
+                "with",
+                "xor"
+            );
+        };
+    },
+    
+    // Not Quite C
+    {
+        Identifier = nqc;
+        Name = "NQC";
+        Description = "Not Quite C";
+        BasedOn = "pbx_root_language";
+        SourceScannerClassName = PBXNQCSourceScanner;
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            IndexedSymbols = YES;
+            CommentsCanBeNested = NO;
+            IdentifierStartChars = "_";
+            IdentifierChars = "_";
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            String = (
+                ( "\"", "\"" )
+            );
+            EscapeCharacter = "\\";
+            Character = (
+                ( "'", "'" )
+            );
+            SingleLineComment = (  "//" );
+            Keywords = (
+                "__event_src",
+                "__sensor",
+                "__type",
+                "abs",
+                "acquire",
+                "asm",
+                "break",
+                "case",
+                "catch",
+                "const",
+                "continue",
+                "default",
+                "do",
+                "else",
+                "false",
+                "for",
+                "if",
+                "inline",
+                "int",
+                "monitor",
+                "repeat",
+                "return",
+                "sign",
+                "start",
+                "stop",
+                "sub",
+                "switch",
+                "task",
+                "true",
+                "void",
+                "while"
+            );
+            AltKeywords = (
+                "ACQUIRE_OUT_A",
+                "ACQUIRE_OUT_B",
+                "ACQUIRE_OUT_C",
+                "ACQUIRE_SOUND",
+                "ACQUIRE_USER_1",
+                "ACQUIRE_USER_2",
+                "ACQUIRE_USER_3",
+                "ACQUIRE_USER_4",
+                "DISPLAY_OUT_A",
+                "DISPLAY_OUT_B",
+                "DISPLAY_OUT_C",
+                "DISPLAY_SENSOR_1",
+                "DISPLAY_SENSOR_2",
+                "DISPLAY_SENSOR_3",
+                "DISPLAY_USER",
+                "DISPLAY_WATCH",
+                "EVENT_MASK",
+                "EVENT_TYPE_CLICK",
+                "EVENT_TYPE_DOUBLECLICK",
+                "EVENT_TYPE_EDGE",
+                "EVENT_TYPE_FASTCHANGE",
+                "EVENT_TYPE_HIGH",
+                "EVENT_TYPE_LOW",
+                "EVENT_TYPE_MESSAGE",
+                "EVENT_TYPE_NORMAL",
+                "EVENT_TYPE_PRESSED",
+                "EVENT_TYPE_PULSE",
+                "EVENT_TYPE_RELEASED",
+                "OUT_A",
+                "OUT_B",
+                "OUT_C",
+                "OUT_FLOAT",
+                "OUT_FORWARD",
+                "OUT_OFF",
+                "OUT_ON",
+                "OUT_REV",
+                "OUT_TOGGLE",
+                "SENSOR_1",
+                "SENSOR_2",
+                "SENSOR_3",
+                "SENSOR_CELSIUS",
+                "SENSOR_EDGE",
+                "SENSOR_FAHRENHEIT",
+                "SENSOR_LIGHT",
+                "SENSOR_MODE_BOOL",
+                "SENSOR_MODE_CELSIUS",
+                "SENSOR_MODE_EDGE",
+                "SENSOR_MODE_FAHRENHEIT",
+                "SENSOR_MODE_PERCENT",
+                "SENSOR_MODE_PULSE",
+                "SENSOR_MODE_RAW",
+                "SENSOR_MODE_ROTATION",
+                "SENSOR_PULSE",
+                "SENSOR_ROTATION",
+                "SENSOR_TOUCH",
+                "SENSOR_TYPE_LIGHT",
+                "SENSOR_TYPE_NONE",
+                "SENSOR_TYPE_ROTATION",
+                "SENSOR_TYPE_TEMPERATURE",
+                "SENSOR_TYPE_TOUCH",
+                "SERIAL_COMM_4800",
+                "SERIAL_COMM_76KHZ",
+                "SERIAL_COMM_DEFAULT",
+                "SERIAL_COMM_DUTY25",
+                "SERIAL_PACKET_CHECKSUM",
+                "SERIAL_PACKET_DEFAULT",
+                "SERIAL_PACKET_NEGATED",
+                "SERIAL_PACKET_PREAMBLE",
+                "SERIAL_PACKET_RCX",
+                "SOUND_CLICK",
+                "SOUND_DOUBLE_BEEP",
+                "SOUND_DOWN",
+                "SOUND_FAST_UP",
+                "SOUND_LOW_BEEP",
+                "SOUND_UP",
+                "__ASM_NO_LOCAL",
+                "__ASM_NO_TYPE",
+                "__ASM_SMALL_VALUE",
+                "__ASM_SRC_BASIC",
+                "__ASM_SRC_EXT"
+            );
+            PreprocessorKeywordStart = "#";
+            PreprocessorKeywords = (
+                "define",
+                "elif",
+                "else",
+                "endif",
+                "if",
+                "ifdef",
+                "ifndef",
+                "include",
+                "pragma",
+                "undef"
+            );
+        };
+    },
+
+    // Man page source (nroff). Lame definition, but better than the default rules.
+    {
+        Identifier = man;
+        Name = "Man Page";
+        Description = "Man";
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = NO;
+            SingleLineComment = (
+                ".\\\"",
+                "\\\""
+            );
+        };
+    },
+    
+    // JavaScript (following ECMAScript v3, aka JavaScript 1.5)
+    {   
+        Identifier = javascript;
+        Name = "JavaScript";
+        Description = "JavaScript";
+        SourceScannerClassName = PBXJavaScriptSourceScanner;
+        BasedOn = "pbx_root_language";
+        SupportsIndentation = YES;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = YES;
+            IndexedSymbols = NO;
+            CommentsCanBeNested = NO;
+            IdentifierStartChars = "_";
+            IdentifierChars = "_";
+            String = (
+                ( "\"", "\"" )
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            DocComment = "!";
+            EscapeCharacter = "\\";
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            SingleLineComment = (  "//" );
+            Keywords = (
+                "break",
+                "case",
+                "catch",
+                "continue",
+                "default",
+                "delete",
+                "do",
+                "else",
+                "false",
+                "finally",
+                "for",
+                "function",
+                "if",
+                "in",
+                "instanceof",
+                "new",
+                "null",
+                "return",
+                "switch",
+                "this",
+                "throw",
+                "true",
+                "try",
+                "typeof",
+                "var",
+                "void",
+                "while",
+                "with"
+            );
+        };
+    },
+	
+    // Ruby
+    {   
+        Identifier = shell.ruby;
+        Name = "Ruby";
+        Description = "Ruby";
+        SourceScannerClassName = PBXRubySourceScanner;
+        BasedOn = "shell";
+        SupportsIndentation = NO;
+        Indentation = {
+        };
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            UnicodeSymbols = NO;
+            IndexedSymbols = NO;
+            CommentsCanBeNested = NO;
+            String = (
+                ( "\"", "\"" ),
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            IdentifierStartChars = "_[";
+            IdentifierChars = "_?[]";
+            EscapeCharacter = "\\";
+            MultiLineComment = (
+                ( "=begin", "=end" )
+            );
+            SingleLineComment = (  "#" );
+            Keywords = (
+                "BEGIN",
+                "END",
+                "__FILE__",
+                "__LINE__",
+                "alias",
+                "and",
+                "begin",
+                "break",
+                "case",
+                "class",
+                "def",
+                "defined?",
+                "do",
+                "else",
+                "elsif",
+                "end",
+                "ensure",
+                "false",
+                "for",
+                "if",
+                "in",
+                "module",
+                "next",
+                "nil",
+                "not",
+                "or",
+                "redo",
+                "rescue",
+                "retry",
+                "return",
+                "self",
+                "super",
+                "then",
+                "true",
+                "undef",
+                "unless",
+                "until",
+                "when",
+                "while",
+                "yield"
+            );
+            AltKeywords = (
+                "include",
+                "private",
+                "protected",
+                "public",
+                "raise",
+                "require"
+            );
+        };
+    },
+	
+    // Python
+    {
+        Identifier = shell.python;
+        Name = "Python";
+        Description = "Python";
+        BasedOn = "pbx_root_language";
+        SourceScannerClassName = PBXPythonSourceScanner;
+        SupportsIndentation = NO;
+        SyntaxColoring = {
+            IdentifierStartChars = "_";
+            IdentifierChars = "_";
+            SingleLineComment = ( "#" );
+            String = (
+                ( "\"\"\"", "\"\"\""),
+                ( "'''", "'''"),
+                ( "\"", "\"" ),
+                ( "'", "'" )
+            );
+            EscapeCharacter = "\\";
+            Keywords = (
+                "and",
+                "assert",
+                "break",
+                "class",
+                "continue",
+                "def",
+                "del",
+                "elif",
+                "else",
+                "except",
+                "exec",
+                "finally",
+                "for",
+                "from",
+                "global",
+                "if",
+                "import",
+                "in",
+                "is",
+                "lambda",
+                "not",
+                "or",
+                "pass",
+                "print",
+                "raise",
+                "return",
+                "try",
+                "while",
+		"yield"
+            );
+        };
+    },
+
+    // PHP
+    {
+        Identifier = php;
+        Name = "PHP";
+        Description = "PHP";
+        BasedOn = pbx_root_language;
+        SupportsIndentation = YES;
+        SyntaxColoring = {
+            CaseSensitive = YES;
+            IdentifierStartChars = "$";
+            IdentifierChars = "_";
+            MultiLineComment = (
+                ( "/*", "*/" )
+            );
+            CommentsCanBeNested = YES;
+            SingleLineComment = ( "//", "#");
+            String = (
+                ("\"", "\"")
+            );
+            Character = (
+                ( "'", "'" )
+            );
+            EscapeCharacter = "\\";
+            Keywords = (
+                ".",
+                "AND",
+                "OR",
+                "XOR",
+                "array",
+                "as",
+                "bool",
+                "boolean",
+                "break",
+                "case",
+                "class",
+                "continue",
+                "default",
+                "die",
+                "do",
+                "double",
+                "echo",
+                "else",
+                "elseif",
+                "empty",
+                "enddeclare",
+                "endfor",
+                "endforeach",
+                "endif",
+                "endswitch",
+                "endwhile",
+                "eval",
+                "exit",
+                "extends",
+                "float",
+                "for",
+                "foreach",
+                "function",
+                "global",
+                "if",
+                "include",
+                "include_once",
+                "int",
+                "isset",
+                "list",
+                "new",
+                "object",
+                "print",
+                "real",
+                "require",
+                "require_once",
+                "return",
+                "static",
+                "string",
+                "switch",
+                "unset",
+                "use",
+                "var",
+                "while"
+            );
+        };
+    }
+)

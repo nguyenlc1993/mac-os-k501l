@@ -1,0 +1,41 @@
+{
+    Names = {
+        English = "Bundle";
+        Swedish = "Knippe";
+    };
+    BuildPhases = (
+        {
+            Class = Headers;
+        },
+        {
+            Class = Resources;
+        },
+        {
+            Class = Sources;
+        },
+        {
+            Class = Frameworks;
+        },
+        {
+            Class = Rez;
+        }
+    );
+    DefaultInstallationPath = "$(USER_LIBRARY_DIR)/Bundles";
+    DefaultBuildFlags = {
+        OTHER_LDFLAGS =	"";
+        WRAPPER_EXTENSION = "bundle";
+    };
+    DefaultProductSettings = {
+        CFBundleExecutable = "";
+        CFBundleIconFile = "";
+        CFBundleInfoDictionaryVersion = "6.0";
+        CFBundleVersion = "0.0.1d1";
+        CFBundleIdentifier = "";
+        CFBundleDevelopmentRegion = English;
+        CFBundlePackageType = "BNDL";
+        CFBundleSignature = "????";
+        CFBundleName = "";
+        CFBundleShortVersionString = "";
+        CFBundleGetInfoString = "";
+    };
+}

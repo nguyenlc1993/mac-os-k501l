@@ -1,0 +1,85 @@
+/**
+    Code Sign Tool build task specification
+
+    Copyright (c) 2007-2008 Apple Inc.  All rights reserved.
+*/
+
+(
+    {   Type = Tool;
+        Identifier = com.apple.build-tools.codesign;
+        Name = "Code Sign";
+        Description = "Code-sign a framework, application, or other built target.";
+        ShouldRerunOnError = Yes;
+        CommandLine = "/usr/bin/codesign";
+        CommandOutputParser = (
+            ("()()(codesign: .+)",  emit-error),
+            ("()()(error: .+)",  emit-error),
+            ("()()(Usage: .+)",  emit-notice),
+        );
+        Options = (
+            {   Name = CODE_SIGN_IDENTITY;
+                Type = CodeSignIdentity;
+                DefaultValue = "";
+                CommandLineArgs = ( "-f -s", "$(value)" );
+            },
+            {   Name = CODE_SIGN_RESOURCE_RULES_PATH;
+                Type = string;
+                DefaultValue = "";
+                CommandLineArgs = ( "--resource-rules=$(value)" );
+            },
+            {   Name = OTHER_CODE_SIGN_FLAGS;
+                Type = StringList;
+                DefaultValue = "";
+                CommandLineArgs = ( "$(value)" );
+            },
+        );
+    },
+    
+    {   Type = Tool;
+        Identifier = com.apple.tools.product-pkg-utility;
+        Name = "Product Packaging Utility";
+        IsAbstract = Yes;       // This is an internal tool, so we keep it out of the user interface
+        CommandInvocationClass = ProductPackagingUtility;
+        CommandLine = "<com.apple.tools.product-pkg-utility> [input] [options] -o [output]";
+        RuleName = ( "ProcessProductPackaging", "$(InputPath)", "$(OutputPath)" );
+        Options = (
+        {   Name = "RemoveFile";
+                Type = Boolean;
+                CommandLineFlag = "-removefile";
+            },
+            {   Name = "CodeSignEntitlements";
+                Type = Boolean;
+                CommandLineFlag = "-entitlements";
+            },
+            {   Name = "CodeSignResourceRules";
+                Type = Boolean;
+                CommandLineFlag = "-resourcerules";
+            },
+            {   Name = "OutputFormat";
+                Type = Enumeration;
+                AllowedValues = (
+                    {   Value = "openstep";
+                        CommandLineArgs = ( "-format", "$(value)" );
+                    },
+                    {   Value = "none";
+                        // this is the default, and so we generate no command line flag
+                        CommandLineArgs = ( );
+                    },
+                    {   Value = "xml";
+                        CommandLineArgs = ( "-format", "$(value)" );
+                    },
+                    {   Value = "binary";
+                        CommandLineArgs = ( "-format", "$(value)" );
+                    },
+                );
+                DefaultValue = "none";
+            },
+        );
+        CommandOutputParser = (
+            ("()()(^[^:]+: [^:]+: No such file or directory)",  emit-error),
+            ("()()(^[^:]+: [^:]+: Permission denied)",  emit-error),
+            ("()()(^[^:]+: [^:]+: Is a directory)",  emit-error),
+        );
+    },
+
+)

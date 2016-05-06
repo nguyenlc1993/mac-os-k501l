@@ -1,0 +1,61 @@
+# EMlyDinEsH’s WiFi BT Toggle Patch (2 toggles) + WiFi BT Boot/Sleep Status Patch (may include insignificant changes in code style and/or comments).
+
+# ————————————————————
+
+# Replacing method _Q0B with only WiFi/BT on and off toggle
+into Method label _Q0B replace_content begin 
+                         If (LEqual (WBTS, One))\n
+                            {\n
+                                OWLD (Zero)\n
+                                ^^^^ATKD.IANE (0x5F)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (Zero)\n
+                                ^^^^ATKD.IANE (0x7E)\n
+                                Store (Zero, WBTS)\n
+                            }\n
+                            Else\n
+                            {\n
+                                OWLD (One)\n
+                                ^^^^ATKD.IANE (0x5E)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (One)\n
+                                ^^^^ATKD.IANE (0x7D)\n
+                                Store (One, WBTS)\n
+                            }
+ end;
+
+# Inserting a field to maintain WiFi/BT state
+into device label EC0 code_regex Name\s\(WBTS,\sOne\) remove_matched;
+into device label EC0 insert begin Name (WBTS, One) end;
+
+# Insert WiFI/BT status toggle method
+into method label WFBT remove_entry;
+into definitionblock code_regex . insert begin
+Method (WFBT, 0, NotSerialized)\n
+{\n
+    If (\_SB.PCI0.LPCB.EC0.WBTS)\n
+    {\n
+        OWLD (One)\n
+        Sleep (0x0DAC)\n
+        OBTD (One)\n
+    }\n
+    Else\n
+    {\n
+        OWLD (Zero)\n
+        Sleep (0x0DAC)\n
+        OBTD (Zero)\n
+    }\n
+}
+end;
+
+# Update WiFi/BT status at boot
+into_all method label _INI code_regex Store\s\(0x07D9,\sOSYS\) replace_matched begin
+Store (0x07D9, OSYS)\n
+            WFBT ()
+end;
+
+# Update WiFi/BT Status after sleep
+into_all method label _WAK code_regex RWAK\s\(Arg0\) replace_matched begin 
+WFBT ()\n
+        RWAK (Arg0)  
+end;

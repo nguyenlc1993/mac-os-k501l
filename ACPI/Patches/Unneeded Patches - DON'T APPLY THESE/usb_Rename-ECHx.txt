@@ -1,0 +1,31 @@
+# Patch made by nguyenlc1993, based on RehabMan’s graphics_Rename-GFX0 patch
+# and his discovery of how to disable the default USB injector in 10.11.
+
+# For more information, visit the link below:
+# http://www.tonymacx86.com/el-capitan-laptop-support/173616-guide-10-11-usb-changes-solutions.html
+
+# ————————————————————
+
+# rename EHC1 to EH01
+into_all all code_regex EHC1\. replaceall_matched begin EH01. end;
+into_all all code_regex \.EHC1 replaceall_matched begin .EH01 end;
+into_all all code_regex \sEHC1, replaceall_matched begin EH01, end;
+into_all all code_regex \(EHC1 replaceall_matched begin (EH01 end;
+into_all all label EHC1 set_label begin EH01 end;
+into_all all label _SB.PCI0.EHC1 set_label begin _SB.PCI0.EH01 end;
+into_all all label \_SB.PCI0.EHC1 set_label begin \_SB.PCI0.EH01 end;
+into_all all label ^^^EHC1 set_label begin ^^^EH01 end;
+into_all all label ^^EHC1 set_label begin ^^EH01 end;
+into_all all label ^EHC1 set_label begin ^EH01 end;
+
+# rename EHC2 to EH02
+into_all all code_regex EHC2\. replaceall_matched begin EH02. end;
+into_all all code_regex \.EHC2 replaceall_matched begin .EH02 end;
+into_all all code_regex \sEHC2, replaceall_matched begin EH02, end;
+into_all all code_regex \(EHC2 replaceall_matched begin (EH02 end;
+into_all all label EHC2 set_label begin EH02 end;
+into_all all label _SB.PCI0.EHC2 set_label begin _SB.PCI0.EH02 end;
+into_all all label \_SB.PCI0.EHC2 set_label begin \_SB.PCI0.EH02 end;
+into_all all label ^^^EHC2 set_label begin ^^^EH02 end;
+into_all all label ^^EHC2 set_label begin ^^EH02 end;
+into_all all label ^EHC2 set_label begin ^EH02 end;

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Classes</key>
+    <dict>
+    </dict>
+	<key>Commands</key>
+	<dict>
+        <key>Refresh</key>
+		<dict>
+			<key>Description</key>
+			<string>Refresh the SCM status of the indicated project or file reference in Xcode.</string>
+			<key>Name</key>
+			<string>scm refresh</string>
+		</dict>
+        <key>Update</key>
+		<dict>
+			<key>Description</key>
+			<string>Perform an SCM Update on the indicated project or file reference in Xcode.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>ToSpecificRevision</key>
+                <dict>
+                    <key>Description</key>
+                    <string>The specific revision to update to. If not supplied, the latest revision will be used.</string>
+                    <key>Name</key>
+                    <string>to revision</string>
+                </dict>
+            </dict>
+			<key>Name</key>
+			<string>scm update</string>
+		</dict>
+        <key>ClearStickyTags</key>
+		<dict>
+			<key>Description</key>
+			<string>Clear sticky tags from the indicated project or file reference in Xcode.</string>
+			<key>Name</key>
+			<string>scm clear sticky tags</string>
+		</dict>
+        <key>Commit</key>
+		<dict>
+			<key>Description</key>
+			<string>Commit the indicated project or file reference in Xcode to the SCM repository.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>CommitMessage</key>
+                <dict>
+                    <key>Description</key>
+                    <string>The log message to use for this commit. If not supplied, an empty log message will be used.</string>
+                    <key>Name</key>
+                    <string>with message</string>
+                </dict>
+            </dict>
+			<key>Name</key>
+			<string>scm commit</string>
+		</dict>
+        <key>Compare</key>
+		<dict>
+			<key>Description</key>
+			<string>Compare the indicated file reference with the given revision or file reference. If no file reference or revision is supplied, the base revision will be used.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>CompareFile</key>
+                <dict>
+                    <key>Description</key>
+                    <string>The file reference to compare this file with.</string>
+                    <key>Name</key>
+                    <string>with</string>
+                </dict>
+                <key>CompareRevision</key>
+                <dict>
+                    <key>Description</key>
+                    <string>The revision to compare this file with.</string>
+                    <key>Name</key>
+                    <string>with revision</string>
+                </dict>
+            </dict>
+			<key>Name</key>
+			<string>scm compare</string>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>This suite contains classes and commands related to Xcode's SCM operations.</string>
+	<key>Name</key>
+	<string>Xcode SCM Suite</string>
+</dict>
+</plist>

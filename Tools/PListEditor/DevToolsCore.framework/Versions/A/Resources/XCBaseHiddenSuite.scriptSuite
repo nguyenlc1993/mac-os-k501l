@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppleEventCode</key>
+	<string>tpnm</string>
+	<key>Classes</key>
+	<dict>
+        <key>PBXBuildStyle</key>
+		<dict>
+			<key>AppleEventCode</key>
+			<string>buis</string>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>AppleEventCode</key>
+					<string>pnam</string>
+					<key>Type</key>
+					<string>NSString</string>
+				</dict>
+			</dict>
+			<key>Superclass</key>
+			<string>PBXProjectSuite.PBXProjectItem</string>
+			<key>ToManyRelationships</key>
+			<dict>
+				<key>appleScriptBuildSettings</key>
+				<dict>
+					<key>AppleEventCode</key>
+					<string>asbs</string>
+					<key>Type</key>
+					<string>PBXTargetSuite.XCAppleScriptBuildSetting</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>Name</key>
+	<string>XCBaseHiddenSuite</string>
+</dict>
+</plist>

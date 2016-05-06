@@ -1,0 +1,21 @@
+# RehabMan’s system_IRQ patch - modified by nguyenlc1993.
+# Change log:
+# - Changed the first IRQ from 0 to 2 (as IRQ0 is still used by APIC Timer).
+# - Modified the code_regex in all patches for better match.
+# - Minor code style changes (added whitespace).
+
+# ————————————————————
+
+# IRQ fix
+into device name_hid PNP0000 code_regex IRQNoFlags\s\(\)\n?\s+\{(\d+)\} remove_matched;
+into device name_hid PNP0100 code_regex IRQNoFlags\s\(\)\n?\s+\{(\d+)\} remove_matched;
+into device name_hid PNP0B00 code_regex IRQNoFlags\s\(\)\n?\s+\{(\d+)\} remove_matched;
+into device name_hid PNP0103 code_regex IRQNoFlags\s\(\)\n?\s+\{.*\} removeall_matched;
+into device name_hid PNP0103 code_regex Name\s\(([^,]+),\sResourceTemplate\s\(\).*\n\s*\{\n\s+((.|\n)*)\n\s*\}\) replace_matched
+begin
+Name (%1, ResourceTemplate ()\n
+            {\n
+                IRQNoFlags () { 2, 8, 11, 15 }\n
+                %2\n
+            })
+end;
