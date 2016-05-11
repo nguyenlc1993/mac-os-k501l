@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plug-in id="com.apple.DevToolsFoundation" name="DevToolsFoundation" version="1.1">
-    <extension-point id="com.apple.platform" name="Platform" version="1.0" />
-</plug-in>
