@@ -16,6 +16,6 @@ If you discovered any issue within the installation pack, please report at the [
 
 On the other hand, if you encountered any issue during the installation process, please report at the linked threads instead, as you will find better support there.
 
-[Releases]: /nguyenlc1993/el-capitan-k501lx/releases
-[Wiki]: /nguyenlc1993/el-capitan-k501lx/wiki
-[Issues]: /nguyenlc1993/el-capitan-k501lx/issues
+[Releases]: http://github.com/nguyenlc1993/el-capitan-k501lx/releases
+[Wiki]: http://github.com/nguyenlc1993/el-capitan-k501lx/wiki
+[Issues]: http://github.com/nguyenlc1993/el-capitan-k501lx/issues
