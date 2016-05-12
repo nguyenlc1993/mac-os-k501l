@@ -332,7 +332,7 @@
 		<key>TextOnly</key>
 		<false/>
 		<key>Theme</key>
-		<string>iclover</string>
+		<string>embedded</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -494,7 +494,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro12,1</string>
 		<key>SerialNumber</key>
-		<string>C02QA123FVH3</string>
+		<string>C02XXXXXFVH3</string>
+		<key>SmUUID</key>
+		<string></string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -504,6 +506,8 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
+		<key>InjectSystemID</key>
+		<false/>
 	</dict>
 </dict>
 </plist>
