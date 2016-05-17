@@ -73,11 +73,12 @@ PHASE1_INSTRUCTION = '''
 In this phase, the script will generate {0} random system serial(s) for {1} configuration, each will be assigned with an index number.
 You will have to manually check whether any of those generated serials can be used on your Hackintosh by doing the following steps:
 
-- Visit https://selfsolve.apple.com
-- Enter the serial you want to check, enter the CAPTCHA code, then click Continue.
--- If the website displayed 'Your Service and Support Coverage' following a bunch of information, then the serial was used on a real Mac, and should not be used on your Hackintosh.
--- If the website displayed 'We're sorry, the number you have provided cannot be found in our records. Please verify the number and try again, or contact us.', then the serial is available, and can be used on your Hackintosh. :D
--- If the website displayed 'We're sorry, but this serial number is not valid. Please check your information and try again.', then the serial was either blacklisted or failed the validation check by Apple. In this case, send feedback to me so I will try to fix the script.
+* Visit https://checkcoverage.apple.com and login with your Apple ID.
+* Enter the serial you want to check, enter the CAPTCHA code, then click Continue.
+  - If the website displayed 'Your Service and Support Coverage' following a bunch of information, then the serial was used on a real Mac, and should not be used on your Hackintosh.
+  - If the website displayed 'We're sorry, but this serial number is not valid. Please check your information and try again.', then the serial, in most cases, is available for use on your Hackintosh.
+
+In rare cases, however, the serial's pattern might be invalid, or the serial itself might be blacklisted by Apple. Unfortunately we could not know if the serial fell into these cases, as the website has been recently updated to display the above message in any case where the serial is not registered. Before the update, the website will display 'We're sorry, the number you have provided cannot be found in our records. Please verify the number and try again, or contact us.' if the serial is valid and not registered.
 
 When one of those serials is available for your Hackintosh (the second case), input the index number of that serial, then the seript will continue to generate the board serial.
 '''.format(SSN_GEN_COUNT, TARGET_PRODUCT_NAME)
