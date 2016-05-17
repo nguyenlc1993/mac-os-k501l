@@ -12,9 +12,9 @@ English: _To be filled later_
 Tiếng Việt: _To be filled later_
 
 ###Problem reporting
-If you discovered any issue within the installation pack, please report at the [Issues][] page of this repository.
+If you discovered any issue within the installation pack or found a solution for these issues, please report at the [Issues][] page of this repository.
 
-On the other hand, if you encountered any issue during the installation process, please report at the linked threads instead, as you will find better support there.
+On the other hand, if you encountered any problem during the installation process, please report at the linked threads instead, as you will find better support there.
 
 [Releases]: http://github.com/nguyenlc1993/el-capitan-k501lx/releases
 [Wiki]: http://github.com/nguyenlc1993/el-capitan-k501lx/wiki

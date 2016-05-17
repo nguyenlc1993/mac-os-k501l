@@ -119,7 +119,7 @@
 						<string>AAPL,ig-platform-id</string>
 						<key>Value</key>
 						<data>
-						AgAWFg==
+						BgAmFg==
 						</data>
 					</dict>
 					<dict>
@@ -440,18 +440,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Patch Framebuffer 0x16160002</string>
+				<string>Patch Framebuffer 0x16260006</string>
 				<key>Find</key>
 				<data>
-				AQUJAAAEAAAHBQAAAgQKAAAEAAAHBQAA/wAAAAEAAABA
-				AAAAAksAAAUFBgACAAAABAAAAIDfFxAAAAAA
+				AQULAAAEAAAHBQAAAgQLAAAEAAAHBQAA/wAAAAEAAABA
+				AAAA
 				</data>
 				<key>Name</key>
 				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>
-				AQUJAAAIAACCAAAAAgQKAAAIAACCAAAA/wAAAAEAAABA
-				AAAADwsAAAEBBQAAAAAABQAAAAAAAAAEAAAA
+				AQULAAAIAACCAAAAAgQLAAAIAACCAAAA/wAAAAEAAABA
+				AAAA
 				</data>
 			</dict>
 		</array>
