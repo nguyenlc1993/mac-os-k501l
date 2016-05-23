@@ -101,7 +101,7 @@ PHASE3_HEADER = '3. Generate config.plist'
 PHASE3_INSTRUCTION = '''
 In this phase, the script will generate a config.plist file which contains only SMBIOS keys for {0} configuration.
 Your chosen system serial and board serial will be used in this config.plist (SerialNumber and BoardSerialNumber keys respectively).
-If your BIOS has SId bug (inconsistent system UUID), then you may have to generate your own UUID as below:
+If your BIOS has SId bug (invalid or inaccessible system UUID), then you may have to generate your own UUID as below:
 - Open Terminal, run uuidgen several times to get your UUID.
 - Set config.plist -> SMBIOS -> SmUUID key to your generated UUID.
 - Add 'InjectSystemID' key to config.plist -> SystemParameters section and set it to Yes.
@@ -260,6 +260,8 @@ def writeConfigFile():
     # Write SystemParameters dict.
     SubElement(configDict, 'key').text = 'SystemParameters'
     sysParamDict = SubElement(configDict, 'dict')
+    SubElement(sysParamDict, 'key').text = 'InjectKexts'
+    SubElement(sysParamDict, 'string').text = 'Detect'
     SubElement(sysParamDict, 'key').text = 'InjectSystemID'
     SubElement(sysParamDict, 'false')
     indentXML(configRoot)

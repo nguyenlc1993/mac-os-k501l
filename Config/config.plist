@@ -216,6 +216,22 @@
 						<key>Value</key>
 						<integer>2100</integer>
 					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-id</string>
+						<key>Value</key>
+						<data>
+						cHIAAA==
+						</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-vendor-id</string>
+						<key>Value</key>
+						<data>
+						hoAAAA==
+						</data>
+					</dict>
 				</array>
 				<key>PciAddr</key>
 				<string>00:1D.00</string>
@@ -249,6 +265,22 @@
 						<key>Value</key>
 						<integer>2100</integer>
 					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-id</string>
+						<key>Value</key>
+						<data>
+						cHIAAA==
+						</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-vendor-id</string>
+						<key>Value</key>
+						<data>
+						hoAAAA==
+						</data>
+					</dict>
 				</array>
 				<key>PciAddr</key>
 				<string>00:1A.00</string>
@@ -281,6 +313,22 @@
 						<string>AAPL,max-port-current-in-sleep</string>
 						<key>Value</key>
 						<integer>2100</integer>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-id</string>
+						<key>Value</key>
+						<data>
+						cHIAAA==
+						</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>subsystem-vendor-id</string>
+						<key>Value</key>
+						<data>
+						hoAAAA==
+						</data>
 					</dict>
 				</array>
 				<key>PciAddr</key>
