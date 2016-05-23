@@ -17,7 +17,6 @@ _(compared with the old installation pack)_
 		+ From now on, user will have to copy the essentials kexts and config.plist manually from _Kexts_ and _Config_ folder respectively.
 * Config.plist:
 	- Added DSDT rename patches and IOReg injection patches (by applying the new 'arbitrary device injection' features since Clover r3262).
-	- Changed ig-platform-id to 0x16160002 instead of 0x16260006.
 	- Added patch to AppleIntelBDWFramebuffer.kext.
 	- Updated SMBIOS properties.
 * Kexts:
