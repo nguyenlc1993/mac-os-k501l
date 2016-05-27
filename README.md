@@ -7,9 +7,9 @@ To download the installation pack, please visit the [Releases][] tab of this rep
 ###Guide
 For the **Guide to installing El Capitan on ASUS K501LX**, please visit the [Wiki][] page of this repository, or the following threads:
 
-English: _To be filled later_
+[English](http://www.insanelymac.com/forum/topic/312356-guide-installing-el-capitan-on-asus-k501lx/)
 
-Tiếng Việt: _To be filled later_
+[Tiếng Việt](http://osx.vn/threads/guide-cai-os-x-el-capitan-len-asus-k501lx.63125/)
 
 ###Problem reporting
 If you discovered any issue within the installation pack or found a solution for these issues, please report at the [Issues][] page of this repository.
