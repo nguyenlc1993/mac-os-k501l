@@ -1,5 +1,7 @@
-# EMlyDinEsH’s Optional Fn key patches (may include insignificant changes in code style and/or comments).
-
+# Fn Key Patches
+# Source: EMlyDinEsH’s Optional Fn key patches.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Replacing method _Q0C for F3 key to work

@@ -1,5 +1,7 @@
-# RehabMan’s system_Shutdown2 patch (may include insignificant changes in code style and/or comments).
-
+# _PTS Fix
+# Source: RehabMan’s system_Shutdown2 patch.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # _PTS method won’t do anything if Arg0 = 0x05

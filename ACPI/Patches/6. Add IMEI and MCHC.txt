@@ -1,5 +1,7 @@
-# RehabMan’s system_IMEI patch + system_MCHC patch (may include insignificant changes in code style and/or comments).
-
+# Add IMEI and MCHC
+# Source: RehabMan’s system_IMEI and system_MCHC patches.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Add IMEI and MCHC devices if missing

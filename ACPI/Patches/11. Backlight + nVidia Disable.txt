@@ -1,7 +1,7 @@
-# RehabMan’s graphics_PNLF patch - modified by nguyenlc1993.
-# Change log:
+# Backlight + nVidia Disable
+# Source: RehabMan’s graphics_PNLF patch.
+# Changelog:
 # - Added _INI method to disable nVidia card.
-
 # ————————————————————
 
 # Add PNLF device with nVidia disable code

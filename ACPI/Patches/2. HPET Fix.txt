@@ -1,5 +1,7 @@
-# RehabMan’s system_HPET patch (may include insignificant changes in code style and/or comments).
-
+# HPET Fix
+# Source: RehabMan’s system_HPET patch.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # HPET fix to avoid AppleIntelCPUPowerManagement panic

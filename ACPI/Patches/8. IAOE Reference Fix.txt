@@ -1,8 +1,9 @@
-# RehabMan’s system_IAOE patch - modified by nguyenlc1993.
-# Change log:
+# IAOE Reference Fix
+# Source: RehabMan’s system_IAOE patch.
+# Changelog:
 # - Completely rewrote the patch for correct finding and replacing.
 # - The patch will now modify the RPTS and RWAK methods, instead of _PTS and _WAK.
-
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # RPTS fixes

@@ -1,26 +1,43 @@
-# RehabMan’s battery_ASUS-N55SL patch (may include insignificant changes in code style and/or comments).
-
+# Battery Patch
+# Source: RehabMan’ s battery_ASUS-N55SL patch.
+# Changelog:
+# - Rearranged code into sections based on fields' order to be patched.
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Add B1B2 method
+
 into method label B1B2 remove_entry;
 into definitionblock code_regex . insert
 begin
 Method (B1B2, 2, NotSerialized) { Return (Or (Arg0, ShiftLeft (Arg1, 8))) }\n
 end;
 
-# Not really for battery, but might come in handy to read fan speed(s)
+# Correct field units in ECOR to 8-bit length
+## Not really for battery, but might come in handy to read fan speed(s)
+
 into device label EC0 code_regex TAH0,\s+16 replace_matched begin TH00,8,TH01,8 end;
 into device label EC0 code_regex TAH1,\s+16 replace_matched begin TH10,8,TH11,8 end;
 into method label TACH code_regex \(TAH0, replace_matched begin (B1B2(TH00,TH01), end;
 into method label TACH code_regex \(TAH1, replace_matched begin (B1B2(TH10,TH11), end;
 into method label GFAN code_regex \(\\_SB\.PCI0\.LPCB\.EC0\.TAH0, replace_matched begin (B1B2(\\_SB.PCI0.LPCB.EC0.TH00,\\_SB.PCI0.LPCB.EC0.TH01), end;
 
-# Battery EC
+## Related to battery
+
 into device label EC0 code_regex B0SN,\s+16 replace_matched begin B0S0,8,B0S1,8 end;
 into device label EC0 code_regex B1SN,\s+16 replace_matched begin B1S0,8,B1S1,8 end;
 into method label BIFA code_regex \(B0SN, replace_matched begin (B1B2(B0S0,B0S1), end;
 into method label BIFA code_regex \(B1SN, replace_matched begin (B1B2(B1S0,B1S1), end;
+
+## Additional work for _BIX method present in some ASUS laptops
+
+into device label EC0 code_regex B0C3,\s+16 replace_matched begin XC30,8,XC31,8 end;
+into device label EC0 code_regex B1C3,\s+16 replace_matched begin YC30,8,YC31,8 end;
+into_all method label _BIX code_regex \(\^\^LPCB\.EC0\.B0C3, replaceall_matched begin (B1B2(^^LPCB.EC0.XC30,^^LPCB.EC0.XC31), end;
+into_all method label _BIX code_regex \(\^\^LPCB\.EC0\.B1C3, replaceall_matched begin (B1B2(^^LPCB.EC0.YC30,^^LPCB.EC0.YC31), end;
+
+# Correct field units in SMBX to 8-bit length
+
 into device label EC0 code_regex DT2B,\s+16 replace_matched begin T2B0,8,T2B1,8 end;
 into method label SMBR code_regex \(DT2B, replace_matched begin (B1B2(T2B0,T2B1), end;
 into method label SMBW code_regex Store\s+\(([^,]*),\s+DT2B\) replace_matched
@@ -129,6 +146,7 @@ into method label SMBW code_regex Store\s\((.*),\sBDAT\) replaceall_matched begi
 into method label ECSB code_regex Store\s\((.*),\sBDAT\) replaceall_matched begin WRBA(%1) end;
 into method label ECSB code_regex \(BDAT, replaceall_matched begin (RDBA(), end;
 
+# Correct field units in SMB2 to 8-bit length
 
 into device label EC0 insert
 begin
@@ -231,18 +249,8 @@ into method label SMBW code_regex Store\s\((.*),\sBDA2\) replaceall_matched begi
 into method label ECSB code_regex Store\s\((.*),\sBDA2\) replaceall_matched begin WRBB(%1) end;
 into method label ECSB code_regex \(BDA2, replaceall_matched begin (RDBB(), end;
 
-# Additional work for _BIX method present in some ASUS laptops
+# Fix logic error in some newer ASUS DSDTs
 
-into device label EC0 code_regex B0C3,\s+16 replace_matched begin XC30,8,XC31,8 end;
-into device label EC0 code_regex B1C3,\s+16 replace_matched begin YC30,8,YC31,8 end;
-into_all method label _BIX code_regex \(\^\^LPCB\.EC0\.B0C3, replaceall_matched begin (B1B2(^^LPCB.EC0.XC30,^^LPCB.EC0.XC31), end;
-into_all method label _BIX code_regex \(\^\^LPCB\.EC0\.B1C3, replaceall_matched begin (B1B2(^^LPCB.EC0.YC30,^^LPCB.EC0.YC31), end;
-
-# or could remove the _BIX method if it turns out not to work
-
-#into_all method label _BIX remove_entry;
-
-# Fix logic error in some newer ASUS DSDTs (issue #23)
 into method label FBST code_regex If\s\(CHGS\s\(Zero\)\)[\s]+\{[\s]+Store\s\(0x02,\sLocal0\)[\s]+\}[\s]+Else[\s]+\{[\s]+Store\s\(One,\sLocal0\)[\s]+\} replaceall_matched
 begin
 If (CHGS (Zero))\n

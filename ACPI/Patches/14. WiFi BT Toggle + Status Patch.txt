@@ -1,5 +1,7 @@
-# EMlyDinEsH’s WiFi BT Toggle Patch (2 toggles) + WiFi BT Boot/Sleep Status Patch (may include insignificant changes in code style and/or comments).
-
+# WiFi BT Toggle + Status Patch
+# Source: EMlyDinEsH’s WiFi BT Toggle (2 toggles) and WiFi BT Boot/Sleep Status patches.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Replacing method _Q0B with only WiFi/BT on and off toggle

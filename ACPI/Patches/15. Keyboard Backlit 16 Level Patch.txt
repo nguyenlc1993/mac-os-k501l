@@ -1,7 +1,8 @@
-# EMlyDinEsH’s KeyboardBacklight 16Levels Patch - modified by nguyenlc1993.
-# Change log:
+# WiFi BT Toggle + Status Patch
+# Source: EMlyDinEsH’s KeyboardBacklight 16Levels patch.
+# Changelog:
 # - Changed the memory address to write the backlight value from 0x04B1 to 0xF8B1. This can be found in \_SB.ATKD.SLKB method.
-
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Insert backlight off control sync field for Smart Touchpad and Asus Fn Keys driver

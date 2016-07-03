@@ -1,5 +1,7 @@
-# RehabMan’s system_OSYS_win8 patch (may include insignificant changes in code style and/or comments).
-
+# OSYS Fix
+# Source: RehabMan’s system_OSYS_win8 patch.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # Store 0x07DC (value corresponding to Windows 2012) to OSYS if OS is Darwin

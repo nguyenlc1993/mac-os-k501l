@@ -1,5 +1,7 @@
-# RehabMan’s system_WAK2 patch (may include insignificant changes in code style and/or comments).
-
+# _WAK Fix
+# Source: RehabMan’s system_WAK2 patch.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # If Arg0 was out of range, set it back to 0x03

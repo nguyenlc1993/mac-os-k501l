@@ -1,7 +1,7 @@
-# RehabMan’s usb_prw_0x6d_xhc patch - modified by nguyenlc1993.
-# Change log:
+# _PRW 0x6D Fix
+# Source: RehabMan’s usb_prw_0x6d_xhc patch.
+# Changelog:
 # - Removed the _DSM injection patch.
-
 # ————————————————————
 
 # Fix _PRW objects to prevent instant wake

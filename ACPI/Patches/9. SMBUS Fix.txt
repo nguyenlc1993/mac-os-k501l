@@ -1,5 +1,7 @@
-# RehabMan’s system_SMBUS patch (may include insignificant changes in code style and/or comments).
-
+# SMBUS Fix
+# Source: RehabMan’s system_SMBUS patch.
+# Changelog:
+# - Minor changes in code style and/or comments.
 # ————————————————————
 
 # SMBUS fix
