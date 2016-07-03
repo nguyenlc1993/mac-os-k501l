@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,7 +23,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -235,6 +235,24 @@
 			</dict>
 			<key>idProduct</key>
 			<integer>57388</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3011-e03d-0489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57405</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
@@ -454,9 +472,45 @@
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
+		<key>Info - AR9462-AR3012-17d0-0b05</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>6096</integer>
+			<key>idVendor</key>
+			<integer>2821</integer>
+		</dict>
+		<key>Info - AR965x-AR3012-e078-489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57464</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2015. All rights reserved.</string>
+	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2016. All rights reserved.</string>
 	<key>OSBundleRequired</key>
 	<string>Safe Boot</string>
 </dict>

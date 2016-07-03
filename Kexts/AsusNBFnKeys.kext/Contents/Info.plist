@@ -125,7 +125,7 @@
 				<key>InstantKeyFunction</key>
 				<integer>0</integer>
 				<key>KBackLightlvlAtBoot</key>
-				<integer>15</integer>
+				<integer>0</integer>
 				<key>MakeFnKeysAsFunction</key>
 				<false/>
 				<key>MediaKeysDoFastRewind</key>

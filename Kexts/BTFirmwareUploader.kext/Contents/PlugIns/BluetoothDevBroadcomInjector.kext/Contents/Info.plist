@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,7 +23,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -430,6 +430,21 @@
 			<key>idVendor</key>
 			<integer>5075</integer>
 		</dict>
+		<key>AppleBroadcomBTUSBController_6417</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>LMPLoggingEnabled</key>
+			<false/>
+			<key>idProduct</key>
+			<integer>25623</integer>
+			<key>idVendor</key>
+			<integer>2652</integer>
+		</dict>
 		<key>AppleBroadcomBTUSBController_8143</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -442,6 +457,21 @@
 			<false/>
 			<key>idProduct</key>
 			<integer>33091</integer>
+			<key>idVendor</key>
+			<integer>16700</integer>
+		</dict>
+		<key>AppleBroadcomBTUSBController_8197</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>LMPLoggingEnabled</key>
+			<false/>
+			<key>idProduct</key>
+			<integer>33175</integer>
 			<key>idVendor</key>
 			<integer>16700</integer>
 		</dict>
@@ -487,6 +517,21 @@
 			<false/>
 			<key>idProduct</key>
 			<integer>57466</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>AppleBroadcomBTUSBController_E0A1</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>LMPLoggingEnabled</key>
+			<false/>
+			<key>idProduct</key>
+			<integer>57505</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
@@ -746,6 +791,24 @@
 			<key>idVendor</key>
 			<integer>2652</integer>
 		</dict>
+		<key>Info- BCM - Dell-DW380-8197</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Broadcom USB Bluetooth 4.0 Controller (Dell DW380 BT)</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>33175</integer>
+			<key>idVendor</key>
+			<integer>16700</integer>
+		</dict>
 		<key>Info- BCM - Dongle-USB-21E8</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -887,6 +950,24 @@
 			</dict>
 			<key>idProduct</key>
 			<integer>57466</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info- BCM - Lenovo-43602-NGFF-E0A1</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Broadcom USB Bluetooth 4.0 Controller (Lenovo 43602 WiFi/BT combo NGFF)</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57505</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
@@ -1034,9 +1115,27 @@
 			<key>idVendor</key>
 			<integer>2652</integer>
 		</dict>
+		<key>Info- BCM - Zebra-4352-6417</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Broadcom USB Bluetooth 4.0 Controller (Zebra BCM4352 WiFi/BT combo)</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>25623</integer>
+			<key>idVendor</key>
+			<integer>2652</integer>
+		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2015. All rights reserved.</string>
+	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2016. All rights reserved.</string>
 	<key>OSBundleRequired</key>
 	<string>Safe Boot</string>
 </dict>

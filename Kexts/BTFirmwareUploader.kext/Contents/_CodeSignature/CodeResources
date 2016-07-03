@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/AtherosBluetoothDevices.rtf</key>
 		<data>
-		KM92R7gBHXT7axVUaBL8oPgc1MQ=
+		Qrk9OB5IgyAhLDGbjvXCWjHvlGk=
 		</data>
 		<key>Resources/BroadcomBluetoothDevices.rtf</key>
 		<data>
@@ -19,23 +19,23 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			nTdftJ8ahv8p+SkUKPPJomO8ack=
+			XIXlutDCRJn/y4PUvaODCjH+5Vg=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"9d375fb49f1a86ff29f9291428f3c9a263bc69c9"</string>
+			<string>cdhash H"5c85e5bad0c24499ffcb83d4bda3830a31fee558"</string>
 		</dict>
 		<key>PlugIns/BluetoothDevQAtherosInjector.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			2DWAqx18+Q8ax7rq9rUSYlgsTuo=
+			hL9NK4q04LtL0Frvn7FQkpGQdWw=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"d83580ab1d7cf90f1ac7baeaf6b51262582c4eea"</string>
+			<string>cdhash H"84bf4d2b8ab4e0bb4bd05aef9fb150929190756c"</string>
 		</dict>
 		<key>Resources/AtherosBluetoothDevices.rtf</key>
 		<data>
-		KM92R7gBHXT7axVUaBL8oPgc1MQ=
+		Qrk9OB5IgyAhLDGbjvXCWjHvlGk=
 		</data>
 		<key>Resources/BroadcomBluetoothDevices.rtf</key>
 		<data>

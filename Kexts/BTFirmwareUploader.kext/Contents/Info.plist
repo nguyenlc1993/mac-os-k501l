@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.0.5</string>
+	<string>3.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -255,6 +255,42 @@
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
+		<key>Atheros-AR3011-e03d-0489</key>
+		<dict>
+			<key>BTController</key>
+			<string>AR3011</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>Use Linux fw</key>
+			<true/>
+			<key>Windows fw</key>
+			<integer>1</integer>
+			<key>idProduct</key>
+			<integer>57405</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Atheros-AR3012-17d0-0b05</key>
+		<dict>
+			<key>BTController</key>
+			<string>AR3012</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>Use Linux fw</key>
+			<true/>
+			<key>idProduct</key>
+			<integer>6096</integer>
+			<key>idVendor</key>
+			<integer>2821</integer>
+		</dict>
 		<key>Atheros-AR3012-3004-0cf3</key>
 		<dict>
 			<key>BTController</key>
@@ -456,6 +492,23 @@
 			<true/>
 			<key>idProduct</key>
 			<integer>57430</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Atheros-AR3012-e078-489</key>
+		<dict>
+			<key>BTController</key>
+			<string>AR3012</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>Use Linux fw</key>
+			<true/>
+			<key>idProduct</key>
+			<integer>57464</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
@@ -725,6 +778,25 @@
 			<key>idVendor</key>
 			<integer>2652</integer>
 		</dict>
+		<key>BCM-Dell-DW380-8197-413c</key>
+		<dict>
+			<key>AbortOnFwUpdFail</key>
+			<true/>
+			<key>BTController</key>
+			<string>BCMSTDAL</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>DeviceSpecificFw</key>
+			<true/>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>33175</integer>
+			<key>idVendor</key>
+			<integer>16700</integer>
+		</dict>
 		<key>BCM-Dongles-USB-21e8-0a5c</key>
 		<dict>
 			<key>AbortOnFwUpdFail</key>
@@ -874,6 +946,25 @@
 			<string>IOUSBHostDevice</string>
 			<key>idProduct</key>
 			<integer>57466</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>BCM-Lenovo-43602-ngff-e0a1-0489</key>
+		<dict>
+			<key>AbortOnFwUpdFail</key>
+			<true/>
+			<key>BTController</key>
+			<string>BCMCOMBO</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>DeviceSpecificFw</key>
+			<true/>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>57505</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
 		</dict>
@@ -1029,9 +1120,28 @@
 			<key>idVendor</key>
 			<integer>2652</integer>
 		</dict>
+		<key>BCM-Zebra-4352-6417-0a5c</key>
+		<dict>
+			<key>AbortOnFwUpdFail</key>
+			<true/>
+			<key>BTController</key>
+			<string>BCMCOMBO</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>DeviceSpecificFw</key>
+			<true/>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>25623</integer>
+			<key>idVendor</key>
+			<integer>2652</integer>
+		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2015. All rights reserved.</string>
+	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2016. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOUSBHostFamily</key>

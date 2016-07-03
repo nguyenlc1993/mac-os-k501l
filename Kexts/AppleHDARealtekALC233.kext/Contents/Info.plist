@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>AppleHDA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>AppleHDA 274.7, Copyright © 2000-2016 Apple Inc. All rights reserved.</string>
+	<string>AppleHDA 274.9, Copyright © 2000-2016 Apple Inc. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.driver.AppleHDA</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -35,7 +35,7 @@
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>15E55</string>
+	<string>15F24</string>
 	<key>DTSDKName</key>
 	<string>macosx10.11internal</string>
 	<key>DTXcode</key>
@@ -96,15 +96,17 @@
 					<data>
 					AwAAAA==
 					</data>
-					<key>Codec</key>
-					<string>Realtek ALC233</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>
 					<key>ConfigData</key>
 					<data>
-					AUccEAFHHQEBRx4QAUcfkAGXHEABlx0QAZce
-					gQGXHwABtxwwAbcdAQG3HqABtx+QAhccIAIX
-					HRACFx4hAhcfAAFHDAIBtwwC
+					AUccEAFHHQABRx4XAUcfkAG3HDABtx0AAbce
+					oAG3H5ACFxwgAhcdEAIXHiECFx8AAScc8AEn
+					HQABJx4AAScfQAF3HPABdx0AAXceAAF3H0AB
+					hxzwAYcdAAGHHgABhx9AAZcc8AGXHQABlx4A
+					AZcfQAGnHPABpx0AAaceAAGnH0AB1xzwAdcd
+					AAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAFH
+					DAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -116,6 +118,8 @@
 			<string>AppleHDAHardwareConfigDriver</string>
 			<key>IOMatchCategory</key>
 			<string>AppleHDAHardwareConfigDriver</string>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
 			<key>IOProviderClass</key>
 			<string>AppleHDAHardwareConfigDriverLoader</string>
 			<key>PostConstructionInitialization</key>
@@ -960,7 +964,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>AppleHDA 274.7, Copyright © 2000-2016 Apple Inc. All rights reserved.</string>
+	<string>AppleHDA 274.9, Copyright © 2000-2016 Apple Inc. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.driver.AppleHDAController</key>
