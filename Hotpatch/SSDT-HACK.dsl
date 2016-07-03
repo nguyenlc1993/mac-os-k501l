@@ -1,9 +1,20 @@
 /*
     This is SSDT-HACK written for ASUS K501LX/K501LB.
     
-    Credit: RehabMan for his awesome collection of hotpatch samples.
+    Author: nguyenlc1993
+    Credit: RehabMan for his awesome collection of tiny SSDT samples.
     
-    Mandatory DSDT fixes:
+    By using this SSDT and an appropriate config.plist, you will get these benefits:
+    
+    - No need to patch/repatch DSDT anymore.
+    - Floating region issue will be completely eliminated.
+    - SSDT-HACK can be applied to K501LB model.
+    
+    How to install: just copy SSDT-HACK.aml to /EFI/CLOVER/ACPI/patched and config.plist to /EFI/CLOVER/.
+    
+    Below are the required DSDT fixes/patches in config.plist/ACPI/DSDT section:
+
+    I. Mandatory DSDT Fixes:
     
     1. FixHPET_0010
     2. FixIPIC_0040
@@ -11,7 +22,9 @@
     4. FIX_TMR_40000
     5. NewWay_80000000
     
-    Mandatory DSDT binary patches (to make this SSDT work):
+    Optional: Rtc8Allowed = YES
+    
+    II. Mandatory DSDT binary patches:
     
     1.  _OSI to XOSI (5F4F5349 -> 584F5349)
     2.  _PTS(1,N) to ZPTS(1,N) (5F50545301 -> 5A50545301)
@@ -31,18 +44,17 @@
     16. _Q13(0,N) to ZQ13(0,N) (5F51313300 -> 5A51313300)
     17. _Q14(0,N) to ZQ14(0,N) (5F51313400 -> 5A51313400)
     18. _Q15(0,N) to ZQ15(0,N) (5F51313500 -> 5A51313500)
+    19. Fix logic error in FBST (A00A4348 47530070 0A0260A1 04700160 -> A00A4348 47530070 0A0260A1 04700060)
+    20. D029@1F,3 to MCHC@0 (5B820F44 30323908 5F414452 0C03001F 00 -> 5B820F4D 43484308 5F414452 0C000000 00)
     
-    Other necessary DSDT patches:
+    III. Other recommended DSDT patches:
     
-    19. _DSM to XDSM (5F44534D -> 5844534D)
-    20. EHC1 to EH01 (45484331 -> 45483031)
-    21. EHC2 to EH02 (45484332 -> 45483032)
-    22. GFX0 to IGPU (47465830 -> 49475055)
-    23. B0D3 to HDAU (42304433 -> 48444155)
-    24. HECI to IMEI (48454349 -> 494D4549)
-    25. Fix logic error in FBST (A00A4348 47530070 0A0260A1 04700160 -> A00A4348 47530070 0A0260A1 04700060)
-    26. D029@1F,3 to MCHC@0 (5B820F44 30323908 5F414452 0C03001F 00 -> 5B820F4D 43484308 5F414452 0C000000 00)
-    
+    21. _DSM to XDSM (5F44534D -> 5844534D)
+    22. EHC1 to EH01 (45484331 -> 45483031)
+    23. EHC2 to EH02 (45484332 -> 45483032)
+    24. GFX0 to IGPU (47465830 -> 49475055)
+    25. B0D3 to HDAU (42304433 -> 48444155)
+    26. HECI to IMEI (48454349 -> 494D4549)
 */
 
 DefinitionBlock ("", "SSDT", 2, "HACK", "K501LX", 0)

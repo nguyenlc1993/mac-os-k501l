@@ -109,7 +109,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_PTS(1,NS) to ZPTS(1,NS)</string>
+					<string>_PTS(1,N) to ZPTS(1,N)</string>
 					<key>Find</key>
 					<data>
 					X1BUUwE=
@@ -121,7 +121,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_WAK(1,NS) to ZWAK(1,NS)</string>
+					<string>_WAK(1,N) to ZWAK(1,N)</string>
 					<key>Find</key>
 					<data>
 					X1dBSwE=
@@ -133,7 +133,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>GPRW(2,NS) to XPRW(2,NS)</string>
+					<string>GPRW(2,N) to XPRW(2,N)</string>
 					<key>Find</key>
 					<data>
 					R1BSVwI=
@@ -157,7 +157,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>BIFA(0,NS) to BIFZ(0,NS)</string>
+					<string>BIFA(0,N) to BIFZ(0,N)</string>
 					<key>Find</key>
 					<data>
 					QklGQQA=
@@ -193,7 +193,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>ECSB(7,NS) to ECSZ(7,NS)</string>
+					<string>ECSB(7,N) to ECSZ(7,N)</string>
 					<key>Find</key>
 					<data>
 					RUNTQgc=
@@ -205,7 +205,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_BIX(0,NS) to ZBIX(0,NS)</string>
+					<string>_BIX(0,N) to ZBIX(0,N)</string>
 					<key>Find</key>
 					<data>
 					X0JJWAA=
@@ -217,7 +217,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q0B(0,NS) to ZQ0B(0,NS)</string>
+					<string>_Q0B(0,N) to ZQ0B(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1EwQgA=
@@ -229,7 +229,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q0C(0,NS) to ZQ0C(0,NS)</string>
+					<string>_Q0C(0,N) to ZQ0C(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1EwQwA=
@@ -241,7 +241,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q0D(0,NS) to ZQ0D(0,NS)</string>
+					<string>_Q0D(0,N) to ZQ0D(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1EwRAA=
@@ -253,7 +253,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q0E(0,NS) to ZQ0E(0,NS)</string>
+					<string>_Q0E(0,N) to ZQ0E(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1EwRQA=
@@ -265,7 +265,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q0F(0,NS) to ZQ0F(0,NS)</string>
+					<string>_Q0F(0,N) to ZQ0F(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1EwRgA=
@@ -277,7 +277,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q13(0,NS) to ZQ13(0,NS)</string>
+					<string>_Q13(0,N) to ZQ13(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1ExMwA=
@@ -289,7 +289,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q14(0,NS) to ZQ14(0,NS)</string>
+					<string>_Q14(0,N) to ZQ14(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1ExNAA=
@@ -301,7 +301,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q15(0,NS) to ZQ15(0,NS)</string>
+					<string>_Q15(0,N) to ZQ15(0,N)</string>
 					<key>Find</key>
 					<data>
 					X1ExNQA=
