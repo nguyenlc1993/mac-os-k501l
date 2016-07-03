@@ -79,6 +79,10 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>MCFG</string>
+			</dict>
 		</array>
 		<key>SSDT</key>
 		<dict>
@@ -101,7 +105,7 @@
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>3</integer>
 		<key>XMPDetection</key>
 		<false/>
 	</dict>
@@ -390,7 +394,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC233</string>
+				<string>Realtek ALC3236</string>
 				<key>Find</key>
 				<data>
 				YQLsEA==
@@ -404,7 +408,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC233</string>
+				<string>Realtek ALC3236</string>
 				<key>Find</key>
 				<data>
 				gxnUEQ==
@@ -418,7 +422,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC233</string>
+				<string>Realtek ALC3236</string>
 				<key>Find</key>
 				<data>
 				hQjsEA==
@@ -432,7 +436,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC233</string>
+				<string>Realtek ALC3236</string>
 				<key>Find</key>
 				<data>
 				YgLsEA==
@@ -446,7 +450,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC233</string>
+				<string>Realtek ALC3236</string>
 				<key>Find</key>
 				<data>
 				hBnUEQ==
@@ -555,7 +559,7 @@
 		<key>InjectKexts</key>
 		<string>Detect</string>
 		<key>InjectSystemID</key>
-		<false/>
+		<true/>
 	</dict>
 </dict>
 </plist>
