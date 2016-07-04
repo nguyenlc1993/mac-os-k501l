@@ -7,6 +7,7 @@
     By using this SSDT and an appropriate config.plist, you will get these benefits:
     
     - No need to patch/repatch DSDT anymore.
+    - SSDT-HACK usually will work with further BIOS updates without having to be modified.
     - Floating region issue will be completely eliminated.
     - SSDT-HACK can be applied to K501LB model.
     
