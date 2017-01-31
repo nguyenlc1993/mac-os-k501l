@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1</string>
+	<string>3.1.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,7 +23,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.1</string>
+	<string>3.1.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -255,6 +255,24 @@
 			<integer>57405</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3012-036-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>54</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
 		</dict>
 		<key>Info - AR3012-3004-0cf3</key>
 		<dict>

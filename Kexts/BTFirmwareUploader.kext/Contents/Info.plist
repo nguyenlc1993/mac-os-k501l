@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1</string>
+	<string>3.1.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.1</string>
+	<string>3.1.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -273,6 +273,23 @@
 			<integer>57405</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
+		</dict>
+		<key>Atheros-AR3012-036-0cf3</key>
+		<dict>
+			<key>BTController</key>
+			<string>AR3012</string>
+			<key>CFBundleIdentifier</key>
+			<string>org.emlydinesh.driver.BTFirmwareUploader</string>
+			<key>IOClass</key>
+			<string>BTFirmwareUploader</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>Use Linux fw</key>
+			<true/>
+			<key>idProduct</key>
+			<integer>54</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
 		</dict>
 		<key>Atheros-AR3012-17d0-0b05</key>
 		<dict>

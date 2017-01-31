@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.6</string>
+	<string>4.6.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>4.6</string>
+	<string>4.6.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -29,9 +29,9 @@
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>11E52</string>
+	<string>12D75</string>
 	<key>DTSDKName</key>
-	<string>macosx10.7</string>
+	<string>macosx10.8</string>
 	<key>DTXcode</key>
 	<string>0611</string>
 	<key>DTXcodeBuild</key>
@@ -878,6 +878,10 @@
 				</dict>
 				<key>Dragging</key>
 				<dict>
+					<key>DragLock</key>
+					<false/>
+					<key>Enable</key>
+					<true/>
 					<key>FLiftDragReleaseTimeOut</key>
 					<integer>300</integer>
 					<key>FingerPressDrag</key>
@@ -924,6 +928,8 @@
 					<key>EnableAsusKBacklightAutoOff</key>
 					<true/>
 					<key>EnableAsusKBacklightSupport</key>
+					<true/>
+					<key>IgnoreAccidentalTouchpadInput</key>
 					<true/>
 					<key>TapEnablesTPadFromAccInput</key>
 					<false/>
@@ -1033,10 +1039,14 @@
 					<true/>
 					<key>RotationDelta</key>
 					<integer>350</integer>
-					<key>RotationMaxCFDelta</key>
+					<key>RotationMaxCFingDelta</key>
 					<integer>85</integer>
+					<key>RotationMinCFingIdleTime</key>
+					<integer>500</integer>
 					<key>TPadStatusCheckPollRate</key>
 					<integer>1500</integer>
+					<key>UseSynapticsGenericBounds</key>
+					<true/>
 				</dict>
 				<key>Pointing</key>
 				<dict>
@@ -1050,6 +1060,8 @@
 					<integer>1</integer>
 					<key>EnhancedAccelerationMinDelta</key>
 					<integer>15</integer>
+					<key>HIDTrackpadAccelLevel</key>
+					<integer>7</integer>
 					<key>PointerCustomAcceleration</key>
 					<integer>16</integer>
 					<key>PointerResolution</key>
@@ -1138,8 +1150,12 @@
 							<key>SynapticsClickPad</key>
 							<integer>15</integer>
 						</dict>
+						<key>2FHorizontalScroll</key>
+						<true/>
 						<key>2FScrollAccelMode</key>
 						<integer>0</integer>
+						<key>2FVerticalScroll</key>
+						<true/>
 						<key>Auto2FingScroll</key>
 						<false/>
 						<key>Continuous2FingScroll</key>
@@ -1151,6 +1167,8 @@
 						<key>Sling2FingScroll</key>
 						<false/>
 					</dict>
+					<key>ChangeScrollFlowlDirection</key>
+					<false/>
 					<key>EdgeScroll</key>
 					<dict>
 						<key>AutoEdgeScroll</key>
@@ -1189,14 +1207,16 @@
 						<key>EdgeScrolling</key>
 						<true/>
 						<key>EdgeVScrollAdaptArea</key>
-						<integer>3</integer>
+						<integer>4</integer>
 						<key>EdgeVScrollArea</key>
-						<integer>7</integer>
+						<integer>8</integer>
 						<key>InertialEdgeScroll</key>
 						<true/>
 						<key>SlingEdgeScroll</key>
 						<false/>
 					</dict>
+					<key>HIDTrackpadScrollAccelLevel</key>
+					<integer>4</integer>
 					<key>InertialScrollLevel</key>
 					<integer>2</integer>
 					<key>NoInertiaForHScroll</key>
@@ -1218,8 +1238,6 @@
 						<key>SynapticsClickPad</key>
 						<integer>5</integer>
 					</dict>
-					<key>ScrollLevelAtBoot</key>
-					<integer>0</integer>
 					<key>ScrollLevelFactor</key>
 					<integer>1</integer>
 					<key>ScrollLevelGranularity</key>
@@ -1262,27 +1280,27 @@
 					<key>EdgeSwipeBottom</key>
 					<integer>0</integer>
 					<key>EdgeSwipeDeltaX</key>
-					<integer>30</integer>
+					<integer>50</integer>
 					<key>EdgeSwipeDeltaY</key>
 					<integer>60</integer>
-					<key>EdgeSwipeDetectHArea</key>
-					<integer>7</integer>
-					<key>EdgeSwipeDetectVArea</key>
-					<integer>5</integer>
 					<key>EdgeSwipeFingers</key>
-					<integer>0</integer>
+					<integer>2</integer>
 					<key>EdgeSwipeLeft</key>
 					<integer>6</integer>
 					<key>EdgeSwipeRight</key>
 					<integer>17</integer>
+					<key>EdgeSwipeSenseHArea</key>
+					<integer>7</integer>
+					<key>EdgeSwipeSenseVArea</key>
+					<integer>5</integer>
 					<key>EdgeSwipeTop</key>
 					<integer>10</integer>
 					<key>EdgeSwipes</key>
-					<false/>
+					<true/>
 					<key>EdgeSwipes2Ways</key>
-					<false/>
+					<true/>
 					<key>EdgeSwipesResetPointer</key>
-					<false/>
+					<true/>
 					<key>MultiFingerSwipesDeltaX</key>
 					<integer>250</integer>
 					<key>MultiFingerSwipesDeltaY</key>
@@ -1311,6 +1329,8 @@
 						<key>SynapticsClickPad</key>
 						<integer>40</integer>
 					</dict>
+					<key>1FingerTapAction</key>
+					<integer>35</integer>
 					<key>2FingersTapAction</key>
 					<integer>22</integer>
 					<key>3FingersTapAction</key>
@@ -1327,6 +1347,8 @@
 					<true/>
 					<key>DisableBottomCornersTap</key>
 					<false/>
+					<key>Enable</key>
+					<true/>
 					<key>MulFingDoubleTaps</key>
 					<false/>
 					<key>MulFingTapMaxDelta</key>
@@ -1346,21 +1368,21 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2015. All rights reserved.</string>
+	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2016. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOHIDSystem</key>
 		<string>1.0.0b1</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>9.0.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>9.0.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.mach</key>
-		<string>9.0.0</string>
+		<string>8.0.0</string>
 		<key>org.emlydinesh.driver.ApplePS2Controller</key>
-		<string>4.6</string>
+		<string>4.6.5</string>
 		<key>org.emlydinesh.driver.ApplePS2Keyboard</key>
-		<string>4.6</string>
+		<string>4.6.5</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Safe Boot</string>
