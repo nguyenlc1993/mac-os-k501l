@@ -1,4 +1,7 @@
 ##Changelog
+####v1.1
+(Under construction)
+
 ####v1.0.1
 * ACPI:
 	- Removed 'fix warning' patches in Generic Fixes, as they are unnecessary.
