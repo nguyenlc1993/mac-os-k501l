@@ -1,8 +1,8 @@
-##Changelog
-####v1.1
+## Changelog
+#### v1.1
 (Under construction)
 
-####v1.0.1
+#### v1.0.1
 * ACPI:
 	- Removed 'fix warning' patches in Generic Fixes, as they are unnecessary.
 	- Updated patch's descriptions.
@@ -21,7 +21,7 @@
 * Hotpatch (experimental):
 	- Added SSDT-HACK and modified config.plist for testing 'hotpatch' method. Details can be found in SSDT-HACK.dsl.
 		
-####Initial version
+#### Initial version
 (compared with the old installation pack)
 
 * The installation pack is now moved to GitHub for better development.

@@ -1,5 +1,5 @@
 ##mac-os-k501l
-This repository contains all the supporting files to install and run macOS on ASUS K501LX/K501LB laptop.
+This repository contains all the supporting files to install and run macOS on ASUS K501L (X/B) laptop.
 
 ###Download
 To download the installation pack, please visit the [Releases][] tab of this repository.
@@ -18,6 +18,6 @@ On the other hand, if you encountered any problem during the installation proces
 
 [English]: http://www.insanelymac.com/forum/topic/312356-guide-installing-el-capitan-on-asus-k501lx/
 [Tiếng Việt]: http://osx.vn/threads/guide-cai-os-x-el-capitan-len-asus-k501lx.63125/
-[Releases]: http://github.com/nguyenlc1993/el-capitan-k501lx/releases/
-[Wiki]: http://github.com/nguyenlc1993/el-capitan-k501lx/wiki/
-[Issues]: http://github.com/nguyenlc1993/el-capitan-k501lx/issues/
+[Releases]: http://github.com/nguyenlc1993/mac-os-k501l/releases/
+[Wiki]: http://github.com/nguyenlc1993/mac-os-k501l/wiki/
+[Issues]: http://github.com/nguyenlc1993/mac-os-k501l/issues/
