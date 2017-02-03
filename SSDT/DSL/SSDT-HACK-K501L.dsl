@@ -15,7 +15,8 @@
  *       - _PTS fix.
  *       - _WAK fix.
  *       - Disable discrete graphics.
- *       - ASUS Fn hot keys patch.
+ *       - ASUS Fn hotkeys patch.
+ *       - ASUS 16-level keyboard backlit patch (Broadwell).
  *       - WiFi/Bluetooth resume after wake patch.
  * 3. Requirements
  *     Other SSDTs: None.

@@ -1,17 +1,17 @@
-##mac-os-k501l
+## mac-os-k501l
 This repository contains all the supporting files to install and run macOS on ASUS K501L (X/B) laptop.
 
-###Download
+### Download
 To download the installation pack, please visit the [Releases][] tab of this repository.
 
-###Guide
+### Guide
 For the **Guide to installing macOS on ASUS K501L**, please visit the [Wiki][] page of this repository, or the following threads:
 
 [English][]
 
 [Tiếng Việt][]
 
-###Problem reporting
+### Problem reporting
 If you discovered any issue within the installation pack or found a solution for these issues, please report at the [Issues][] page of this repository.
 
 On the other hand, if you encountered any problem during the installation process, please report at the linked threads instead, as you will find better support there.

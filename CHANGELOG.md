@@ -1,6 +1,27 @@
 ## Changelog
 #### v1.1
-(Under construction)
+In this version, hotpatch now becomes the official method of ACPI patching. This method now uses 2 SSDTs, namely SSDT-HACK-K501L and SSDT-BATT-ASUS, together with a proper config.plist.
+
+The package was also updated to provide support for macOS Sierra.
+
+* ACPI (now renamed to SSDT):
+	- Regenerated SSDT.aml with ssdtPRGen.sh v21.4.
+	- Added 2 hotpatch SSDTs with source files (.dsl).
+* Kexts:
+	- Updated kexts to their latest versions.
+	- Renamed kexts:
+		+ AppleGraphicsPowerManagement\_K501LX to AppleGraphicsPowerManagement\_Broadwell.
+		+ X86PlatformPlugin\_K501LX to X86PlatformPlugin\_Broadwell.
+		+ AppleHDARealtekALC233 to AppleHDARealtekALC3236.
+	- Added ApplePS2SmartTouchpad.kext v4.7b5 that works with Sierra.
+	- Removed AtherosARPT.kext.
+* Config:
+	- Used DSDT fixes (AddPNLF and FixSBUS) as replacements of patches in hotpatch SSDT.
+	- Replaced arbitrary injection with traditional configurations in Devices and Graphics sections.
+	- Removed most of SMBIOS values (only keep ProductName = MacBookPro12,1). These values can be generated with the latest version of Clover Configurator.
+* Other:
+	- Removed EFI folder. Now it is recommended to install Clover using setup.
+	- Moved DSDT patches and SMBIOS generator scripts to a new folder named Legacy. This folder will be available in source repository only (not include in release).
 
 #### v1.0.1
 * ACPI:
