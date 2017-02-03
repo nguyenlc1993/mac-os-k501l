@@ -9,13 +9,13 @@
  *       - EMlyDinEsH's DSDT patches for ASUS laptops.
  *     Credit: RehabMan for his awesome collection of tiny SSDTs.
  * 2. Purposes
- *     This SSDT contains a set of patches for ASUS K501LX/K501LB laptop, namely:
+ *     This SSDT contains a set of patches for ASUS K501L (X/B) laptop, namely:
  *       - _OSI fix.
  *       - _PRW instant wake fix.
  *       - _PTS fix.
  *       - _WAK fix.
  *       - Disable discrete graphics.
- *       - ASUS Fn hotkeys patch.
+ *       - ASUS Fn hotkey patch.
  *       - ASUS 16-level keyboard backlit patch (Broadwell).
  *       - WiFi/Bluetooth resume after wake patch.
  * 3. Requirements
@@ -258,7 +258,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "K501L", 0)
         }
     }
     
-    // 16-level keyboard backlit patch
+    // ASUS 16-level keyboard backlit patch
     Scope (_SB.ATKD)
     {
         Name (KBPW, Buffer (0x10)

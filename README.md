@@ -16,7 +16,7 @@ If you discovered any issue within the installation pack or found a solution for
 
 On the other hand, if you encountered any problem during the installation process, please report at the linked threads instead, as you will find better support there.
 
-[English]: http://www.insanelymac.com/forum/topic/312356-guide-installing-el-capitan-on-asus-k501lx/
+[English]: http://www.insanelymac.com/forum/topic/312356-guide-installing-macos-on-asus-k501l/
 [Tiếng Việt]: http://osx.vn/threads/guide-cai-os-x-el-capitan-len-asus-k501lx.63125/
 [Releases]: http://github.com/nguyenlc1993/mac-os-k501l/releases/
 [Wiki]: http://github.com/nguyenlc1993/mac-os-k501l/wiki/

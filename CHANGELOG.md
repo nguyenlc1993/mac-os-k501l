@@ -1,5 +1,5 @@
 ## Changelog
-#### v1.1
+#### v2.0
 In this version, hotpatch now becomes the official method of ACPI patching. This method now uses 2 SSDTs, namely SSDT-HACK-K501L and SSDT-BATT-ASUS, together with a proper config.plist.
 
 The package was also updated to provide support for macOS Sierra.
@@ -23,7 +23,7 @@ The package was also updated to provide support for macOS Sierra.
 	- Removed EFI folder. Now it is recommended to install Clover using setup.
 	- Moved DSDT patches and SMBIOS generator scripts to a new folder named Legacy. This folder will be available in source repository only (not include in release).
 
-#### v1.0.1
+#### v1.1
 * ACPI:
 	- Removed 'fix warning' patches in Generic Fixes, as they are unnecessary.
 	- Updated patch's descriptions.
@@ -42,7 +42,7 @@ The package was also updated to provide support for macOS Sierra.
 * Hotpatch (experimental):
 	- Added SSDT-HACK and modified config.plist for testing 'hotpatch' method. Details can be found in SSDT-HACK.dsl.
 		
-#### Initial version
+#### v1.0
 (compared with the old installation pack)
 
 * The installation pack is now moved to GitHub for better development.
